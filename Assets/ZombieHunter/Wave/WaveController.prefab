@@ -106,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoints: []
   wavesConfig: {fileID: 11400000, guid: f4fd900f3f375294d9a75b8b19920d5b, type: 2}
-  delayBetweenSpawn: 2000
+  delayBetweenSpawn: 2
 --- !u!1 &1172953880010512033
 GameObject:
   m_ObjectHideFlags: 0
