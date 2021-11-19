@@ -96,3 +96,190 @@ Received Import Request.
 Start importing Assets/ZombieHunter/Wave/WaveController.prefab using Guid(422c70ea8e0aa0f43bdc083b5fede2f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '443a80535b1cc1c8d154770d65510db3') in 0.026663 seconds
   Import took 0.031698 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000609 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.666 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1128 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 58.2 MB.
+System memory in use after: 58.3 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1582.
+Total: 1.360200 ms (FindLiveObjects: 0.200500 ms CreateObjectMapping: 0.048000 ms MarkObjects: 1.098100 ms  DeleteObjects: 0.012400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 943.037040 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(cab1f55635dfc6d4fb2d6a257e26bcb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(cab1f55635dfc6d4fb2d6a257e26bcb1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a71a71d09402a4bdeda67706cca79e48') in 0.008964 seconds
+  Import took 0.011161 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 275.974661 seconds.
+  path: Assets/RPGPP_LT
+  artifactKey: Guid(276068b5fb2190344a37116a0c38e938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPGPP_LT using Guid(276068b5fb2190344a37116a0c38e938) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3aba1f391b3bf13554014b6cabf2aa9') in 0.007275 seconds
+  Import took 0.008918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.437554 seconds.
+  path: Assets/RPGPP_LT/Scene
+  artifactKey: Guid(807cf4ac218a00345b44c9bd6cc3bf99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/RPGPP_LT/Scene using Guid(807cf4ac218a00345b44c9bd6cc3bf99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b40ef467550967a4e133450b6a640912') in 0.007521 seconds
+  Import took 0.009184 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000636 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.22 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.619 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1128 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 58.3 MB.
+System memory in use after: 58.3 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1584.
+Total: 1.518600 ms (FindLiveObjects: 0.143400 ms CreateObjectMapping: 0.030700 ms MarkObjects: 1.329200 ms  DeleteObjects: 0.014500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 68.719237 seconds.
+  path: Assets/ZombieHunter
+  artifactKey: Guid(1d274742fd5c0e745b48d6cf78e3ed66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter using Guid(1d274742fd5c0e745b48d6cf78e3ed66) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23aa2e9fcf7c0672668681d096ec21b6') in 0.007633 seconds
+  Import took 0.009285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.189745 seconds.
+  path: Assets/ZombieHunter/Scenes/rpgpp_lt_scene_1.0.unity
+  artifactKey: Guid(07b3310fd57c602458506388d8c69368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/rpgpp_lt_scene_1.0.unity using Guid(07b3310fd57c602458506388d8c69368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da2a3e46f6cd76b0e2db3ffa64b39e2c') in 0.010643 seconds
+  Import took 0.012281 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.449095 seconds.
+  path: Assets/ZombieHunter/Scenes/GameScene.unity
+  artifactKey: Guid(07b3310fd57c602458506388d8c69368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/GameScene.unity using Guid(07b3310fd57c602458506388d8c69368) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f76450a139e383c9917cadc368cdfc9') in 0.008076 seconds
+  Import took 0.010153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.870671 seconds.
+  path: Assets/ZombieHunter/Scenes/rpgpp_lt_scene_1.0Settings.lighting
+  artifactKey: Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/rpgpp_lt_scene_1.0Settings.lighting using Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: '58ea8bda2bd2d62895182b087f1a84b6') in 0.008410 seconds
+  Import took 0.010060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.013214 seconds.
+  path: Assets/ZombieHunter/Scenes/rpgpp_lt_scene_1.0Settings.lighting
+  artifactKey: Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/rpgpp_lt_scene_1.0Settings.lighting using Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: '58ea8bda2bd2d62895182b087f1a84b6') in 0.004286 seconds
+  Import took 0.005921 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.432550 seconds.
+  path: Assets/ZombieHunter/Scenes/GameScene.lighting
+  artifactKey: Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/GameScene.lighting using Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: '8c7a9570268a6579f9fedce8d02290f1') in 0.007466 seconds
+  Import took 0.009078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002852 seconds.
+  path: Assets/ZombieHunter/Scenes/GameScene.lighting
+  artifactKey: Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/GameScene.lighting using Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: '8c7a9570268a6579f9fedce8d02290f1') in 0.002793 seconds
+  Import took 0.004477 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.546600 seconds.
+  path: Assets/ZombieHunter/Scenes/GameScene.lighting
+  artifactKey: Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/GameScene.lighting using Guid(6cee301ec7c99444cbf7302593293c92) Importer(815301076,1909f56bfc062723c751e8b465ee728b) LightingSettings: switching bake backend from 1 to 0.
+ -> (artifact id: '8b9282930eecc38008ca54266fd01e1e') in 0.002688 seconds
+  Import took 0.004351 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.818949 seconds.
+  path: Assets/ZombieHunter/Scenes/SampleSceneSettings.lighting
+  artifactKey: Guid(cb8db4b7749d69c4294e3ac577f4b8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/SampleSceneSettings.lighting using Guid(cb8db4b7749d69c4294e3ac577f4b8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bdc107fc96e54207e1a73f1991d2b14') in 0.005848 seconds
+  Import took 0.007853 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.031785 seconds.
+  path: Assets/ZombieHunter/Scenes/SampleSceneSettings.lighting
+  artifactKey: Guid(cb8db4b7749d69c4294e3ac577f4b8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Scenes/SampleSceneSettings.lighting using Guid(cb8db4b7749d69c4294e3ac577f4b8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bdc107fc96e54207e1a73f1991d2b14') in 0.002648 seconds
+  Import took 0.004290 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000709 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.619 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Refreshing native plugins compatible for Editor in 0.21 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1128 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 58.3 MB.
+System memory in use after: 58.4 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1586.
+Total: 1.497300 ms (FindLiveObjects: 0.140700 ms CreateObjectMapping: 0.030400 ms MarkObjects: 1.314200 ms  DeleteObjects: 0.011400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
