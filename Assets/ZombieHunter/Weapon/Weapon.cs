@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using Wave.Enemy;
@@ -16,6 +17,8 @@ namespace Weapon
 
         [SerializeField] private ParticleSystem system;
 
+        public Transform container1;
+        
         private bool _shoot;
         private int _effectDelay = 100;
 
@@ -24,6 +27,7 @@ namespace Weapon
         private void Start()
         {
             _bullet = Resources.Load<Bullet.Bullet>("Bullet");
+            StartCoroutine(Cor());
         }
 
         public void Shoot(Transform container)
@@ -35,32 +39,41 @@ namespace Weapon
                 OnShoot?.Invoke();
                 
                 var obj = Instantiate(_bullet,shootPose);
-                    //obj.transform.rotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch);
-                
+                //obj.transform.rotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch);
+                obj.transform.eulerAngles = transform.eulerAngles;
+                Debug.Log(transform.eulerAngles);
                 obj.transform.SetParent(container);
-                
-                
+
                 EffectAsync(); 
                 ShootDelay();
             }
             
         }
+        private float GetAngleFromVector(Vector3 dir)
+        {
+            float n = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            if (n < 0)
+                n += 360;
+            return n;
+        }
+
+        private IEnumerator Cor()
+        {
+            Shoot(container1);
+            yield return new WaitForSeconds(0.4f);
+            StartCoroutine(Cor());
+        }
+        
 
         private void Update()
         {
-            transform.localPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
-            transform.localRotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch);
+            //transform.localPosition = OVRInput.GetLocalControllerPosition(OVRInput.Controller.RTouch);
+            //transform.localRotation = OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch);
             
-            Debug.DrawRay(transform.position, new Vector3(
-                transform.rotation.x,
-                transform.rotation.y,
-                transform.rotation.z), Color.red);
-            
-            Debug.DrawRay(transform.position, new Vector3(
-                OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch).x,
-                OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch).y,
-                OVRInput.GetLocalControllerRotation(OVRInput.Controller.RTouch).z
-                ), Color.blue);
+            // Debug.DrawRay(transform.position, new Vector3(
+            //     transform.rotation.x,
+            //     transform.rotation.y,
+            //     transform.rotation.z), Color.red);
         }
 
         

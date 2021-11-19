@@ -8,7 +8,6 @@ namespace Weapon.Bullet
         [SerializeField] private float speed;
         [SerializeField] private int delayToDestroy;
         
-
         private void Update()
         {
             transform.Translate(transform.forward* speed);
