@@ -8,4 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ZombieHunter/Scenes/GameScene.unity
     guid: 07b3310fd57c602458506388d8c69368
-  m_configObjects: {}
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: dc4c1b0e7d65dc24f8ef88e11193c416,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e198665dcf602f745be313cbe349a163,
+      type: 2}
