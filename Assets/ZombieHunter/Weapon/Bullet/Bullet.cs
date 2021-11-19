@@ -10,7 +10,7 @@ namespace Weapon.Bullet
         
         private void Update()
         {
-            transform.Translate(transform.forward* speed);
+            transform.Translate(0, 0,speed);
         }
         
         private void Start()
