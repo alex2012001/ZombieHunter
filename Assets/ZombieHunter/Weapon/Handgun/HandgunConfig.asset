@@ -12,9 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45cf612f80a4c2f968f73af5ca5ab9b, type: 3}
   m_Name: HandgunConfig
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 873610065194698635, guid: a39c92a9ae4811f4d90049e92c864afe, type: 3}
-  SpawnPosition: {x: 0.24, y: -0.22, z: 0.48}
   Damage: 15
-  FireRate: 500
+  FireRate: 300
   ShotSFx: {fileID: 0}
   AudioSource: {fileID: 0}
