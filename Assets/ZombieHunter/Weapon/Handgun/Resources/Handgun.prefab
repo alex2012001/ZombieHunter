@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3032310100277076909}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3057597601332329033
 MeshFilter:
@@ -110,12 +110,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3035033931846626459}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: -0.22, z: 0.48}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8927670996554327680}
   - {fileID: 3032277153639858609}
   - {fileID: 3029760454848219483}
-  - {fileID: 8927670996554327680}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3659079187ad39449745d2cbb32895e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootPose: {fileID: 8927670996554327680}
   weaponConfig: {fileID: 11400000, guid: 6ddb797b241498148804cf7126fbb278, type: 2}
   effect: {fileID: 4769575631413397763}
   system: {fileID: 1858146215227385985}
@@ -247,7 +248,7 @@ Transform:
   m_Children:
   - {fileID: 3032053051614438963}
   m_Father: {fileID: 3032310100277076909}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3054363199802380167
 MeshFilter:
@@ -403,13 +404,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9026696660882506669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: 0.0334, z: 0.128}
+  m_LocalPosition: {x: 0, y: 0.0334, z: 0.128}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4769575631413702579}
   - {fileID: 1858146215212096999}
   m_Father: {fileID: 3032310100277076909}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1858146215212043669
 PrefabInstance:
