@@ -1519,7 +1519,7 @@ GameObject:
   - component: {fileID: -4964118693171120342}
   m_Layer: 0
   m_Name: UniversalCharacter
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1577,6 +1577,7 @@ MonoBehaviour:
   healthPoints: 100
   particle: {fileID: 194062, guid: 730bd00725256054bba4c7d7ef3b0053, type: 3}
   particleSpawnpoint: {fileID: 7553842540645468483}
+  colliderGivedDamage: 5
 --- !u!65 &8682608527744377052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1585,7 +1586,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22713378485400919}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.61123246, y: 1.6912286, z: 0.5526694}

@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
+using Wave.Enemy;
 
-namespace Wave.Enemy
+namespace ZombieHunter.Player
 {
-    public class Enemy : MonoBehaviour
+    public class Player : MonoBehaviour
     {
         [SerializeField] private float healthPoints;
         [SerializeField] private GameObject particle;
         [SerializeField] private Transform particleSpawnpoint;
+
+        private bool isTakeingDamage;
         
-        [SerializeField] private float colliderGivedDamage;
-      
         public void TakeDamage(float damage)
         {
             healthPoints -= damage;
@@ -23,21 +23,23 @@ namespace Wave.Enemy
             {
                 var part = Instantiate(particle, particleSpawnpoint);
                 StartCoroutine(DelayForDeletePartycle(part));
+                Debug.Log(healthPoints);
             }
         }
 
-        public float GetDamageNumber()
+        private void OnTriggerEnter(Collider other)
         {
-            return colliderGivedDamage;
+            if (other.CompareTag("Enemy"))
+            {
+                var enemy = other.GetComponent<Enemy>();
+                TakeDamage(enemy.GetDamageNumber());
+            }
         }
-        
         private IEnumerator DelayForDeletePartycle(GameObject partycle)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(5f);
             
             Destroy(partycle.gameObject);
         }
-
-        
     }
 }
