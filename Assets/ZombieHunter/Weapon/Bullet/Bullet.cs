@@ -1,4 +1,3 @@
-using System;
 using System.Threading.Tasks;
 using UnityEngine;
 
@@ -9,14 +8,9 @@ namespace Weapon.Bullet
         [SerializeField] private float speed;
         [SerializeField] private int delayToDestroy;
         
-        private void OnTriggerEnter(Collider other)
-        {
-            
-        }
-
         private void Update()
         {
-            transform.Translate(transform.forward* speed);
+            transform.Translate(0, 0,speed);
         }
         
         private void Start()

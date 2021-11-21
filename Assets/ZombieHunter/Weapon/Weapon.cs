@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Threading.Tasks;
 using UnityEngine;
 using Wave.Enemy;
@@ -8,6 +9,8 @@ namespace Weapon
     public class Weapon : MonoBehaviour
     {
         public Action OnShoot;
+
+        [SerializeField] private Transform shootPose;
         
         [SerializeField] private WeaponConfig weaponConfig;
         [SerializeField] private GameObject effect;
@@ -17,25 +20,27 @@ namespace Weapon
         private bool _shoot;
         private int _effectDelay = 100;
 
-        public void Shoot(Ray ray)
+        private Bullet.Bullet _bullet;
+        
+        private void Start()
+        {
+            _bullet = Resources.Load<Bullet.Bullet>("Bullet");
+        }
+
+        public void Shoot(Transform container)
         {
             if (!_shoot)
             {
                 _shoot = true;
                 
                 OnShoot?.Invoke();
-            
-                EffectAsync();
-                ShootDelay();
+                
+                var obj = Instantiate(_bullet,shootPose);
 
-                if (Physics.Raycast(ray, out var hit))
-                {
-                    if (hit.collider.GetComponent<Enemy>())
-                    {
-                        var enemy = hit.collider.GetComponent<Enemy>();
-                        enemy.TakeDamage(weaponConfig.Damage);
-                    }
-                }
+                obj.transform.SetParent(container);
+
+                EffectAsync(); 
+                ShootDelay();
             }
             
         }
