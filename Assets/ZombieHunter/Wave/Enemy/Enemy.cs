@@ -24,7 +24,7 @@ namespace Wave.Enemy
             _damage = config.Damage;
         }
         
-        private void TakeDamage(float dmg)
+        public void TakeDamage(float dmg)
         {
             _healthPoints -= dmg;
             if (_healthPoints <= 0)

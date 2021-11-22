@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 19886758}
   - component: {fileID: 19954650}
   m_Layer: 0
-  m_Name: FX_BloodSplatter
+  m_Name: PlayerBloodySplatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
