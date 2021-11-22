@@ -1,43 +1,56 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
+using ZombieHunter.Player;
 
 namespace Wave.Enemy
 {
     public class Enemy : MonoBehaviour
     {
-        [SerializeField] private float healthPoints;
-        [SerializeField] private GameObject particle;
+        [SerializeField] private EnemyConfig config;
         [SerializeField] private Transform particleSpawnpoint;
+
+        private float _healthPoints;
+        private float _timeLivePartycle;
+        private float _damage;
         
-        [SerializeField] private float colliderGivedDamage;
-      
-        public void TakeDamage(float damage)
+        private GameObject _particle;
+       
+
+        private void Start()
         {
-            healthPoints -= damage;
-            if (healthPoints <= 0)
+            _healthPoints = config.HealthPoints;
+            _particle = config.Particle;
+            _timeLivePartycle = config.TimeLivePartycle;
+            _damage = config.Damage;
+        }
+        
+        private void TakeDamage(float dmg)
+        {
+            _healthPoints -= dmg;
+            if (_healthPoints <= 0)
             {
                 Destroy(gameObject);
             }
             else
             {
-                var part = Instantiate(particle, particleSpawnpoint);
+                var part = Instantiate(_particle, particleSpawnpoint);
                 StartCoroutine(DelayForDeletePartycle(part));
             }
         }
-
-        public float GetDamageNumber()
+        private void OnTriggerEnter(Collider other)
         {
-            return colliderGivedDamage;
+            if (other.CompareTag("Player"))
+            {
+                var player = other.GetComponent<Player>();
+                player.TakeDamage(_damage);
+            }
         }
-        
+       
         private IEnumerator DelayForDeletePartycle(GameObject partycle)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(_timeLivePartycle);
             
             Destroy(partycle.gameObject);
         }
-
-        
     }
 }

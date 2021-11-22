@@ -1138,7 +1138,7 @@ GameObject:
   - component: {fileID: 2625368283368158538}
   - component: {fileID: 3257173100838490608}
   m_Layer: 0
-  m_Name: F_AA_001
+  m_Name: FemaleCharacterArmor
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1194,10 +1194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94ef3896da3470d8d2d0e5eaf449f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 100
-  particle: {fileID: 194062, guid: 730bd00725256054bba4c7d7ef3b0053, type: 3}
+  config: {fileID: 11400000, guid: ffa99b0e2b57dfc4791c2e238d8e0a9d, type: 2}
   particleSpawnpoint: {fileID: 1382898905349260378}
-  colliderGivedDamage: 5
 --- !u!65 &2625368283368158538
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1206,7 +1204,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3438631853146181096}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.61123246, y: 1.6912286, z: 0.5526694}
