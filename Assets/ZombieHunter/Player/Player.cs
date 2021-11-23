@@ -11,8 +11,6 @@ namespace ZombieHunter.Player
         [SerializeField] private GameObject particle;
         [SerializeField] private Transform particleSpawnpoint;
         [SerializeField] private float timeLivePartycle; 
-
-        private bool _isTakeingDamage;
         
         public void TakeDamage(float damage)
         {

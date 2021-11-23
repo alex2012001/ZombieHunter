@@ -8,32 +8,17 @@ namespace Wave.Enemy
     {
         [SerializeField] private EnemyConfig config;
         [SerializeField] private Transform particleSpawnpoint;
-
-        private float _healthPoints;
-        private float _timeLivePartycle;
-        private float _damage;
-        
-        private GameObject _particle;
        
-
-        private void Start()
+        private void TakeDamage(float damage)
         {
-            _healthPoints = config.HealthPoints;
-            _particle = config.Particle;
-            _timeLivePartycle = config.TimeLivePartycle;
-            _damage = config.Damage;
-        }
-        
-        private void TakeDamage(float dmg)
-        {
-            _healthPoints -= dmg;
-            if (_healthPoints <= 0)
+            config.HealthPoints -= damage;
+            if ( config.HealthPoints <= 0)
             {
                 Destroy(gameObject);
             }
             else
             {
-                var part = Instantiate(_particle, particleSpawnpoint);
+                var part = Instantiate(config.Particle, particleSpawnpoint);
                 StartCoroutine(DelayForDeletePartycle(part));
             }
         }
@@ -42,13 +27,13 @@ namespace Wave.Enemy
             if (other.CompareTag("Player"))
             {
                 var player = other.GetComponent<Player>();
-                player.TakeDamage(_damage);
+                player.TakeDamage(config.Damage);
             }
         }
        
         private IEnumerator DelayForDeletePartycle(GameObject partycle)
         {
-            yield return new WaitForSeconds(_timeLivePartycle);
+            yield return new WaitForSeconds(config.TimeLivePartycle);
             
             Destroy(partycle.gameObject);
         }

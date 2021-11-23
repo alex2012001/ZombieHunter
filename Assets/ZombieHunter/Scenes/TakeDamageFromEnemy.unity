@@ -1779,7 +1779,7 @@ PrefabInstance:
     - target: {fileID: 3382024724856137294, guid: 4a3c4c173b4d98b4f8deab50ca3f4fee,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3437829173618047904, guid: 4a3c4c173b4d98b4f8deab50ca3f4fee,
         type: 3}
@@ -4917,7 +4917,7 @@ GameObject:
   - component: {fileID: 630222376}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4937,6 +4937,7 @@ MonoBehaviour:
   healthPoints: 100
   particle: {fileID: 194062, guid: 730bd00725256054bba4c7d7ef3b0053, type: 3}
   particleSpawnpoint: {fileID: 630222377}
+  timeLivePartycle: 0
 --- !u!65 &630222376
 BoxCollider:
   m_ObjectHideFlags: 0
