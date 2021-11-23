@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using ZombieHunter.Player;
 
@@ -6,6 +7,8 @@ namespace Wave.Enemy
 {
     public class Enemy : MonoBehaviour
     {
+        public Action OnAttack;
+
         [SerializeField] private EnemyConfig config;
         [SerializeField] private Transform particleSpawnpoint;
        
@@ -24,6 +27,7 @@ namespace Wave.Enemy
         }
         private void OnTriggerEnter(Collider other)
         {
+            OnAttack?.Invoke();
             if (other.CompareTag("Player"))
             {
                 var player = other.GetComponent<Player>();
