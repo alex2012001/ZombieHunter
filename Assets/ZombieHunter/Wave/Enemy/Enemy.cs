@@ -11,11 +11,18 @@ namespace Wave.Enemy
 
         [SerializeField] private EnemyConfig config;
         [SerializeField] private Transform particleSpawnpoint;
-       
+        
+        private float _healhPoint;
+
+        private void Start()
+        {
+            _healhPoint = config.HealthPoints;
+        }
+
         public void TakeDamage(float damage)
         {
-            config.HealthPoints -= damage;
-            if ( config.HealthPoints <= 0)
+            _healhPoint -= damage;
+            if (_healhPoint <= 0)
             {
                 Destroy(gameObject);
             }

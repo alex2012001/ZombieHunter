@@ -8,7 +8,6 @@ namespace ZombieHunter.Player
         public float HealthPoints;
         public GameObject Particle;
         public float TimeLivePartycle;
-        public float Damage;
     }
    
 }

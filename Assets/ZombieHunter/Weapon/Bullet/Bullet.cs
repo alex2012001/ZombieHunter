@@ -10,20 +10,25 @@ namespace Weapon.Bullet
         [SerializeField] private float speed;
         [SerializeField] private int delayToDestroy;
 
-        [SerializeField] private PlayerConfig playerConfig;
+        private float _damage;
         
+        public void SetParameters(float damage)
+        {
+            _damage = damage;
+        }
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.CompareTag("Enemy"))
             {
                 var enemy = other.GetComponent<Enemy>();
-                enemy.TakeDamage(playerConfig.Damage);
+                enemy.TakeDamage(_damage);
             }
         }
         private void Update()
         {
             transform.Translate(0, 0,speed);
-        }
+         }
         
         private void Start()
         {
