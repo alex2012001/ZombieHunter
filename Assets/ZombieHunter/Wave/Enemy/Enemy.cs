@@ -38,6 +38,7 @@ namespace Wave.Enemy
             if (other.CompareTag("Player"))
             {
                 var player = other.GetComponent<ZombieHunter.Player.PlayerController>();
+
                 player.TakeDamage(config.Damage);
             }
         }
