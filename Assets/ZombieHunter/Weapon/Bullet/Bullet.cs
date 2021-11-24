@@ -1,5 +1,7 @@
 using System.Threading.Tasks;
 using UnityEngine;
+using Wave.Enemy;
+using ZombieHunter.Player;
 
 namespace Weapon.Bullet
 {
@@ -7,11 +9,26 @@ namespace Weapon.Bullet
     {
         [SerializeField] private float speed;
         [SerializeField] private int delayToDestroy;
+
+        private float _damage;
         
+        public void SetParameters(float damage)
+        {
+            _damage = damage;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Enemy"))
+            {
+                var enemy = other.GetComponent<Enemy>();
+                enemy.TakeDamage(_damage);
+            }
+        }
         private void Update()
         {
             transform.Translate(0, 0,speed);
-        }
+         }
         
         private void Start()
         {

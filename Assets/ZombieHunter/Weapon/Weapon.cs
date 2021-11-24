@@ -34,6 +34,7 @@ namespace Weapon
                 OnShoot?.Invoke();
                 
                 var obj = Instantiate(_bullet,shootPose);
+                obj.SetParameters(weaponConfig.Damage);
 
                 obj.transform.SetParent(container);
 

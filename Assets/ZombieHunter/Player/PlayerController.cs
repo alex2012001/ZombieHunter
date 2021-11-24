@@ -1,34 +1,30 @@
 ﻿using System.Collections;
 using UnityEngine;
-using Wave.Enemy;
 
 namespace ZombieHunter.Player
 {
-    public class Player : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private float healthPoints;
-        
-        [SerializeField] private GameObject particle;
+        [SerializeField] private PlayerConfig config;
         [SerializeField] private Transform particleSpawnpoint;
-        [SerializeField] private float timeLivePartycle; 
-        
+
         public void TakeDamage(float damage)
         {
-            healthPoints -= damage;
-            if (healthPoints <= 0)
+            config.HealthPoints -= damage;
+            if (config.HealthPoints <= 0)
             {
                 Destroy(gameObject);
             }
             else
             {
-                var part = Instantiate(particle, particleSpawnpoint);
+                var part = Instantiate(config.Particle, particleSpawnpoint);
                 StartCoroutine(DelayForDeletePartycle(part));
             }
         }
 
         private IEnumerator DelayForDeletePartycle(GameObject partycle)
         {
-            yield return new WaitForSeconds(timeLivePartycle);
+            yield return new WaitForSeconds(config.TimeLivePartycle);
             
             Destroy(partycle.gameObject);
         }

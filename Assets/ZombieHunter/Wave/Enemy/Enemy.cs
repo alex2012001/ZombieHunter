@@ -11,11 +11,18 @@ namespace Wave.Enemy
 
         [SerializeField] private EnemyConfig config;
         [SerializeField] private Transform particleSpawnpoint;
-       
-        private void TakeDamage(float damage)
+        
+        private float _healhPoint;
+
+        private void Start()
         {
-            config.HealthPoints -= damage;
-            if ( config.HealthPoints <= 0)
+            _healhPoint = config.HealthPoints;
+        }
+
+        public void TakeDamage(float damage)
+        {
+            _healhPoint -= damage;
+            if (_healhPoint <= 0)
             {
                 Destroy(gameObject);
             }
@@ -30,7 +37,8 @@ namespace Wave.Enemy
             OnAttack?.Invoke();
             if (other.CompareTag("Player"))
             {
-                var player = other.GetComponent<Player>();
+                var player = other.GetComponent<ZombieHunter.Player.PlayerController>();
+
                 player.TakeDamage(config.Damage);
             }
         }

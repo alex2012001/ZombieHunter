@@ -4855,8 +4855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5c86e155b3413b934cfaa0ff503964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: d18a5d66954f0e44995f2130d34bf836, type: 2}
   particleSpawnpoint: {fileID: 630222377}
+  config: {fileID: 11400000, guid: d18a5d66954f0e44995f2130d34bf836, type: 2}
 --- !u!65 &630222376
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4878,7 +4878,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630222374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.29, y: 24, z: 50}
+  m_LocalPosition: {x: 70.29, y: 23, z: 51.347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1221221630}

@@ -1518,9 +1518,14 @@ public class OVRManager : MonoBehaviour, OVRMixedRealityCaptureConfiguration
         //For legacy, we should initialize OVRManager in all cases.
         //For now, in XR SDK, only initialize if OVRPlugin is initialized.
         InitOVRManager();
+        return;
+#endif
+#if UNITY_EDITOR
+        InitOVRManager();
 #else
         if (OVRPlugin.initialized)
-            InitOVRManager();
+        InitOVRManager();
+
 #endif
     }
 

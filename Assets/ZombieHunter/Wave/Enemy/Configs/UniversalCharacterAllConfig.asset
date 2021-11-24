@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthPoints: 10
   Particle: {fileID: 194062, guid: 730bd00725256054bba4c7d7ef3b0053, type: 3}
-  TimeLivePartycle: 0.5
+  TimeLivePartycle: 3
   Damage: 10
