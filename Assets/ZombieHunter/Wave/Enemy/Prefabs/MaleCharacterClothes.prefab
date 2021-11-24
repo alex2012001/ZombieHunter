@@ -4247,8 +4247,8 @@ GameObject:
   - component: {fileID: 3125604581300810560}
   - component: {fileID: -2154681883315483468}
   m_Layer: 0
-  m_Name: M_AA_002
-  m_TagString: Untagged
+  m_Name: MaleCharacterClothes
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4303,8 +4303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94ef3896da3470d8d2d0e5eaf449f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healthPoints: 100
-  particle: {fileID: 194062, guid: 730bd00725256054bba4c7d7ef3b0053, type: 3}
+  config: {fileID: 11400000, guid: ffa99b0e2b57dfc4791c2e238d8e0a9d, type: 2}
   particleSpawnpoint: {fileID: 6323768887029705078}
 --- !u!65 &3125604581300810560
 BoxCollider:

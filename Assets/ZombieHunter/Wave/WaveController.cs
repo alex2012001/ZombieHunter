@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Threading.Tasks;
 using UnityEngine;
 namespace Wave
 {
@@ -16,8 +15,7 @@ namespace Wave
         private void Start()
         {
             StartCoroutine(EnemySpawner());
-        }
-        
+        }        
 
         private IEnumerator EnemySpawner()
         {
