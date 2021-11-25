@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ZombieHunter/Scenes/GameScene.unity
-    guid: 07b3310fd57c602458506388d8c69368
+    path: Assets/ZombieHunter/Scenes/TakeDamageFromPlayer.unity
+    guid: d8e498f96f142774a8c925eb4c530465
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: dc4c1b0e7d65dc24f8ef88e11193c416,
       type: 2}

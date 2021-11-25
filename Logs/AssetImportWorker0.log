@@ -15,12 +15,12 @@ E:/MyCode/ZombieHunter
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60931
+53688
 Successfully changed project path to: E:/MyCode/ZombieHunter
 E:/MyCode/ZombieHunter
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 77.62 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 1.01 ms.
+Refreshing native plugins compatible for Editor in 62.56 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.80 ms.
 Initialize engine version: 2020.2.6f1 (8a2143876886)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path E:/MyCode/ZombieHunter/Assets
@@ -36,26 +36,26 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56904
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56416
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.6f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002839 seconds.
+Registered in 0.001777 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 69.52 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
+Refreshing native plugins compatible for Editor in 54.83 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  6.715 seconds
+- Completed reload, in  2.265 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002277 seconds.
+Registered in 0.002760 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 195.50 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+Refreshing native plugins compatible for Editor in 56.63 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
@@ -66,587 +66,117 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  3.015 seconds
+- Completed reload, in  1.007 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 1.81 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
-Unloading 2251 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 105.8 MB.
-System memory in use after: 105.9 MB.
-
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2688.
-Total: 5.484400 ms (FindLiveObjects: 0.487500 ms CreateObjectMapping: 0.232900 ms MarkObjects: 4.576100 ms  DeleteObjects: 0.185000 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/ZombieHunter/Wave/Enemy/Enemy.cs
-  artifactKey: Guid(e94ef3896da3470d8d2d0e5eaf449f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Wave/Enemy/Enemy.cs using Guid(e94ef3896da3470d8d2d0e5eaf449f7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1374e8a722445786e887c3712df863cd') in 0.100726 seconds
-  Import took 0.178599 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002671 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.09 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.199 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.65 ms, found 4 plugins.
 Preloading 1 native plugins for Editor in 0.04 ms.
-Unloading 2181 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.4 MB.
-System memory in use after: 101.6 MB.
+Unloading 2253 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 104.7 MB.
+System memory in use after: 104.8 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2691.
-Total: 3.777200 ms (FindLiveObjects: 0.425000 ms CreateObjectMapping: 0.149100 ms MarkObjects: 3.163400 ms  DeleteObjects: 0.035400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 5624.901310 seconds.
-  path: Assets/ZombieHunter/Scenes/TakeDamageFromEnemy.unity
-  artifactKey: Guid(2b8465542e1f1b048b1513aaba2d46df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/TakeDamageFromEnemy.unity using Guid(2b8465542e1f1b048b1513aaba2d46df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cbe77a835a4085f0842eef172e82a02') in 0.011827 seconds
-  Import took 0.112921 seconds .
+Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2689.
+Total: 2.151800 ms (FindLiveObjects: 0.280300 ms CreateObjectMapping: 0.154900 ms MarkObjects: 1.650800 ms  DeleteObjects: 0.064500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.826671 seconds.
-  path: Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity
-  artifactKey: Guid(30547a8be7200ba4aac9daa751dcd741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity using Guid(30547a8be7200ba4aac9daa751dcd741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75ac9aec9858850f08437afd82b66fd3') in 0.003010 seconds
-  Import took 0.047017 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.002473 seconds.
-  path: Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity
-  artifactKey: Guid(30547a8be7200ba4aac9daa751dcd741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity using Guid(30547a8be7200ba4aac9daa751dcd741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75ac9aec9858850f08437afd82b66fd3') in 0.003916 seconds
-  Import took 0.008947 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 50.267460 seconds.
-  path: Assets/ZombieHunter/Weapon/Bullet/demo.unity
-  artifactKey: Guid(fa0a0c1d6ab9ac248bec1f0a40cff4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/Bullet/demo.unity using Guid(fa0a0c1d6ab9ac248bec1f0a40cff4b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3b98fd2798f12951ad8358e489d9deb') in 0.002060 seconds
-  Import took 0.023100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.068472 seconds.
-  path: Assets/ZombieHunter/Weapon/Handgun
-  artifactKey: Guid(ea403aee193bc5e4ba4554bca1eae03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/Handgun using Guid(ea403aee193bc5e4ba4554bca1eae03b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e3bd7bda80b773bfd548bfcb9fa0fdc') in 0.001628 seconds
-  Import took 0.112770 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.389996 seconds.
-  path: Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity
-  artifactKey: Guid(eba2036d17ba46f4c919262aa91f0d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity using Guid(eba2036d17ba46f4c919262aa91f0d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88cb2fe8a04fb49f2b751f77c2f33aa2') in 0.002214 seconds
-  Import took 0.028146 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.009973 seconds.
-  path: Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity
-  artifactKey: Guid(eba2036d17ba46f4c919262aa91f0d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity using Guid(eba2036d17ba46f4c919262aa91f0d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88cb2fe8a04fb49f2b751f77c2f33aa2') in 0.001791 seconds
-  Import took 0.005430 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.285866 seconds.
-  path: Assets/ZombieHunter/Scenes/demo.unity
-  artifactKey: Guid(eba2036d17ba46f4c919262aa91f0d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/demo.unity using Guid(eba2036d17ba46f4c919262aa91f0d40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8808e62395fa49d1088e550223af19d9') in 0.003860 seconds
-  Import took 0.010096 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.503072 seconds.
-  path: Assets/ZombieHunter/Scenes/TakeDamageFromEnemy 1.unity
-  artifactKey: Guid(490061fe9d723854f9ed7913cbc44c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/TakeDamageFromEnemy 1.unity using Guid(490061fe9d723854f9ed7913cbc44c78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '836d29a4278cc9d49a40dedb9e8cf7f3') in 0.003927 seconds
-  Import took 0.065530 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.834622 seconds.
-  path: Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity
-  artifactKey: Guid(af96e4b638444e946addef4c174b4b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/TakeDamageFromPlayer 1.unity using Guid(af96e4b638444e946addef4c174b4b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '740b6d5df78b449c8909b88b0b62df1d') in 0.001801 seconds
-  Import took 0.006919 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.519751 seconds.
-  path: Assets/ZombieHunter/Scenes/demo.unity
-  artifactKey: Guid(af96e4b638444e946addef4c174b4b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Scenes/demo.unity using Guid(af96e4b638444e946addef4c174b4b04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7812f90e221caaa2cd6415f44830206d') in 0.002484 seconds
-  Import took 0.017071 seconds .
+  path: Assets/ExternalAssets
+  artifactKey: Guid(2c6322616ab8bdb44a0eebddd5c6a7b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ExternalAssets using Guid(2c6322616ab8bdb44a0eebddd5c6a7b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43c199e2ab6821ae4d50b4ca2fcb0307') in 0.004289 seconds
+  Import took 0.007741 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002822 seconds.
+Registered in 0.002255 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.84 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.089 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.5 MB.
-System memory in use after: 101.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2695.
-Total: 3.089500 ms (FindLiveObjects: 0.242000 ms CreateObjectMapping: 0.073200 ms MarkObjects: 2.748800 ms  DeleteObjects: 0.024400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 110.660824 seconds.
-  path: Assets/TestWeaponShootDamage.cs
-  artifactKey: Guid(202f26461b4abcb488c9843b1746243d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TestWeaponShootDamage.cs using Guid(202f26461b4abcb488c9843b1746243d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3723fbfea103ab7bf2fb2d8cb3e3d35c') in 0.007569 seconds
-  Import took 0.068382 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002638 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.075 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.7 MB.
-System memory in use after: 101.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2698.
-Total: 4.701100 ms (FindLiveObjects: 0.229400 ms CreateObjectMapping: 0.101200 ms MarkObjects: 4.301400 ms  DeleteObjects: 0.066300 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.909332 seconds.
-  path: Assets/ZombieHunter/Weapon/demo
-  artifactKey: Guid(f7fbb35b1d5ea7e48be22f0a57aba741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/demo using Guid(f7fbb35b1d5ea7e48be22f0a57aba741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6b12fb6ea947efd908da231137151db') in 0.006644 seconds
-  Import took 0.053389 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.674993 seconds.
-  path: Assets/ZombieHunter/Weapon/Bullet/Bullet.cs
-  artifactKey: Guid(0f802d96497562e4c997f2d34c707539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/Bullet/Bullet.cs using Guid(0f802d96497562e4c997f2d34c707539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e114d341a32c2270ab9e2c1f8f829725') in 0.001434 seconds
-  Import took 0.034409 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003413 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.15 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.21 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.301 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.7 MB.
-System memory in use after: 101.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2701.
-Total: 5.602500 ms (FindLiveObjects: 0.529400 ms CreateObjectMapping: 0.163100 ms MarkObjects: 4.788900 ms  DeleteObjects: 0.118500 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002425 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.072 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.6 MB.
-System memory in use after: 101.7 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2704.
-Total: 2.998900 ms (FindLiveObjects: 0.264300 ms CreateObjectMapping: 0.084900 ms MarkObjects: 2.600100 ms  DeleteObjects: 0.048400 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003036 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.06 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.152 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 1.21 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.18 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.7 MB.
-System memory in use after: 101.8 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2707.
-Total: 3.335200 ms (FindLiveObjects: 0.326000 ms CreateObjectMapping: 0.144700 ms MarkObjects: 2.820100 ms  DeleteObjects: 0.041500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 126.874649 seconds.
-  path: Assets/ZombieHunter/Weapon/Bullet/demo/TestWeaponShootDamage.cs
-  artifactKey: Guid(202f26461b4abcb488c9843b1746243d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/Bullet/demo/TestWeaponShootDamage.cs using Guid(202f26461b4abcb488c9843b1746243d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e8c56a2dbf3cee18d4801df978d9c3e') in 0.004723 seconds
-  Import took 0.030032 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004110 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.118 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 1.13 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 102.0 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2710.
-Total: 3.626500 ms (FindLiveObjects: 0.377200 ms CreateObjectMapping: 0.113300 ms MarkObjects: 3.086700 ms  DeleteObjects: 0.047900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 219.948833 seconds.
-  path: Assets/ZombieHunter/Wave/Enemy/Configs/FemaleCharacterArmorConfig.asset
-  artifactKey: Guid(ffa99b0e2b57dfc4791c2e238d8e0a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Wave/Enemy/Configs/FemaleCharacterArmorConfig.asset using Guid(ffa99b0e2b57dfc4791c2e238d8e0a9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaa6011dae296bd34a8f0ffa9a3ae3a7') in 0.030010 seconds
-  Import took 0.048175 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.349599 seconds.
-  path: Assets/ZombieHunter/Wave/Enemy/Configs/FemaleCharacterClothesConfig.asset
-  artifactKey: Guid(d997c7b2f074c1f4cb5c67d079c0eb7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Wave/Enemy/Configs/FemaleCharacterClothesConfig.asset using Guid(d997c7b2f074c1f4cb5c67d079c0eb7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b6ebe6f919f396e47803990e9bead34') in 0.003100 seconds
-  Import took 0.139358 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.800894 seconds.
-  path: Assets/ZombieHunter/Wave/Enemy/Configs/MaleCharacterArmorConfig.asset
-  artifactKey: Guid(9501e1db51534654c873b4050ae5d5b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Wave/Enemy/Configs/MaleCharacterArmorConfig.asset using Guid(9501e1db51534654c873b4050ae5d5b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4dbaec6e007de2ac0b6ec594cc4fca3') in 0.003340 seconds
-  Import took 0.109276 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.414208 seconds.
-  path: Assets/ZombieHunter/Wave/Enemy/Configs/MaleCharacterClothesConfig.asset
-  artifactKey: Guid(3d1650151c564e44587b0b788adc6c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Wave/Enemy/Configs/MaleCharacterClothesConfig.asset using Guid(3d1650151c564e44587b0b788adc6c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd11ff4df26a70bcaafdd84017be2aed4') in 0.003973 seconds
-  Import took 0.029353 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.415399 seconds.
-  path: Assets/ZombieHunter/Wave/Enemy/Configs/UniversalCharacterAllConfig.asset
-  artifactKey: Guid(acbf370dd750e244c87ce081a2712379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Wave/Enemy/Configs/UniversalCharacterAllConfig.asset using Guid(acbf370dd750e244c87ce081a2712379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c4a0d864e4424fa91e3d4a0742d9335') in 0.005444 seconds
-  Import took 0.044488 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.766482 seconds.
-  path: Assets/ZombieHunter/Wave/Enemy/Configs/UniversalCharacterConfig.asset
-  artifactKey: Guid(774d9452d74bf8a40bb1f2ca2bc7f639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Wave/Enemy/Configs/UniversalCharacterConfig.asset using Guid(774d9452d74bf8a40bb1f2ca2bc7f639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cc28a33e05c6689566ba3f287015d85') in 0.004446 seconds
-  Import took 0.111459 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002646 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.75 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.18 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.058 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
 Refreshing native plugins compatible for Editor in 0.67 ms, found 4 plugins.
 Preloading 1 native plugins for Editor in 0.04 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 102.0 MB.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2714.
-Total: 2.297400 ms (FindLiveObjects: 0.259300 ms CreateObjectMapping: 0.111300 ms MarkObjects: 1.903000 ms  DeleteObjects: 0.022400 ms)
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.924 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 0.65 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 2186 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 100.1 MB.
+System memory in use after: 100.2 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2692.
+Total: 2.607700 ms (FindLiveObjects: 0.422900 ms CreateObjectMapping: 0.115200 ms MarkObjects: 2.049800 ms  DeleteObjects: 0.018900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002762 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.51 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.20 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.943 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 2186 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 100.1 MB.
+System memory in use after: 100.2 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2695.
+Total: 2.267200 ms (FindLiveObjects: 0.356800 ms CreateObjectMapping: 0.093200 ms MarkObjects: 1.798100 ms  DeleteObjects: 0.017800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 135.343461 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/EnemyAi.cs
+  artifactKey: Guid(8899c715a09c9054fbb1cfd963196694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/EnemyAi.cs using Guid(8899c715a09c9054fbb1cfd963196694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '703de6a5c0816c920ed1c3fd8224d473') in 0.031561 seconds
+  Import took 0.036529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.005706 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/EnemyAi.cs
+  artifactKey: Guid(8899c715a09c9054fbb1cfd963196694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/EnemyAi.cs using Guid(8899c715a09c9054fbb1cfd963196694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '703de6a5c0816c920ed1c3fd8224d473') in 0.001527 seconds
+  Import took 0.006676 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002285 seconds.
+Registered in 0.002555 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 1.10 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.23 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.155 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 102.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2717.
-Total: 3.617700 ms (FindLiveObjects: 0.306400 ms CreateObjectMapping: 0.128000 ms MarkObjects: 3.154800 ms  DeleteObjects: 0.026800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015132 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.30 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.31 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.930 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 2.20 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.8 MB.
-System memory in use after: 102.0 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2720.
-Total: 3.299700 ms (FindLiveObjects: 0.487200 ms CreateObjectMapping: 0.238200 ms MarkObjects: 2.539600 ms  DeleteObjects: 0.032500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 258.318621 seconds.
-  path: Assets/ZombieHunter/Weapon/Handgun/HandgunConfig.asset
-  artifactKey: Guid(6ddb797b241498148804cf7126fbb278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/Handgun/HandgunConfig.asset using Guid(6ddb797b241498148804cf7126fbb278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e7563a82a632a701c7bd3ef2e01d8f0') in 0.022411 seconds
-  Import took 0.145555 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.021545 seconds.
-  path: Assets/ZombieHunter/Weapon/WeaponConfig.cs
-  artifactKey: Guid(f45cf612f80a4c2f968f73af5ca5ab9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/WeaponConfig.cs using Guid(f45cf612f80a4c2f968f73af5ca5ab9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fefea35b95c327dd890c15cce2b26ea2') in 0.001609 seconds
-  Import took 0.118153 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.968872 seconds.
-  path: Assets/ZombieHunter/Weapon/Handgun/Resources/Handgun.prefab
-  artifactKey: Guid(a39c92a9ae4811f4d90049e92c864afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/Handgun/Resources/Handgun.prefab using Guid(a39c92a9ae4811f4d90049e92c864afe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f7696b2e4e91ed80ce6d4acaaffd382') in 0.111724 seconds
-  Import took 0.231211 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003065 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.40 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.13 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.315 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 2.84 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.08 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2730.
-Total: 4.740200 ms (FindLiveObjects: 0.391100 ms CreateObjectMapping: 0.221800 ms MarkObjects: 4.087700 ms  DeleteObjects: 0.037800 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003544 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.40 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.11 ms.
-Invoked RoslynAnalysisRunner static constructor.
-RoslynAnalysisRunner will not be running.
-RoslynAnalysisRunner has terminated.
-NullReferenceException: Object reference not set to an instance of an object
-  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
-  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
-
-(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.056 seconds
-Platform modules already initialized, skipping
-Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.87 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.04 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.1 MB.
-
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2733.
-Total: 2.924300 ms (FindLiveObjects: 0.592900 ms CreateObjectMapping: 0.148500 ms MarkObjects: 2.155700 ms  DeleteObjects: 0.025200 ms)
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.002244 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.71 ms, found 4 plugins.
 Preloading 1 native plugins for Editor in 0.06 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -658,25 +188,61 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.084 seconds
+- Completed reload, in  1.993 seconds
 Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 1.72 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.1 MB.
+Refreshing native plugins compatible for Editor in 0.85 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 2187 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 100.2 MB.
+System memory in use after: 100.3 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2736.
-Total: 3.771600 ms (FindLiveObjects: 0.368300 ms CreateObjectMapping: 0.181300 ms MarkObjects: 3.181400 ms  DeleteObjects: 0.038800 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2699.
+Total: 3.865100 ms (FindLiveObjects: 0.808300 ms CreateObjectMapping: 0.357400 ms MarkObjects: 2.661600 ms  DeleteObjects: 0.034500 ms)
 
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002745 seconds.
+Registered in 0.003092 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.79 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 2.41 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.16 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.034 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 0.77 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 2188 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 100.2 MB.
+System memory in use after: 100.3 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2703.
+Total: 2.180700 ms (FindLiveObjects: 0.372300 ms CreateObjectMapping: 0.120300 ms MarkObjects: 1.660600 ms  DeleteObjects: 0.026400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002583 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 4 plugins.
 Preloading 1 native plugins for Editor in 0.04 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -688,33 +254,215 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.298 seconds
+- Completed reload, in  0.993 seconds
 Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.07 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.1 MB.
+Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 2188 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 100.2 MB.
+System memory in use after: 100.3 MB.
 
-Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2739.
-Total: 5.929100 ms (FindLiveObjects: 0.857900 ms CreateObjectMapping: 0.758100 ms MarkObjects: 4.218900 ms  DeleteObjects: 0.090100 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2706.
+Total: 3.662900 ms (FindLiveObjects: 0.533400 ms CreateObjectMapping: 0.159400 ms MarkObjects: 2.936200 ms  DeleteObjects: 0.032500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 157.989971 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/EnemyAi.cs
+  artifactKey: Guid(8899c715a09c9054fbb1cfd963196694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/EnemyAi.cs using Guid(8899c715a09c9054fbb1cfd963196694) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a98b99c156fc73b4def103c2069d7070') in 0.004895 seconds
+  Import took 0.008811 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002495 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.940 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 2188 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 100.3 MB.
+System memory in use after: 100.4 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2709.
+Total: 2.355900 ms (FindLiveObjects: 0.351800 ms CreateObjectMapping: 0.153500 ms MarkObjects: 1.830400 ms  DeleteObjects: 0.019100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 25.440478 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab
+  artifactKey: Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab using Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '030e1520bde310c83fdde37ec60d15c7') in 0.313655 seconds
+  Import took 0.319559 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 414.447554 seconds.
-  path: Assets/ZombieHunter/Weapon/Bullet/Resources/Bullet.prefab
-  artifactKey: Guid(ef0b48aea4519354bba80d8a7d53b6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/ZombieHunter/Weapon/Bullet/Resources/Bullet.prefab using Guid(ef0b48aea4519354bba80d8a7d53b6bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd71e58c04b79edb7b7e4429bc085de66') in 0.100355 seconds
-  Import took 0.141986 seconds .
+  Time since last request: 11.617704 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab
+  artifactKey: Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab using Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '481657e34c454befc9686cf234b887c4') in 0.060363 seconds
+  Import took 0.069712 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.808196 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab
+  artifactKey: Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab using Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74412e0e4bfdcb033d8757cc971c573d') in 0.042823 seconds
+  Import took 0.048289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003943 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab
+  artifactKey: Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab using Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74412e0e4bfdcb033d8757cc971c573d') in 0.040746 seconds
+  Import took 0.045862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.241646 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab
+  artifactKey: Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab using Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42bd3146ec80d98e21c4e924e48c93a4') in 0.048618 seconds
+  Import took 0.053421 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.009397 seconds.
+Registered in 0.002642 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.65 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.72 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  0.924 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 0.78 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 2188 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.5 MB.
+System memory in use after: 117.8 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2721.
+Total: 2.307100 ms (FindLiveObjects: 0.379000 ms CreateObjectMapping: 0.109500 ms MarkObjects: 1.796000 ms  DeleteObjects: 0.020500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 36.736081 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab
+  artifactKey: Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab using Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44a9b7eb2602054c03bb69ff56706343') in 0.085495 seconds
+  Import took 0.112072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.974953 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab
+  artifactKey: Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab using Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '44a9b7eb2602054c03bb69ff56706343') in 0.042908 seconds
+  Import took 0.047705 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002247 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.82 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+NullReferenceException: Object reference not set to an instance of an object
+  at Unity.XR.Oculus.OculusLoader.AssetPathToAbsolutePath (System.String assetPath) [0x0004c] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:243 
+  at Unity.XR.Oculus.OculusLoader.EditorLoadOVRPlugin () [0x000b0] in E:\MyCode\ZombieHunter\Library\PackageCache\com.unity.xr.oculus@1.7.0\Runtime\OculusLoader.cs:228 
+
+(Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.013 seconds
+Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 1.40 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 2188 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.5 MB.
+System memory in use after: 117.8 MB.
+
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2725.
+Total: 6.222800 ms (FindLiveObjects: 0.798000 ms CreateObjectMapping: 0.422000 ms MarkObjects: 4.951500 ms  DeleteObjects: 0.049200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Prepare
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 7.68 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.03 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 75.0 MB.
+System memory in use after: 75.2 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2725.
+Total: 2.708700 ms (FindLiveObjects: 0.368800 ms CreateObjectMapping: 0.154600 ms MarkObjects: 2.160000 ms  DeleteObjects: 0.023500 ms)
+
+========================================================================
+Received Prepare
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 6.03 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.03 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 75.0 MB.
+System memory in use after: 75.2 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2725.
+Total: 3.570800 ms (FindLiveObjects: 0.735900 ms CreateObjectMapping: 0.216200 ms MarkObjects: 2.587400 ms  DeleteObjects: 0.026400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002975 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 4 plugins.
 Preloading 1 native plugins for Editor in 0.04 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
@@ -726,23 +474,38 @@ NullReferenceException: Object reference not set to an instance of an object
 (Filename: Library/PackageCache/com.unity.xr.oculus@1.7.0/Runtime/OculusLoader.cs Line: 243)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  1.157 seconds
+- Completed reload, in  1.019 seconds
 Platform modules already initialized, skipping
+Switching build target platform(5) subTarget(0) extendedPlatform(0) -> platform(13) subTarget(589824) extendedPlatform(0)
 Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
-Refreshing native plugins compatible for Editor in 0.88 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 2182 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.9 MB.
-System memory in use after: 105.1 MB.
+Refreshing native plugins compatible for Editor in 1.62 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.09 ms.
+Unloading 2188 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.6 MB.
+System memory in use after: 117.8 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2744.
-Total: 2.485000 ms (FindLiveObjects: 0.218100 ms CreateObjectMapping: 0.077900 ms MarkObjects: 2.158500 ms  DeleteObjects: 0.029100 ms)
+Unloading 23 unused Assets to reduce memory usage. Loaded Objects now: 2728.
+Total: 4.305500 ms (FindLiveObjects: 0.792400 ms CreateObjectMapping: 0.245200 ms MarkObjects: 3.237200 ms  DeleteObjects: 0.029100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:graphics/normal-map-encoding: 01000000000000000000000000000000 -> 02000000000000000000000000000000
+========================================================================
+Received Import Request.
+  Time since last request: 197.004942 seconds.
+  path: Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab
+  artifactKey: Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZombieHunter/Wave/Enemy/Prefabs/FemaleCharacterArmor.prefab using Guid(4a3c4c173b4d98b4f8deab50ca3f4fee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b583a66ca9c3f55f82447884daecb38d') in 0.135658 seconds
+  Import took 0.153900 seconds .
 
 ========================================================================
 Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003709 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 2.70 ms, found 4 plugins.
-Preloading 1 native plugins for Editor in 0.10 ms.
+Shader 'Oculus/OVRMRCameraFrameLit': fallback shader 'Alpha-Diffuse' not found
+Refreshing native plugins compatible for Editor in 5.76 ms, found 4 plugins.
+Preloading 1 native plugins for Editor in 0.03 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 76.6 MB.
+System memory in use after: 76.8 MB.
+
+Unloading 20 unused Assets to reduce memory usage. Loaded Objects now: 2729.
+Total: 3.187700 ms (FindLiveObjects: 0.218800 ms CreateObjectMapping: 0.095400 ms MarkObjects: 2.843300 ms  DeleteObjects: 0.029000 ms)
+
