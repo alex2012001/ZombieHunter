@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7c42dd91041466889ca5a0cbca3e7ad, type: 3}
   m_Name: FemaleCharacterClothesConfig
   m_EditorClassIdentifier: 
-  HealthPoints: 10
+  HealthPoints: 100
   Particle: {fileID: 194062, guid: 730bd00725256054bba4c7d7ef3b0053, type: 3}
   TimeLivePartycle: 3
   Damage: 10
+  Speed: 3.5
+  AngularSpeed: 120
+  StoppingDistance: 0.7

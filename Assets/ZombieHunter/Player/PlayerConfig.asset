@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b3fdc01539045198224d4b66c021d8b, type: 3}
   m_Name: PlayerConfig
   m_EditorClassIdentifier: 
-  HealthPoints: 100
+  HealthPoints: 90
   Particle: {fileID: 194062, guid: 8790358fe36e6744995310619a8cd2fd, type: 3}
   TimeLivePartycle: 0.5
-  Damage: 15
