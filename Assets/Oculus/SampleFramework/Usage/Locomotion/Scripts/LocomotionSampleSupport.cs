@@ -171,9 +171,9 @@ public class LocomotionSampleSupport : MonoBehaviour
     void SetupTeleportDefaults()
     {
         TeleportController.enabled = true;
-        //lc.PlayerController.SnapRotation = true;
+        //lc.PlayerControllerOculus.SnapRotation = true;
         lc.PlayerController.RotationEitherThumbstick = false;
-        //lc.PlayerController.FixedSpeedSteps = 0;
+        //lc.PlayerControllerOculus.FixedSpeedSteps = 0;
         TeleportController.EnableMovement(false, false, false, false);
         TeleportController.EnableRotation(false, false, false, false);
 
@@ -206,8 +206,8 @@ public class LocomotionSampleSupport : MonoBehaviour
     {
         SetupTeleportDefaults();
         SetupNonCap();
-        //lc.PlayerController.SnapRotation = true;
-        //lc.PlayerController.FixedSpeedSteps = 1;
+        //lc.PlayerControllerOculus.SnapRotation = true;
+        //lc.PlayerControllerOculus.FixedSpeedSteps = 1;
         lc.PlayerController.RotationEitherThumbstick = true;
         TeleportController.EnableRotation(true, false, false, true);
         ActivateHandlers<TeleportInputHandlerTouch, TeleportAimHandlerLaser, TeleportTargetHandlerNode, TeleportOrientationHandlerThumbstick, TeleportTransitionBlink>();
@@ -224,9 +224,9 @@ public class LocomotionSampleSupport : MonoBehaviour
         SetupTeleportDefaults();
         TeleportController.EnableRotation(true, false, false, true);
         TeleportController.EnableMovement(false, false, false, false);
-        //lc.PlayerController.SnapRotation = true;
+        //lc.PlayerControllerOculus.SnapRotation = true;
         lc.PlayerController.RotationEitherThumbstick = true;
-        //lc.PlayerController.FixedSpeedSteps = 1;
+        //lc.PlayerControllerOculus.FixedSpeedSteps = 1;
 
         var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
         input.InputMode = TeleportInputHandlerTouch.InputModes.ThumbstickTeleportForwardBackOnly;
@@ -242,8 +242,8 @@ public class LocomotionSampleSupport : MonoBehaviour
         SetupTeleportDefaults();
         TeleportController.EnableRotation(true, false, false, false);
         TeleportController.EnableMovement(false, false, false, false);
-        lc.PlayerController.SnapRotation = true;
-        lc.PlayerController.FixedSpeedSteps = 1;
+        lc.PlayerControllerOculus.SnapRotation = true;
+        lc.PlayerControllerOculus.FixedSpeedSteps = 1;
 
         var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
         input.InputMode = TeleportInputHandlerTouch.InputModes.ThumbstickTeleport;
@@ -261,9 +261,9 @@ public class LocomotionSampleSupport : MonoBehaviour
         SetupTeleportDefaults();
         TeleportController.enabled = false;
         lc.PlayerController.EnableLinearMovement = true;
-        //lc.PlayerController.SnapRotation = true;
+        //lc.PlayerControllerOculus.SnapRotation = true;
         lc.PlayerController.RotationEitherThumbstick = false;
-        //lc.PlayerController.FixedSpeedSteps = 1;
+        //lc.PlayerControllerOculus.FixedSpeedSteps = 1;
     }
 
     // 
@@ -272,8 +272,8 @@ public class LocomotionSampleSupport : MonoBehaviour
         SetupTeleportDefaults();
         TeleportController.EnableRotation(true, false, false, true);
         TeleportController.EnableMovement(true, false, false, false);
-        //lc.PlayerController.SnapRotation = true;
-        //lc.PlayerController.FixedSpeedSteps = 1;
+        //lc.PlayerControllerOculus.SnapRotation = true;
+        //lc.PlayerControllerOculus.FixedSpeedSteps = 1;
 
         var input = TeleportController.GetComponent<TeleportInputHandlerTouch>();
         input.InputMode = TeleportInputHandlerTouch.InputModes.ThumbstickTeleportForwardBackOnly;

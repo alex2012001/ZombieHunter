@@ -853,6 +853,6 @@ public class LocomotionTeleport : MonoBehaviour
 
 		characterTransform.position = lerpPosition;
 
-		//LocomotionController.PlayerController.Teleported = true;
+		//LocomotionController.PlayerControllerOculus.Teleported = true;
 	}
 }

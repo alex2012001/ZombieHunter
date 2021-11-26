@@ -25,9 +25,9 @@ public class CharacterCameraConstraint : MonoBehaviour
 	private const float FADE_AMOUNT_MAXIMUM = 1.0f;
 
 	/// <summary>
-	/// This should be a reference to the OVRCameraRig that is usually a child of the PlayerController.
+	/// This should be a reference to the OVRCameraRig that is usually a child of the PlayerControllerOculus.
 	/// </summary>
-	[Tooltip("This should be a reference to the OVRCameraRig that is usually a child of the PlayerController.")]
+	[Tooltip("This should be a reference to the OVRCameraRig that is usually a child of the PlayerControllerOculus.")]
 	public OVRCameraRig CameraRig;
 
 	/// <summary>
@@ -78,7 +78,7 @@ public class CharacterCameraConstraint : MonoBehaviour
 	}
 
 	/// <summary>
-	/// This method is the handler for the PlayerController.CameraUpdated event, which is used
+	/// This method is the handler for the PlayerControllerOculus.CameraUpdated event, which is used
 	/// to handle whether or not the screen should fade out due to the camera's position (such
 	/// as in a wall), and update the character height based on camera position.
 	///

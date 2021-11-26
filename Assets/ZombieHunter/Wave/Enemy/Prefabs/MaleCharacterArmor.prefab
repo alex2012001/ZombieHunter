@@ -5133,7 +5133,6 @@ GameObject:
   - component: {fileID: 5887759534496242478}
   - component: {fileID: 8693749780420466318}
   - component: {fileID: 4838737100143467663}
-  - component: {fileID: -8169106742493841802}
   m_Layer: 0
   m_Name: MaleCharacterArmor
   m_TagString: Enemy
@@ -5242,20 +5241,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e94ef3896da3470d8d2d0e5eaf449f7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: ffa99b0e2b57dfc4791c2e238d8e0a9d, type: 2}
+  config: {fileID: 11400000, guid: 9501e1db51534654c873b4050ae5d5b7, type: 2}
   particleSpawnpoint: {fileID: 2980277524346364193}
---- !u!114 &-8169106742493841802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4838737100143467660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8899c715a09c9054fbb1cfd963196694, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _navMeshAgent: {fileID: 9140601828591605502}
 --- !u!1 &4838746164760297454
 GameObject:
   m_ObjectHideFlags: 0
