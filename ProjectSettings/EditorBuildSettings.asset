@@ -5,10 +5,14 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/RPGPP_LT/Scene/rpgpp_lt_scene_1.0.unity
-    guid: d2809ab9b90eea7419d8d90d4c505d35
   - enabled: 0
-    path: Assets/ZombieHunter/Scenes/MainScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  m_configObjects: {}
+    path: Assets/ZombieHunter/Scenes/TakeDamageFromPlayer.unity
+    guid: d8e498f96f142774a8c925eb4c530465
+  - enabled: 1
+    path: Assets/Oculus/SampleFramework/Usage/DistanceGrab.unity
+    guid: 24f58b3f0ca02d44eaec7f50bca538f2
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: dc4c1b0e7d65dc24f8ef88e11193c416,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: e198665dcf602f745be313cbe349a163,
+      type: 2}
