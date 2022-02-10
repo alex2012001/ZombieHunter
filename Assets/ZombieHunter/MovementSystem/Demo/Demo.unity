@@ -6865,10 +6865,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1000026091}
   - component: {fileID: 1000026090}
+  - component: {fileID: 1000026093}
   - component: {fileID: 1000026096}
   - component: {fileID: 1000026095}
   - component: {fileID: 1000026094}
-  - component: {fileID: 1000026093}
   - component: {fileID: 1000026092}
   m_Layer: 0
   m_Name: Player
@@ -6919,7 +6919,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000026089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6f7d7a8ecc24e5a931b913c80b896f5, type: 3}
+  m_Script: {fileID: 11500000, guid: 38f4a4724fb548f69decac6c4bb4147e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   value:
@@ -6946,7 +6946,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000026089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6265a3e511264a6f8e56a194720ea338, type: 3}
+  m_Script: {fileID: 11500000, guid: cf732e7a6bf34d429cbb9ccc956d940d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   value:
@@ -6960,7 +6960,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1000026089}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cee3f743be5946b4a6e6e9fb934e3247, type: 3}
+  m_Script: {fileID: 11500000, guid: fddad72d07254c5d8d3d1927da904cd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   value:
@@ -10202,6 +10202,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460235168}
+  - component: {fileID: 1460235167}
   m_Layer: 0
   m_Name: Startup
   m_TagString: Untagged
@@ -10209,6 +10210,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1460235167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460235166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc316b96a4949019756be8165af6763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1460235168
 Transform:
   m_ObjectHideFlags: 0
