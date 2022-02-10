@@ -16,3 +16,6 @@ MonoBehaviour:
   Particle: {fileID: 194062, guid: 730bd00725256054bba4c7d7ef3b0053, type: 3}
   TimeLivePartycle: 3
   Damage: 10
+  Speed: 3.5
+  AngularSpeed: 120
+  StoppingDistance: 0.7

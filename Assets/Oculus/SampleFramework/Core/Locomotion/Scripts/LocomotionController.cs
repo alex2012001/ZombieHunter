@@ -24,7 +24,7 @@ public class LocomotionController : MonoBehaviour
     public OVRCameraRig CameraRig;
     //public CharacterController CharacterController;
     public CapsuleCollider CharacterController;
-	//public OVRPlayerController PlayerController;
+	//public OVRPlayerController PlayerControllerOculus;
 	public SimpleCapsuleWithStickMovement PlayerController;
 
     void Start()
@@ -36,11 +36,11 @@ public class LocomotionController : MonoBehaviour
         }
         Assert.IsNotNull(CharacterController);
 		*/
-        //if (PlayerController == null)
+        //if (PlayerControllerOculus == null)
         //{
-            //PlayerController = GetComponentInParent<OVRPlayerController>();
+            //PlayerControllerOculus = GetComponentInParent<OVRPlayerController>();
         //}
-        //Assert.IsNotNull(PlayerController);
+        //Assert.IsNotNull(PlayerControllerOculus);
         if(CameraRig == null)
         {
             CameraRig = FindObjectOfType<OVRCameraRig>();

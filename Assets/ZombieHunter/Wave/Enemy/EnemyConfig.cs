@@ -9,5 +9,9 @@ namespace Wave.Enemy
         public GameObject Particle;
         public float TimeLivePartycle;
         public float Damage;
+
+        public float Speed;
+        public float AngularSpeed;
+        public float StoppingDistance;
     }
 }

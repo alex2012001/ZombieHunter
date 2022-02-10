@@ -2187,9 +2187,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1447036849784548831}
   - component: {fileID: 1533665903634084335}
-  - component: {fileID: 1449465032879837466}
+  - component: {fileID: -8892729168944861247}
   - component: {fileID: 6961646508035910465}
   - component: {fileID: 6942893689909728241}
+  - component: {fileID: 1449465032879837466}
   m_Layer: 0
   m_Name: FemaleCharacterClothes
   m_TagString: Enemy
@@ -2224,7 +2225,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449465032879837477}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 6aa8f6756ec685443847b09fc4fc149c, type: 3}
   m_Controller: {fileID: 9100000, guid: 80544552aace0a143b16ed108229a654, type: 2}
   m_CullingMode: 1
@@ -2235,20 +2236,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1449465032879837466
-MonoBehaviour:
+--- !u!195 &-8892729168944861247
+NavMeshAgent:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1449465032879837477}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94ef3896da3470d8d2d0e5eaf449f7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: ffa99b0e2b57dfc4791c2e238d8e0a9d, type: 2}
-  particleSpawnpoint: {fileID: 3926932278019597053}
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0.7
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!65 &6961646508035910465
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2278,6 +2287,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &1449465032879837466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449465032879837477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94ef3896da3470d8d2d0e5eaf449f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  config: {fileID: 11400000, guid: d997c7b2f074c1f4cb5c67d079c0eb7e, type: 2}
+  particleSpawnpoint: {fileID: 3926932278019597053}
+  _navMeshAgent: {fileID: -8892729168944861247}
 --- !u!1 &1449470605189305487
 GameObject:
   m_ObjectHideFlags: 0

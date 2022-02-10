@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 namespace ZombieHunter.Player
@@ -8,10 +9,11 @@ namespace ZombieHunter.Player
         [SerializeField] private PlayerConfig config;
         [SerializeField] private Transform particleSpawnpoint;
 
+        private float _healhPoint;
         public void TakeDamage(float damage)
         {
-            config.HealthPoints -= damage;
-            if (config.HealthPoints <= 0)
+            _healhPoint -= damage;
+            if (_healhPoint <= 0)
             {
                 Destroy(gameObject);
             }
@@ -20,6 +22,14 @@ namespace ZombieHunter.Player
                 var part = Instantiate(config.Particle, particleSpawnpoint);
                 StartCoroutine(DelayForDeletePartycle(part));
             }
+        }
+        private void Start()
+        {
+            _healhPoint = config.HealthPoints;
+        }
+        private void Awake()
+        {
+            PlayerParameters.PlayerTransform = transform;
         }
 
         private IEnumerator DelayForDeletePartycle(GameObject partycle)
