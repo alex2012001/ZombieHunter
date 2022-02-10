@@ -8,15 +8,15 @@ namespace ZombieHunter.MovementSystem
     {
         private readonly EcsWorld _world = null;
 
-        private readonly EcsFilter<ModelData, MovableData, DirectionData> movableFilter;
+        private readonly EcsFilter<ModelData, MovableData, DirectionData> _movableFilter;
         
         public void Run()
         {
-            foreach (var i in movableFilter)
+            foreach (var i in _movableFilter)
             {
-                ref var modelComponent = ref movableFilter.Get1(i);
-                ref var movableComponent = ref movableFilter.Get2(i);
-                ref var directionComponent = ref movableFilter.Get3(i);
+                ref var modelComponent = ref _movableFilter.Get1(i);
+                ref var movableComponent = ref _movableFilter.Get2(i);
+                ref var directionComponent = ref _movableFilter.Get3(i);
 
                 ref var direction = ref directionComponent.Direction;
                 ref var transform = ref modelComponent.ModelTransform;
@@ -25,7 +25,12 @@ namespace ZombieHunter.MovementSystem
                 ref var speed = ref movableComponent.Speed;
 
                 var rawDirection = (transform.right * direction.x) + (transform.forward * direction.z);
+
+                ref var velocity = ref movableComponent.Velocity;
+                velocity.y += movableComponent.Gravity * Time.deltaTime;
+                
                 characterController.Move(rawDirection * speed * Time.deltaTime);
+                characterController.Move(velocity * Time.deltaTime);
             }   
         }
     }

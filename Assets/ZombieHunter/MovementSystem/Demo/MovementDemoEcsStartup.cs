@@ -2,6 +2,7 @@
 using Leopotam.Ecs;
 using UnityEngine;
 using Voody.UniLeo;
+using ZombieHunter.MovementSystem.Events;
 
 namespace ZombieHunter.MovementSystem
 {
@@ -28,7 +29,9 @@ namespace ZombieHunter.MovementSystem
         {
             _systems
                 .Add(new PlayerInputSystem())
-                .Add(new MovementSystem());
+                .Add(new MovementSystem())
+                .Add(new GroundCheckSystem())
+                .Add(new PlayerJumpSystem());
         }
 
         private void AddInjections()
@@ -38,7 +41,8 @@ namespace ZombieHunter.MovementSystem
 
         private void AddOneFrames()
         {
-            
+            _systems
+                .OneFrame<JumpEvent>();
         }
         
         private void Update()

@@ -1,6 +1,13 @@
-﻿namespace ZombieHunter.Tags
+﻿using Voody.UniLeo;
+
+namespace ZombieHunter.Tags
 {
-    public struct PlayerTag
+    public class PlayerTag : MonoProvider<Player>
+    {
+        
+    }
+    
+    public struct Player
     {
         
     }

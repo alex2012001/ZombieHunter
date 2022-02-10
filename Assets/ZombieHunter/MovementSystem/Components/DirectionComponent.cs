@@ -12,6 +12,6 @@ namespace ZombieHunter.MovementSystem.Components
     [Serializable]
     public struct DirectionData
     {
-        public Vector3 Direction;
+        [HideInInspector] public Vector3 Direction;
     }
 }
