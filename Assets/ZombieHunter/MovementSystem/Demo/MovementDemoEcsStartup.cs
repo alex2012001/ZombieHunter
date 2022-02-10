@@ -28,6 +28,7 @@ namespace ZombieHunter.MovementSystem
         private void AddSystems()
         {
             _systems
+                .Add(new BlockJumpSystem())
                 .Add(new PlayerInputSystem())
                 .Add(new MovementSystem())
                 .Add(new GroundCheckSystem())
