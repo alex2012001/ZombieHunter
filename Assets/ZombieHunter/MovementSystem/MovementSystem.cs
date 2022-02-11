@@ -8,7 +8,7 @@ namespace ZombieHunter.MovementSystem
     {
         private readonly EcsWorld _world = null;
 
-        private readonly EcsFilter<ModelData, MovableData, DirectionData> _movableFilter;
+        private readonly EcsFilter<ModelData, MovableData, DirectionData> _movableFilter = null;
         
         public void Run()
         {
