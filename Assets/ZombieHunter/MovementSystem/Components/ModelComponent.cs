@@ -6,7 +6,10 @@ namespace ZombieHunter.MovementSystem.Components
 {
     public class ModelComponent : MonoProvider<ModelData>
     {
-        
+        private void Start()
+        {
+            PlayerParameters.PlayerTransform = transform;
+        }
     }
     
     [Serializable]

@@ -1,6 +1,5 @@
 using UnityEngine.AI;
 using Wave.Enemy;
-using ZombieHunter.Player;
 
 namespace ZombieHunter.Wave.Enemy
 {
@@ -26,10 +25,7 @@ namespace ZombieHunter.Wave.Enemy
 
         public void FollowPlayer()
         {
-//            _navMeshAgent.destination = PlayerParameters.PlayerTransform.position;
-
-
-
+            _navMeshAgent.destination = PlayerParameters.PlayerTransform.position;
         }
         
     }

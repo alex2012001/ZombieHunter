@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ZombieHunter.Player
+namespace ZombieHunter
 {
     public static class PlayerParameters
     {

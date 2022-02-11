@@ -2190,7 +2190,10 @@ GameObject:
   - component: {fileID: -8892729168944861247}
   - component: {fileID: 6961646508035910465}
   - component: {fileID: 6942893689909728241}
-  - component: {fileID: 1449465032879837466}
+  - component: {fileID: 8580625927739722599}
+  - component: {fileID: -4208789312938443195}
+  - component: {fileID: -483882575085447720}
+  - component: {fileID: -7645315489716467528}
   m_Layer: 0
   m_Name: FemaleCharacterClothes
   m_TagString: Enemy
@@ -2246,7 +2249,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2287,7 +2290,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &1449465032879837466
+--- !u!114 &8580625927739722599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2296,12 +2299,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 1449465032879837477}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94ef3896da3470d8d2d0e5eaf449f7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 863c7f7460b2b49abb4fa9a7ff9cb180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: d997c7b2f074c1f4cb5c67d079c0eb7e, type: 2}
-  particleSpawnpoint: {fileID: 3926932278019597053}
-  _navMeshAgent: {fileID: -8892729168944861247}
+  convertMode: 0
+--- !u!114 &-4208789312938443195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449465032879837477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 231ade3b71bd4195a206e6078189bdfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Config: {fileID: 11400000, guid: d997c7b2f074c1f4cb5c67d079c0eb7e, type: 2}
+    ParticleSpawnpoint: {fileID: 1447036849784548831}
+--- !u!114 &-483882575085447720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449465032879837477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74910aa687df47f5b4d2ebbcf6108fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    NavMeshAgent: {fileID: -8892729168944861247}
+--- !u!114 &-7645315489716467528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449465032879837477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5612faa10a5a4b7aaef5a06dfd133a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1449470605189305487
 GameObject:
   m_ObjectHideFlags: 0

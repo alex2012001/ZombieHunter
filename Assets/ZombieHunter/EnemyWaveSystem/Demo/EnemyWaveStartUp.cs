@@ -33,7 +33,8 @@ namespace ZombieHunter.MovementSystem
                 .Add(new MovementSystem())
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem())
-                .Add(new EnemyWaveSpawnSystem());
+                .Add(new EnemyWaveSpawnSystem())
+                .Add(new EnemyFollowPlayerSystem());
         }
 
         private void AddInjections()

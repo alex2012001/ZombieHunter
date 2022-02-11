@@ -1327,7 +1327,10 @@ GameObject:
   - component: {fileID: -2085843579214892489}
   - component: {fileID: 4076027690975540157}
   - component: {fileID: -497150961612361799}
-  - component: {fileID: 7214925026024560490}
+  - component: {fileID: 4205555873829378613}
+  - component: {fileID: 8678476977119086074}
+  - component: {fileID: -8843093187275932711}
+  - component: {fileID: -2533404561861038437}
   m_Layer: 0
   m_Name: UniversalCharacterAll
   m_TagString: Enemy
@@ -1383,7 +1386,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 10
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -1424,7 +1427,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 0
---- !u!114 &7214925026024560490
+--- !u!114 &4205555873829378613
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1433,12 +1436,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 7214925026024560491}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94ef3896da3470d8d2d0e5eaf449f7c, type: 3}
+  m_Script: {fileID: 11500000, guid: 863c7f7460b2b49abb4fa9a7ff9cb180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 11400000, guid: 774d9452d74bf8a40bb1f2ca2bc7f639, type: 2}
-  particleSpawnpoint: {fileID: 771945869376391793}
-  _navMeshAgent: {fileID: -2085843579214892489}
+  convertMode: 0
+--- !u!114 &8678476977119086074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214925026024560491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 231ade3b71bd4195a206e6078189bdfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Config: {fileID: 11400000, guid: 774d9452d74bf8a40bb1f2ca2bc7f639, type: 2}
+    ParticleSpawnpoint: {fileID: 7218029317131029835}
+--- !u!114 &-8843093187275932711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214925026024560491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74910aa687df47f5b4d2ebbcf6108fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    NavMeshAgent: {fileID: -2085843579214892489}
+--- !u!114 &-2533404561861038437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7214925026024560491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5612faa10a5a4b7aaef5a06dfd133a22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7214927312074973125
 GameObject:
   m_ObjectHideFlags: 0

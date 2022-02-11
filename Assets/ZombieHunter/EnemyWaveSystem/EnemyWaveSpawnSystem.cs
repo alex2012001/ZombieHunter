@@ -1,7 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.EnemyWaveSystem.Components;
-using ZombieHunter.MovementSystem.Components;
 
 namespace ZombieHunter.EnemyWaveSystem
 {
