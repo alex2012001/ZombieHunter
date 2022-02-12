@@ -41,5 +41,5 @@ namespace ZombieHunter.MovementSystem
             _moveX = Input.GetAxis("Horizontal");
             _moveZ = Input.GetAxis("Vertical");
         }
-}
+    }
 }
