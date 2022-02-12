@@ -1,66 +1,24 @@
-﻿using System;
-using Leopotam.Ecs;
-using UnityEngine;
-using Voody.UniLeo;
-using ZombieHunter.MovementSystem.Events;
+﻿using ZombieHunter.MovementSystem.Events;
 
-namespace ZombieHunter.MovementSystem
+namespace ZombieHunter.MovementSystem.Demo
 {
-    public class MovementDemoEcsStartup : MonoBehaviour
+    public class MovementDemoEcsStartup : EcsStartup
     {
-        private EcsWorld _world;
-        private EcsSystems _systems;
-
-        private void Start()
-        {
-            _world = new EcsWorld();
-            _systems = new EcsSystems(_world);
-
-            AddInjections();
-            AddOneFrames();
-            AddSystems();
-            
-            _systems.ConvertScene();
-            
-            _systems.Init();
-        }
-
-        private void AddSystems()
-        {
-            _systems
-                .Add(new BlockJumpSystem())
-                .Add(new PlayerInputSystem())
-                .Add(new MovementSystem())
-                .Add(new GroundCheckSystem())
-                .Add(new PlayerJumpSystem());
-        }
-
-        private void AddInjections()
-        {
-            
-        }
-
-        private void AddOneFrames()
-        {
-            _systems
-                .OneFrame<JumpEvent>();
-        }
+        private readonly MovementSystemsContainer _movementSystemsContainer = new MovementSystemsContainer();
         
-        private void Update()
+        protected override void AddSystems()
         {
-            _systems.Run();
+            _movementSystemsContainer.AddSystems(_systems);
         }
-        private void OnDestroy()
+
+        protected override void AddOneFrames()
         {
-            if (_systems == null)
-            {
-                return;
-            }
-            
-            _systems.Destroy();
-            _systems = null;
-            _world.Destroy();
-            _world = null;
+            _movementSystemsContainer.AddOneFrameObjects(_systems);
+        }
+
+        protected override void AddInjections()
+        {
+            _movementSystemsContainer.AddInjectors(_systems);
         }
     }
 }
