@@ -29,7 +29,7 @@ namespace ZombieHunter.Player
         }
         private void Awake()
         {
-            PlayerParameters.PlayerTransform = transform;
+            //PlayerParameters.PlayerTransform = transform;
         }
 
         private IEnumerator DelayForDeletePartycle(GameObject partycle)

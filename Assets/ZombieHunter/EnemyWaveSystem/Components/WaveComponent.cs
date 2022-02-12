@@ -9,7 +9,7 @@ namespace ZombieHunter.EnemyWaveSystem.Components
     [Serializable]
     public struct WaveData
     {
-        public GameObject[] PrefabsEnemy;
-        public Transform[] Positions;
+        public Transform[] EnemySpawnpoints;
+        public WaveConfig WaveConfig;
     }
 }

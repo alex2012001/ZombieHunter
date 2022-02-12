@@ -1,7 +1,12 @@
-﻿namespace ZombieHunter.EnemyWaveSystem
+﻿using UnityEngine;
+
+namespace ZombieHunter
 {
-    public class WaveConfig
+    [CreateAssetMenu(fileName = "Wave", menuName = "Wave/WaveConfig")]
+    public class WaveConfig : ScriptableObject
     {
-        
+        public int CountWaves;
+        public int CountEnemyPerWave;
+        public float DelayBetweenSpawn;
     }
 }

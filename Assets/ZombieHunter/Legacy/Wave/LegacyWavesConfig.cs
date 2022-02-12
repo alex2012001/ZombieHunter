@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace Wave
 {
-    [CreateAssetMenu(fileName = "WaveConfig", menuName = "WaveConfig")]
-    public class WavesConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "LegacyWaveConfig", menuName = "WaveConfig")]
+    public class LegacyWavesConfig : ScriptableObject
     {
         public Wave[] Waves;
     }

@@ -1,4 +1,4 @@
-﻿/*using UnityEngine;
+﻿using UnityEngine;
 
 namespace ZombieHunter
 {
@@ -6,4 +6,4 @@ namespace ZombieHunter
     {
         public Transform PlayerTransform;
     }
-}*/
+}

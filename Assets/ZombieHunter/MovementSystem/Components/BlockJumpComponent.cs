@@ -2,6 +2,7 @@
 {
     public class BlockJumpComponent
     {
+        
     }
 
     internal struct BlockJumpData

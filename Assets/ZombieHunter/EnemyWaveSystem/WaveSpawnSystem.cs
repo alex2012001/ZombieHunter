@@ -1,34 +1,47 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.EnemyWaveSystem.Components;
+using ZombieHunter.Tags;
 
 namespace ZombieHunter.EnemyWaveSystem
 {
-    sealed class WaveSpawnSystem : IEcsRunSystem
+    sealed class WaveSpawnSystem : IEcsRunSystem, IEcsInitSystem
     {
         private readonly EcsFilter<WaveData> _waveDataFilter = null;
 
+        private WaveConfig _waveConfig;
+        private Transform[] _posToSpawn;
+        private EnemyTag[] _prefabs;
+
         private int _enemyCounter;
-        public void Run()
+        public void Init()
         {
             foreach (var i in _waveDataFilter)
             {
-                ref var prefabs = ref _waveDataFilter.Get1(i).PrefabsEnemy;
-                ref var positions = ref _waveDataFilter.Get1(i).EnemySpawnpoints;
-
-                if (_enemyCounter<5)
-                {
-                    SpawnEnemy(
-                        positions[Random.Range(0, positions.Length)], 
-                        prefabs[Random.Range(0, prefabs.Length)]);
-                }
+               _waveConfig = _waveDataFilter.Get1(i).WaveConfig;
+               _posToSpawn = _waveDataFilter.Get1(i).EnemySpawnpoints;
+               
+                _prefabs = Resources.LoadAll<EnemyTag>("Prefabs");
+               
+               _enemyCounter = _waveConfig.CountEnemyPerWave;
+            }
+        }
+        
+        public void Run()
+        {
+            if (_enemyCounter > 0)
+            {
+                SpawnEnemy(_posToSpawn, _prefabs);
             }
         }
 
-        private void SpawnEnemy(Transform pos, GameObject prefab)
+        private void SpawnEnemy(Transform[] pos, EnemyTag[] prefabs)
         {
-            GameObject.Instantiate(prefab, pos);
-            _enemyCounter++;
+            var randPos = pos[Random.Range(0, pos.Length)];
+            var randPrefab = prefabs[Random.Range(0, prefabs.Length)].gameObject;
+            
+            GameObject.Instantiate(randPrefab, randPos);
+            _enemyCounter--;
         }
     }
 }

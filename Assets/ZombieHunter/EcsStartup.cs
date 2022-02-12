@@ -30,7 +30,7 @@ namespace ZombieHunter
 
         protected virtual void AddInjections()
         {
-            
+
         }
         
         protected virtual void AddOneFrames()

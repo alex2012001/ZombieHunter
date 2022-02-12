@@ -5,7 +5,7 @@ namespace Wave
     public class WaveController : MonoBehaviour
     {
         [SerializeField] private Transform[] spawnPoints;
-        [SerializeField] private WavesConfig wavesConfig;
+        [SerializeField] private LegacyWavesConfig legacyWavesConfig;
 
         [SerializeField] private int delayBetweenSpawn;
 
@@ -19,14 +19,14 @@ namespace Wave
 
         private IEnumerator EnemySpawner()
         {
-            if (_enemyCounter >= wavesConfig.Waves[_waveCounter]
+            if (_enemyCounter >= legacyWavesConfig.Waves[_waveCounter]
                 .Enemies.Length)
             {
                 _waveCounter++;
                 _enemyCounter = 0;
             }
             
-            if (_waveCounter >= wavesConfig.Waves.Length)
+            if (_waveCounter >= legacyWavesConfig.Waves.Length)
             {
                 //TODO : Win
                 yield break;
@@ -34,8 +34,8 @@ namespace Wave
 
             yield return new WaitForSeconds(delayBetweenSpawn);
             Instantiate(
-                wavesConfig.Waves[_waveCounter]
-                    .Enemies[Random.Range(0, wavesConfig.Waves[_waveCounter].Enemies.Length)],
+                legacyWavesConfig.Waves[_waveCounter]
+                    .Enemies[Random.Range(0, legacyWavesConfig.Waves[_waveCounter].Enemies.Length)],
                 spawnPoints[Random.Range(0, spawnPoints.Length)]);
 
             _enemyCounter++;
