@@ -14,7 +14,7 @@ namespace ZombieHunter.MovementSystem.Demo
                 .Add(new PlayerJumpSystem());
         }
 
-        protected override  void AddOneFrames()
+        protected override void AddOneFrames()
         {
             _systems
                 .OneFrame<JumpEvent>();
