@@ -4,20 +4,21 @@ namespace ZombieHunter.MovementSystem.Demo
 {
     public class MovementDemoEcsStartup : EcsStartup
     {
+        private readonly MovementSystemsContainer _movementSystemsContainer = new MovementSystemsContainer();
+        
         protected override void AddSystems()
         {
-            _systems
-                .Add(new BlockJumpSystem())
-                .Add(new PlayerInputSystem())
-                .Add(new MovementSystem())
-                .Add(new GroundCheckSystem())
-                .Add(new PlayerJumpSystem());
+            _movementSystemsContainer.AddSystems(_systems);
         }
 
         protected override void AddOneFrames()
         {
-            _systems
-                .OneFrame<JumpEvent>();
+            _movementSystemsContainer.AddOneFrameObjects(_systems);
+        }
+
+        protected override void AddInjections()
+        {
+            _movementSystemsContainer.AddInjectors(_systems);
         }
     }
 }
