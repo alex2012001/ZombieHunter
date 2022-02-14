@@ -11,7 +11,7 @@ namespace ZombieHunter.EnemyWaveSystem
 
         private WaveConfig _waveConfig;
         private Transform[] _posToSpawn;
-        private EnemyTag[] _prefabs;
+        private EnemyTag[] _prefabsEnemyes;
 
         private int _enemyCounter;
         public void Init()
@@ -21,7 +21,7 @@ namespace ZombieHunter.EnemyWaveSystem
                _waveConfig = _waveDataFilter.Get1(i).WaveConfig;
                _posToSpawn = _waveDataFilter.Get1(i).EnemySpawnpoints;
                
-                _prefabs = Resources.LoadAll<EnemyTag>("Prefabs");
+               _prefabsEnemyes = Resources.LoadAll<EnemyTag>("Prefabs");
                
                _enemyCounter = _waveConfig.CountEnemyPerWave;
             }
@@ -31,7 +31,7 @@ namespace ZombieHunter.EnemyWaveSystem
         {
             if (_enemyCounter > 0)
             {
-                SpawnEnemy(_posToSpawn, _prefabs);
+                SpawnEnemy(_posToSpawn, _prefabsEnemyes);
             }
         }
 
@@ -41,6 +41,7 @@ namespace ZombieHunter.EnemyWaveSystem
             var randPrefab = prefabs[Random.Range(0, prefabs.Length)].gameObject;
             
             GameObject.Instantiate(randPrefab, randPos);
+            
             _enemyCounter--;
         }
     }

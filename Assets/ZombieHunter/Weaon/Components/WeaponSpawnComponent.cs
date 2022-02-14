@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine;
 using Voody.UniLeo;
 
 namespace ZombieHunter.Weaon.Components
@@ -12,6 +11,6 @@ namespace ZombieHunter.Weaon.Components
     [Serializable]
     public struct WeaponSpawnData
     {
-        public Transform WeaponSpawnPosition;
+        
     }
 }

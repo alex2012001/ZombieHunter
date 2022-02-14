@@ -1,6 +1,7 @@
 ﻿using Leopotam.Ecs;
 using ZombieHunter.EnemyWaveSystem;
 using ZombieHunter.MovementSystem;
+using ZombieHunter.Weaon.Components;
 
 namespace ZombieHunter.Weaon.demo
 {
@@ -15,8 +16,8 @@ namespace ZombieHunter.Weaon.demo
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem())
                 .Add(new EnemyFollowPlayerSystem())
-                //.Add(new WaveSpawnSystem())
                 .Add(new WeaponSpawnSystem())
+                .Add(new ShootWeaponSystem())
                 
                 
                 

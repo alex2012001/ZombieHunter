@@ -7346,6 +7346,7 @@ GameObject:
   - component: {fileID: 1000026098}
   - component: {fileID: 1000026097}
   - component: {fileID: 1000026093}
+  - component: {fileID: 1000026099}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -7364,7 +7365,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 3
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -7379,7 +7380,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1000026089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 70.29, y: 22.9, z: 51.347}
+  m_LocalPosition: {x: 70.29, y: 24, z: 51.347}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 330044981}
@@ -7438,6 +7439,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     ModelTransform: {fileID: 1000026091}
+    RightHandController: {fileID: 1209347081}
+    LeftHandController: {fileID: 1762487083}
 --- !u!114 &1000026095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7489,6 +7492,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a628b9a95c741cfa3ee5bc8d44c4af7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1000026099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000026089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9a37663fca2451cb178b59c9f9c2cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1009944934
@@ -9116,6 +9131,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4931211907768612, guid: e88b7bb02ae149940a5a0cddf34fe370,
     type: 3}
   m_PrefabInstance: {fileID: 1200136471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1209347081 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4484591312116288, guid: 126d619cf4daa52469682f85c1378b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1539091261}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1209717844
 PrefabInstance:
@@ -13351,6 +13372,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4252784401376168, guid: 22a3fd8d3e59a1149bdcd775c0e87241,
     type: 3}
   m_PrefabInstance: {fileID: 1760687299}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1762487083 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4593680705043960, guid: 126d619cf4daa52469682f85c1378b4a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1539091261}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1787017487
 PrefabInstance:
