@@ -1,9 +1,10 @@
 ﻿using Leopotam.Ecs;
+using UnityEngine;
 using ZombieHunter.EnemyWaveSystem;
 using ZombieHunter.MovementSystem;
-using ZombieHunter.Weaon.Components;
+using ZombieHunter.Weapon;
 
-namespace ZombieHunter.Weaon.demo
+namespace ZombieHunter.Weaon
 {
     public class WeaponSystemContainer : IEcsContainer
     {
@@ -18,16 +19,25 @@ namespace ZombieHunter.Weaon.demo
                 .Add(new EnemyFollowPlayerSystem())
                 .Add(new WeaponSpawnSystem())
                 .Add(new ShootWeaponSystem())
-                
-                
-                
-                
+               
                 ;
         }
 
         public void AddInjectors(EcsSystems ecsSystems)
         {
+            var bullet = Resources.Load<Bullet>("Bullet");
+            var weapon = Resources.Load<global::Weapon>("Handgun");
+            var shootAnim = Animator.StringToHash("Shoot");
 
+            var weaponConfig = Resources.Load<WeaponConfig>("WeaponConfig");
+            
+
+            ecsSystems
+                .Inject(bullet)
+                .Inject(weapon)
+                .Inject(shootAnim)
+                .Inject(weaponConfig)
+                ;
         }
 
         public void AddOneFrameObjects(EcsSystems ecsSystems)

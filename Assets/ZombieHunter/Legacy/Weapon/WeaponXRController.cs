@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using ZombieHunter.VRController;
+using ZombieHunter.Weaon;
 
 namespace ZombieHunter.Weapon
 {
@@ -13,14 +14,14 @@ namespace ZombieHunter.Weapon
         
         [SerializeField] private ControllerInput controllerInput;
 
-        private global::Weapon.Weapon _rightWeapon;
-        private global::Weapon.Weapon _leftWeapon;
+        private WeaponLegacy _rightWeaponLegacy;
+        private WeaponLegacy _leftWeaponLegacy;
             
         private void Start()
         {
-            var weapon = Resources.Load<global::Weapon.Weapon>("Handgun");
-            _rightWeapon = Instantiate(weapon, rightControllerTransform);
-            _leftWeapon = Instantiate(weapon, lefttControllerTransform);
+            var weapon = Resources.Load<WeaponLegacy>("Handgun");
+            _rightWeaponLegacy = Instantiate(weapon, rightControllerTransform);
+            _leftWeaponLegacy = Instantiate(weapon, lefttControllerTransform);
 
             controllerInput.RIndexTrigger += RightShoot;
             controllerInput.LIndexTrigger += LeftShoot;
@@ -28,12 +29,12 @@ namespace ZombieHunter.Weapon
 
         private void RightShoot()
         {
-            _rightWeapon.Shoot(bulletsContainer);
+            _rightWeaponLegacy.Shoot(bulletsContainer);
         }
 
         private void LeftShoot()
         {
-            _leftWeapon.Shoot(bulletsContainer);
+            _leftWeaponLegacy.Shoot(bulletsContainer);
         }
     }
 }

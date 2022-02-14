@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Weapon
+namespace ZombieHunter.Weaon
 {
     [CreateAssetMenu(fileName = "WeaponConfig", menuName = "WeaponConfig")]
     public class WeaponConfig : ScriptableObject
@@ -9,5 +9,7 @@ namespace Weapon
         public int FireRate;
         public AudioClip ShotSFx;
         public AudioSource AudioSource;
+        public GameObject Effect;
+        public ParticleSystem System;
     }
 }

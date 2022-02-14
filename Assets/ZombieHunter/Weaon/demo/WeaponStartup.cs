@@ -1,4 +1,4 @@
-﻿namespace ZombieHunter.Weaon.demo
+﻿namespace ZombieHunter.Weaon
 {
     public class WeaponStartup : EcsStartup
     {

@@ -1,15 +1,15 @@
 ﻿using System;
 using Voody.UniLeo;
 
-namespace ZombieHunter.Weaon.Components
+namespace ZombieHunter.Weaon
 {
-    public class WeaponSpawnComponent : MonoProvider<WeaponSpawnData>
+    public class WeaponSpawnComponent : MonoProvider<WeaponData>
     {
         
     }
 
     [Serializable]
-    public struct WeaponSpawnData
+    public struct WeaponData
     {
         
     }

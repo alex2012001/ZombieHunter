@@ -2,9 +2,9 @@ using System;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace Weapon
+namespace ZombieHunter.Weaon
 {
-    public class Weapon : MonoBehaviour
+    public class WeaponLegacy : MonoBehaviour
     {
         public Action OnShoot;
 
@@ -18,11 +18,11 @@ namespace Weapon
         private bool _shoot;
         private int _effectDelay = 100;
 
-        private Bullet.Bullet _bullet;
+        private Bullet _bullet;
         
         private void Start()
         {
-            _bullet = Resources.Load<Bullet.Bullet>("Bullet");
+            _bullet = Resources.Load<Bullet>("Bullet");
         }
 
         public void Shoot(Transform container)

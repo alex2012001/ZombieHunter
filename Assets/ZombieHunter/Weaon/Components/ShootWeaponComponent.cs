@@ -1,9 +1,8 @@
 ﻿using System;
 using UnityEngine;
 using Voody.UniLeo;
-using Weapon;
 
-namespace ZombieHunter.Weaon.Components
+namespace ZombieHunter.Weaon
 {
     public class ShootWeaponComponent : MonoProvider<ShootData>
     {

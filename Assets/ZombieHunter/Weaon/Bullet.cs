@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Wave.Enemy;
 
-namespace Weapon.Bullet
+namespace ZombieHunter.Weaon
 {
     public class Bullet : MonoBehaviour
     {
