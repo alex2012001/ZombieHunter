@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfb5e29bfae87b44a9dfc1d686ecbcb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponLegacy: {fileID: 0}
+  weapon: {fileID: 7696994624381143296}
   animator: {fileID: 4343884890659315224}
 --- !u!95 &4343884890659315224
 Animator:

@@ -14,7 +14,7 @@ namespace ZombieHunter.Weapon
         private readonly WeaponConfig _weaponConfig = null;
 
         private Transform _bulletContainer;
-        private int _effectDelay = 100;
+        private int _effectDelay;
         
         private ParticleSystem _particleSystem;
         private GameObject _gameEffect;
@@ -31,6 +31,7 @@ namespace ZombieHunter.Weapon
 
             _particleSystem = _weaponConfig.System;
             _gameEffect = _weaponConfig.Effect;
+            _effectDelay = _weaponConfig.EffectDelay;
         }
 
         public void Run()
@@ -54,7 +55,6 @@ namespace ZombieHunter.Weapon
                     ref var gunLeftHandSpawnPoint = ref _playerFilter.Get2(i).LeftHandController;
                     Shoot(gunLeftHandSpawnPoint);
                 }
-
             }
         }
 
@@ -85,6 +85,5 @@ namespace ZombieHunter.Weapon
             _particleSystem.Stop();
             _gameEffect.SetActive(false);
         }
-        
     }
 }

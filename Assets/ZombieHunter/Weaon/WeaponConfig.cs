@@ -11,5 +11,6 @@ namespace ZombieHunter.Weaon
         public AudioSource AudioSource;
         public GameObject Effect;
         public ParticleSystem System;
+        public int EffectDelay;
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine;
 using Voody.UniLeo;
 
 namespace ZombieHunter.Weaon
@@ -12,9 +11,6 @@ namespace ZombieHunter.Weaon
     [Serializable]
     public struct ShootData
     {
-        private WeaponConfig weaponConfig;
-        private GameObject effect;
-
-        private ParticleSystem system;
+        
     }
 }
