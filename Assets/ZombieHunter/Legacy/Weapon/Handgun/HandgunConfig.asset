@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45cf612f80a4c2f968f73af5ca5ab9b, type: 3}
   m_Name: HandgunConfig
   m_EditorClassIdentifier: 
-  Damage: 15
+  Damage: 20
   FireRate: 300
   ShotSFx: {fileID: 0}
   AudioSource: {fileID: 0}
