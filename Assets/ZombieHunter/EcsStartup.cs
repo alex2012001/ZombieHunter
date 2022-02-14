@@ -7,7 +7,7 @@ namespace ZombieHunter
 {
     public abstract class EcsStartup : MonoBehaviour
     {
-        [SerializeField] bool developmentMode;
+        [SerializeField] private bool developmentMode;
         
         protected EcsWorld _world;
         protected EcsSystems _systems;
