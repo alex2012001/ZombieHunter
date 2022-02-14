@@ -12,7 +12,7 @@ namespace ZombieHunter.MovementSystem
 
         private float _moveX;
         private float _moveZ;
-        
+
         public void Run()
         {
             SetDirection();
@@ -26,7 +26,8 @@ namespace ZombieHunter.MovementSystem
                 direction.z = _moveZ;
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.B))
             {
                 foreach (var i in _jumpFilter)
                 {
@@ -34,12 +35,30 @@ namespace ZombieHunter.MovementSystem
                     entity.Get<JumpEvent>();
                 }
             }
+            
+            // for developers
+            // if (Input.GetKeyDown(KeyCode.Space))
+            // {
+            //     foreach (var i in _jumpFilter)
+            //     {
+            //         ref var entity = ref _jumpFilter.GetEntity(i);
+            //         entity.Get<JumpEvent>();
+            //     }
+            // }
         }
 
         private void SetDirection()
         {
-            _moveX = Input.GetAxis("Horizontal");
-            _moveZ = Input.GetAxis("Vertical");
+           var axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+
+           _moveX = axis.x;
+           _moveZ = axis.y;
+
+           // for developers
+           // _moveX = Input.GetAxis("Horizontal");
+           // _moveZ = Input.GetAxis("Vertical");
         }
+
+        
     }
 }
