@@ -6,6 +6,8 @@ namespace ZombieHunter
 {
     public abstract class EcsStartup : MonoBehaviour
     {
+        [SerializeField] private bool developmentMode;
+        
         protected EcsWorld _world;
         protected EcsSystems _systems;
 
@@ -30,7 +32,7 @@ namespace ZombieHunter
 
         protected virtual void AddInjections()
         {
-            
+            _systems.Inject(new DevelopMode(developmentMode));
         }
         
         protected virtual void AddOneFrames()
@@ -55,5 +57,15 @@ namespace ZombieHunter
             _world.Destroy();
             _world = null;
         }
+    }
+    
+    public struct DevelopMode
+    {
+        public bool DevelopmentMode { get; }
+
+        public DevelopMode(bool mode)
+        {
+            DevelopmentMode = mode;
+        }   
     }
 }
