@@ -12,6 +12,9 @@ namespace ZombieHunter.MovementSystem
 
         private float _moveX;
         private float _moveZ;
+        
+        //Inject
+        private readonly EcsStartup.DevelopMode _devMode = null;
 
         public void Run()
         {
@@ -35,16 +38,20 @@ namespace ZombieHunter.MovementSystem
                     entity.Get<JumpEvent>();
                 }
             }
+
+            if (!_devMode.Value)
+            {
+                return;
+            }
             
-            // for developers
-            // if (Input.GetKeyDown(KeyCode.Space))
-            // {
-            //     foreach (var i in _jumpFilter)
-            //     {
-            //         ref var entity = ref _jumpFilter.GetEntity(i);
-            //         entity.Get<JumpEvent>();
-            //     }
-            // }
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                foreach (var i in _jumpFilter)
+                {
+                    ref var entity = ref _jumpFilter.GetEntity(i);
+                    entity.Get<JumpEvent>();
+                }
+            }
         }
 
         private void SetDirection()
@@ -54,9 +61,13 @@ namespace ZombieHunter.MovementSystem
            _moveX = axis.x;
            _moveZ = axis.y;
 
-           // for developers
-           // _moveX = Input.GetAxis("Horizontal");
-           // _moveZ = Input.GetAxis("Vertical");
+           if (!_devMode.Value)
+           {
+               return;
+           }
+           
+           _moveX = Input.GetAxis("Horizontal");
+           _moveZ = Input.GetAxis("Vertical");
         }
 
         

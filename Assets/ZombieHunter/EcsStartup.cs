@@ -1,12 +1,13 @@
 using Leopotam.Ecs;
 using Voody.UniLeo;
 using UnityEngine;
+using ZombieHunter.MovementSystem;
 
 namespace ZombieHunter
 {
     public abstract class EcsStartup : MonoBehaviour
     {
-        [SerializeField] private bool developmentMode;
+        [SerializeField] bool developmentMode;
         
         protected EcsWorld _world;
         protected EcsSystems _systems;
@@ -32,7 +33,8 @@ namespace ZombieHunter
 
         protected virtual void AddInjections()
         {
-            _systems.Inject(new DevelopMode(developmentMode));
+            _systems
+                .Inject(new DevelopMode(developmentMode));
         }
         
         protected virtual void AddOneFrames()
@@ -57,15 +59,15 @@ namespace ZombieHunter
             _world.Destroy();
             _world = null;
         }
-    }
-    
-    public struct DevelopMode
-    {
-        public bool DevelopmentMode { get; }
-
-        public DevelopMode(bool mode)
+        
+        public class DevelopMode
         {
-            DevelopmentMode = mode;
-        }   
+            public bool Value { get; }
+
+            public DevelopMode(bool value)
+            {
+                Value = value;
+            }
+        }
     }
 }
