@@ -9,7 +9,7 @@ namespace ZombieHunter.EnemyWaveSystem
         {
             ecsSystems
                 .Add(new BlockJumpSystem())
-                .Add(new PlayerInputSystem())
+                .Add(new PlayerInputSystem.PlayerInputSystem())
                 .Add(new MovementSystem.MovementSystem())
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem())

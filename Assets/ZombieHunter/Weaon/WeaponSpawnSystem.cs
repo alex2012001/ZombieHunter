@@ -14,8 +14,8 @@ namespace ZombieHunter.Weaon
         {
             foreach (var i in _playerFilter)
             {
-                ref var gunRightHandSpawnPoint = ref _playerFilter.Get2(i).RightHandController;
-                ref var gunLeftHandSpawnPoint = ref _playerFilter.Get2(i).LeftHandController;
+                ref var gunRightHandSpawnPoint = ref _playerFilter.Get2(i).RightHandControllerPosition;
+                ref var gunLeftHandSpawnPoint = ref _playerFilter.Get2(i).LeftHandControllerPosition;
 
                 GameObject.Instantiate(_weapon, gunRightHandSpawnPoint);
                 GameObject.Instantiate(_weapon, gunLeftHandSpawnPoint);

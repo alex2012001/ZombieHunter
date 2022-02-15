@@ -14,8 +14,8 @@ namespace ZombieHunter.MovementSystem.Components
     {
         public Transform ModelTransform;
 
-        public Transform RightHandController;
-        public Transform LeftHandController;
+        public Transform RightHandControllerPosition;
+        public Transform LeftHandControllerPosition;
 
         public Transform BulletContainer;
         

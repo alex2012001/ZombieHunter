@@ -21,7 +21,7 @@ namespace ZombieHunter.EnemyWaveSystem
                _waveConfig = _waveDataFilter.Get1(i).WaveConfig;
                _posToSpawn = _waveDataFilter.Get1(i).EnemySpawnpoints;
                
-               _prefabsEnemyes = Resources.LoadAll<EnemyTag>("Prefabs");
+               _prefabsEnemyes = Resources.LoadAll<EnemyTag>("EnemyPrefabs");
                
                _enemyCounter = _waveConfig.CountEnemyPerWave;
             }

@@ -49,7 +49,7 @@ namespace ZombieHunter.PlayerInputSystem
             
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                Jump();
+                Debug.Log("aaaaaaa");
             }
         }
 
@@ -80,11 +80,11 @@ namespace ZombieHunter.PlayerInputSystem
 
         private void DirectionModifier(Transform playerTransform)
         {
-            var axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+            //var axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
 
             if (_isRotateble)
             {
-                if (axis.x > _inputConfig.TopPrimaryThumbstickRotateLim)
+                /*if (axis.x > _inputConfig.TopPrimaryThumbstickRotateLim)
                 {
                     playerTransform.Rotate(0f,_inputConfig.RotateModifier,0f);
                     ModiferTimer();
@@ -93,7 +93,7 @@ namespace ZombieHunter.PlayerInputSystem
                 {
                     playerTransform.Rotate(0f,-_inputConfig.RotateModifier,0f);
                     ModiferTimer();
-                }
+                }*/
             }
         }
 

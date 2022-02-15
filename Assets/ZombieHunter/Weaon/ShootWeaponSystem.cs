@@ -42,7 +42,7 @@ namespace ZombieHunter.Weapon
 
                 foreach (var i in _playerFilter)
                 {
-                    ref var gunRightHandSpawnPoint = ref _playerFilter.Get2(i).RightHandController;
+                    ref var gunRightHandSpawnPoint = ref _playerFilter.Get2(i).RightHandControllerPosition;
                     Shoot(gunRightHandSpawnPoint);
                 }
             }
@@ -52,7 +52,7 @@ namespace ZombieHunter.Weapon
             {
                 foreach (var i in _playerFilter)
                 {
-                    ref var gunLeftHandSpawnPoint = ref _playerFilter.Get2(i).LeftHandController;
+                    ref var gunLeftHandSpawnPoint = ref _playerFilter.Get2(i).LeftHandControllerPosition;
                     Shoot(gunLeftHandSpawnPoint);
                 }
             }
