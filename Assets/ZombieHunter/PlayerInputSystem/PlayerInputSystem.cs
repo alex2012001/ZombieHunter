@@ -3,6 +3,8 @@ using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.MovementSystem.Events;
+using ZombieHunter.TakeDamageSystem.Components;
+using ZombieHunter.TakeDamageSystem.Events;
 
 namespace ZombieHunter.PlayerInputSystem
 {
@@ -16,6 +18,7 @@ namespace ZombieHunter.PlayerInputSystem
         //Inject
         private readonly EcsFilter<Tags.Player, DirectionData, ModelData> _playerFilter = null;
         private readonly EcsFilter<Tags.Player, JumpData> _jumpFilter = null;
+        private readonly EcsFilter<Tags.Player, HealthpointsData> _healthpointsFilter = null;
         
         private readonly EcsStartup.DevelopMode _devMode = null;
         private readonly PlayerInputConfig _inputConfig = null;
@@ -50,6 +53,16 @@ namespace ZombieHunter.PlayerInputSystem
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
+            }
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                foreach (var i in _healthpointsFilter)
+                {
+                    ref var entity = ref _healthpointsFilter.GetEntity(i);
+                    var damage = new TakeDamageEvent { Damage = 10 };
+                    entity.Replace(damage);
+                }
             }
         }
 
