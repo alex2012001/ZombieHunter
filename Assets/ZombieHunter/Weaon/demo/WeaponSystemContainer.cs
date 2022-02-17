@@ -19,6 +19,7 @@ namespace ZombieHunter.Weaon
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem())
                 .Add(new EnemyFollowPlayerSystem())
+                .Add(new WaveSpawnSystem())
                 .Add(new WeaponSpawnSystem())
                 .Add(new WeaponShootSystem())
                
