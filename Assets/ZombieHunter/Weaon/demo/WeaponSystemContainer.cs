@@ -14,20 +14,10 @@ namespace ZombieHunter.Weaon
         {
             ecsSystems
                 .Add(new BulletFlyingSystem())
-                .Add(new BlockJumpSystem())
-                .Add(new PlayerInputSystem.PlayerInputSystem())
-                .Add(new MovementSystem.MovementSystem())
-                .Add(new GroundCheckSystem())
-                .Add(new PlayerJumpSystem())
                 .Add(new EnemyFollowPlayerSystem())
-               // .Add(new WaveSpawnSystem())
                 .Add(new WeaponSpawnSystem())
                 .Add(new WeaponShootSystem())
-               
-               
-               
 
-               
                 ;
         }
 
@@ -35,13 +25,10 @@ namespace ZombieHunter.Weaon
         {
             var bullet = Resources.Load<BulletComponent>("Bullet");
             var weapon = Resources.Load<WeaponComponent>("Handgun");
-            var inputConfig = Resources.Load<PlayerInputConfig>("PlayerInputConfig");
-
+           
             var weaponConfig = Resources.Load<WeaponConfig>("WeaponConfig");
-            
 
             ecsSystems
-                .Inject(inputConfig)
                 .Inject(bullet)
                 .Inject(weapon)
                 .Inject(weaponConfig)

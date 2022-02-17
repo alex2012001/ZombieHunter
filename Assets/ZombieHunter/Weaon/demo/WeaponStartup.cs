@@ -1,13 +1,17 @@
-﻿namespace ZombieHunter.Weaon
+﻿using ZombieHunter.MovementSystem;
+
+namespace ZombieHunter.Weaon
 {
     public class WeaponStartup : EcsStartup
     {
+        private MovementSystemsContainer _movementSystemsContainer = new MovementSystemsContainer();
         private WeaponSystemContainer _weaponSystemContainer = new WeaponSystemContainer();
         
         protected override void AddSystems()
         {
             base.AddSystems();
             
+            _movementSystemsContainer.AddSystems(_systems);
             _weaponSystemContainer.AddSystems(_systems);
         }
 
@@ -15,6 +19,7 @@
         {
             base.AddOneFrames();
             
+            _movementSystemsContainer.AddOneFrameObjects(_systems);
             _weaponSystemContainer.AddOneFrameObjects(_systems);
         }
 
@@ -22,6 +27,7 @@
         {
             base.AddInjections();
             
+            _movementSystemsContainer.AddInjectors(_systems);
             _weaponSystemContainer.AddInjectors(_systems);
         }
         
