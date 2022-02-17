@@ -13,22 +13,28 @@ namespace ZombieHunter.Weaon
         public void AddSystems(EcsSystems ecsSystems)
         {
             ecsSystems
+                .Add(new BulletFlyingSystem())
                 .Add(new BlockJumpSystem())
                 .Add(new PlayerInputSystem.PlayerInputSystem())
                 .Add(new MovementSystem.MovementSystem())
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem())
                 .Add(new EnemyFollowPlayerSystem())
-                //.Add(new WaveSpawnSystem())
+               // .Add(new WaveSpawnSystem())
+                .Add(new WeaponSpawnSystem())
                 .Add(new WeaponShootSystem())
+               
+               
+               
+
                
                 ;
         }
 
         public void AddInjectors(EcsSystems ecsSystems)
         {
-            var bullet = Resources.Load<Bullet>("Bullet");
-            var weapon = Resources.Load<Weapon>("Handgun");
+            var bullet = Resources.Load<BulletComponent>("Bullet");
+            var weapon = Resources.Load<WeaponComponent>("Handgun");
             var inputConfig = Resources.Load<PlayerInputConfig>("PlayerInputConfig");
 
             var weaponConfig = Resources.Load<WeaponConfig>("WeaponConfig");

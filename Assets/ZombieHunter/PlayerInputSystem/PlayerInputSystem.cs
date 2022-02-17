@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
@@ -37,6 +38,16 @@ namespace ZombieHunter.PlayerInputSystem
 
                 DirectionModifier(model.ModelTransform);
             }
+
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+            {
+                ShootRightHand();
+            } 
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
+            {
+                ShootLeftHand();
+            }
             
             if (OVRInput.GetDown(OVRInput.RawButton.Y))
             {
@@ -47,13 +58,18 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 return;
             }
-
-            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) || Input.GetKeyDown(KeyCode.R))
-            {
-                ShootRightHand();
-            } 
             
-            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) || Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Jump();
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                ShootLeftHand();
+            }
+            
+            if (Input.GetMouseButtonDown(1))
             {
                 ShootLeftHand();
             }
@@ -84,6 +100,7 @@ namespace ZombieHunter.PlayerInputSystem
                 entity.Get<JumpEvent>();
             }
         }
+        
 
         private void SetDirection()
         {
