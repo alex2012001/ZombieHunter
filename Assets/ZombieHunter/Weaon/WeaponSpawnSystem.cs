@@ -8,7 +8,7 @@ namespace ZombieHunter.Weaon
     {
         private readonly EcsFilter<Tags.Player, ModelData, WeaponData> _playerFilter = null;
 
-        private readonly global::Weapon _weapon = null;
+        private readonly global::ZombieHunter.Weaon.Weapon _weapon = null;
 
         public void Init()
         {
