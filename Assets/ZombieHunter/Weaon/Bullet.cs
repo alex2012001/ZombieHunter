@@ -20,8 +20,8 @@ namespace ZombieHunter.Weaon
         {
             if (other.CompareTag("Enemy"))
             {
-                var enemy = other.GetComponent<Enemy>();
-                enemy.TakeDamage(_damage);
+                /*var enemy = other.GetComponent<Enemy>();
+                enemy.TakeDamage(_damage);*/
             }
         }
         private void Update()

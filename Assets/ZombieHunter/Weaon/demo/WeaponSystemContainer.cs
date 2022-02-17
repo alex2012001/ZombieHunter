@@ -2,6 +2,8 @@
 using UnityEngine;
 using ZombieHunter.EnemyWaveSystem;
 using ZombieHunter.MovementSystem;
+using ZombieHunter.MovementSystem.Events;
+using ZombieHunter.PlayerInputSystem;
 using ZombieHunter.Weapon;
 
 namespace ZombieHunter.Weaon
@@ -17,8 +19,9 @@ namespace ZombieHunter.Weaon
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem())
                 .Add(new EnemyFollowPlayerSystem())
+                .Add(new WaveSpawnSystem())
                 .Add(new WeaponSpawnSystem())
-                .Add(new ShootWeaponSystem())
+                .Add(new WeaponShootSystem())
                
                 ;
         }
@@ -27,22 +30,27 @@ namespace ZombieHunter.Weaon
         {
             var bullet = Resources.Load<Bullet>("Bullet");
             var weapon = Resources.Load<global::Weapon>("Handgun");
-            var shootAnim = Animator.StringToHash("Shoot");
+            var inputConfig = Resources.Load<PlayerInputConfig>("PlayerInputConfig");
 
             var weaponConfig = Resources.Load<WeaponConfig>("WeaponConfig");
             
 
             ecsSystems
+                .Inject(inputConfig)
                 .Inject(bullet)
                 .Inject(weapon)
-                .Inject(shootAnim)
                 .Inject(weaponConfig)
+                
                 ;
         }
 
         public void AddOneFrameObjects(EcsSystems ecsSystems)
         {
-
+            ecsSystems
+                .OneFrame<JumpEvent>()
+                .OneFrame<ShootRightHandEvent>()
+                .OneFrame<ShootLeftHandEvent>()
+                ;
         }
     }
 }

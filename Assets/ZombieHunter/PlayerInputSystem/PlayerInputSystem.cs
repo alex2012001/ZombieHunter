@@ -3,6 +3,7 @@ using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.MovementSystem.Events;
+using ZombieHunter.Weaon;
 
 namespace ZombieHunter.PlayerInputSystem
 {
@@ -14,9 +15,9 @@ namespace ZombieHunter.PlayerInputSystem
         private bool _isRotateble = true;
 
         //Inject
-        private readonly EcsFilter<Tags.Player, DirectionData, ModelData> _playerFilter = null;
+        private readonly EcsFilter<Tags.Player, DirectionData, ModelData, WeaponData> _playerFilter = null;
         private readonly EcsFilter<Tags.Player, JumpData> _jumpFilter = null;
-        
+
         private readonly EcsStartup.DevelopMode _devMode = null;
         private readonly PlayerInputConfig _inputConfig = null;
         
@@ -46,10 +47,32 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 return;
             }
-            
-            if (Input.GetKeyDown(KeyCode.Space))
+
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) || Input.GetKeyDown(KeyCode.R))
             {
-                Debug.Log("aaaaaaa");
+                ShootRightHand();
+            } 
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger) || Input.GetKeyDown(KeyCode.L))
+            {
+                ShootLeftHand();
+            }
+        }
+
+        private void ShootLeftHand()
+        {
+            foreach (var i in _playerFilter)
+            {
+                ref var entity = ref _playerFilter.GetEntity(i);
+                entity.Get<ShootLeftHandEvent>();
+            }
+        }
+        private void ShootRightHand()
+        {
+            foreach (var i in _playerFilter)
+            {
+                ref var entity = ref _playerFilter.GetEntity(i);
+                entity.Get<ShootRightHandEvent>();
             }
         }
 
@@ -80,11 +103,11 @@ namespace ZombieHunter.PlayerInputSystem
 
         private void DirectionModifier(Transform playerTransform)
         {
-            //var axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+            var axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
 
             if (_isRotateble)
             {
-                /*if (axis.x > _inputConfig.TopPrimaryThumbstickRotateLim)
+                if (axis.x > _inputConfig.TopPrimaryThumbstickRotateLim)
                 {
                     playerTransform.Rotate(0f,_inputConfig.RotateModifier,0f);
                     ModiferTimer();
@@ -93,7 +116,7 @@ namespace ZombieHunter.PlayerInputSystem
                 {
                     playerTransform.Rotate(0f,-_inputConfig.RotateModifier,0f);
                     ModiferTimer();
-                }*/
+                }
             }
         }
 
