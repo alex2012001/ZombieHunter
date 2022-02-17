@@ -7340,10 +7340,10 @@ GameObject:
   - component: {fileID: 1000026091}
   - component: {fileID: 1000026090}
   - component: {fileID: 1000026096}
+  - component: {fileID: 1000026098}
   - component: {fileID: 1000026095}
   - component: {fileID: 1000026094}
   - component: {fileID: 1000026092}
-  - component: {fileID: 1000026098}
   - component: {fileID: 1000026097}
   - component: {fileID: 1000026093}
   - component: {fileID: 1000026099}
@@ -7439,8 +7439,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     ModelTransform: {fileID: 1000026091}
-    RightHandController: {fileID: 1209347081}
-    LeftHandController: {fileID: 1762487083}
+    RightHandControllerPosition: {fileID: 1209347081}
+    LeftHandControllerPosition: {fileID: 1762487083}
+    BulletContainer: {fileID: 1568811964}
 --- !u!114 &1000026095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9355,7 +9356,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1232896745}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -11008,6 +11009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48019721317482d84d46681be8b7d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  developmentMode: 1
 --- !u!4 &1460235168
 Transform:
   m_ObjectHideFlags: 0
