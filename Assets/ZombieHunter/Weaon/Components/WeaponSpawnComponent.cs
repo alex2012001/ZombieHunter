@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 using Voody.UniLeo;
 
 namespace ZombieHunter.Weaon
@@ -11,6 +12,8 @@ namespace ZombieHunter.Weaon
     [Serializable]
     public struct WeaponData
     {
-        
+        public Transform RightHandTransform;
+        public Transform LeftHandTransform;
+        public Transform BulletContainer;
     }
 }

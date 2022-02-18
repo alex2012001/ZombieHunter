@@ -13,11 +13,5 @@ namespace ZombieHunter.MovementSystem.Components
     public struct ModelData
     {
         public Transform ModelTransform;
-
-        public Transform RightHandControllerPosition;
-        public Transform LeftHandControllerPosition;
-
-        public Transform BulletContainer;
-        
     }
 }

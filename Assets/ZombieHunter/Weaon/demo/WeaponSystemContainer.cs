@@ -1,9 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.EnemyWaveSystem;
-using ZombieHunter.MovementSystem;
-using ZombieHunter.MovementSystem.Events;
-using ZombieHunter.PlayerInputSystem;
 using ZombieHunter.Weapon;
 
 namespace ZombieHunter.Weaon
@@ -23,23 +20,24 @@ namespace ZombieHunter.Weaon
 
         public void AddInjectors(EcsSystems ecsSystems)
         {
-            var bullet = Resources.Load<BulletComponent>("Bullet");
-            var weapon = Resources.Load<WeaponComponent>("Handgun");
-           
             var weaponConfig = Resources.Load<WeaponConfig>("WeaponConfig");
+            var weapon = Resources.Load<WeaponComponent>("Handgun");
+
+            var bulletConfig = Resources.Load<BulletConfig>("BulletConfig");
+            var bullet = Resources.Load<BulletComponent>("Bullet");
 
             ecsSystems
-                .Inject(bullet)
-                .Inject(weapon)
                 .Inject(weaponConfig)
+                .Inject(weapon)
                 
+                .Inject(bulletConfig)
+                .Inject(bullet)
                 ;
         }
 
         public void AddOneFrameObjects(EcsSystems ecsSystems)
         {
             ecsSystems
-                .OneFrame<JumpEvent>()
                 .OneFrame<ShootRightHandEvent>()
                 .OneFrame<ShootLeftHandEvent>()
                 ;

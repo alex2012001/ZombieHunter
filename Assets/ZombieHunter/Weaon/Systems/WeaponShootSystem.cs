@@ -10,8 +10,8 @@ namespace ZombieHunter.Weapon
     {
         private readonly EcsFilter<Tags.Player,ModelData, WeaponData, ShootRightHandEvent> _rightHandFilter = null;
         private readonly EcsFilter<Tags.Player,ModelData, WeaponData, ShootLeftHandEvent> _leftHandFilter = null;
-        private readonly EcsFilter<Tags.Player, ModelData> _bulletContainerFilter = null;
-
+        
+        private readonly EcsFilter<Tags.Player, WeaponData> _bulletContainerFilter = null;
 
         private readonly BulletComponent _bullet = null;
         private readonly WeaponConfig _weaponConfig = null;
@@ -35,7 +35,13 @@ namespace ZombieHunter.Weapon
                 if (!_shootRightGun)
                 {
                     _shootRightGun = true;
-                    ref var rightGunShootPosition = ref _rightHandFilter.Get2(i).RightHandControllerPosition;
+                    ref var rightGunShootPosition = ref _rightHandFilter.Get3(i).RightHandTransform;
+                    
+                    
+                    var entity = new EcsEntity();
+                    entity.Get<BulletData>();
+                    
+                    
                     Shoot(rightGunShootPosition);
                     ShootDelayRightHand();
                 }
@@ -46,7 +52,7 @@ namespace ZombieHunter.Weapon
                 if (!_shootLeftGun)
                 {
                     _shootLeftGun = true;
-                    ref var leftGunShootPosition = ref _leftHandFilter.Get2(i).LeftHandControllerPosition;
+                    ref var leftGunShootPosition = ref _leftHandFilter.Get3(i).LeftHandTransform;
                     Shoot(leftGunShootPosition);
                     ShootDelayLeftHand();
                 }

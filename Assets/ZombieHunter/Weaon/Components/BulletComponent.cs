@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine;
 using Voody.UniLeo;
 
 namespace ZombieHunter.Weaon
@@ -11,8 +10,6 @@ namespace ZombieHunter.Weaon
     [Serializable]
     public struct BulletData
     {
-        public float Speed;
-        public int DelayToDestroy;
-        public Transform Transform;
+       
     }
 }
