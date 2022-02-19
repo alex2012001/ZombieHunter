@@ -49,12 +49,10 @@ namespace ZombieHunter.Weaon
         
         private async void DelayToDestroy()
         {
-            Debug.Log("start");
             await Task.Delay(_bulletConfig.DestroyDelay * 1000);
             _timerIsStart = false;
             GameObject.Destroy(_entity);
-            Debug.Log("end");
-           
+
         }
     }
 }

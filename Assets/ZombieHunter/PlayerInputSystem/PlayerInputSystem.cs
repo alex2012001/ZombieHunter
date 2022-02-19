@@ -4,9 +4,7 @@ using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.MovementSystem.Events;
-using ZombieHunter.Weaon;
 using ZombieHunter.TakeDamageSystem.Components;
-using ZombieHunter.TakeDamageSystem.Events;
 
 namespace ZombieHunter.PlayerInputSystem
 {
@@ -18,7 +16,7 @@ namespace ZombieHunter.PlayerInputSystem
         private bool _isRotateble = true;
 
         //Inject
-        private readonly EcsFilter<Tags.Player, DirectionData, ModelData, WeaponData> _playerFilter = null;
+        private readonly EcsFilter<Tags.Player, DirectionData, ModelData> _movableFilter = null;
         private readonly EcsFilter<Tags.Player, JumpData> _jumpFilter = null;
         private readonly EcsFilter<Tags.Player, HealthpointsData> _healthpointsFilter = null;
         
@@ -29,30 +27,30 @@ namespace ZombieHunter.PlayerInputSystem
         {
             SetDirection();
 
-            foreach (var i in _playerFilter)
+            foreach (var i in _movableFilter)
             {
-                ref var directionComponent = ref _playerFilter.Get2(i);
+                ref var directionComponent = ref _movableFilter.Get2(i);
                 ref var direction = ref directionComponent.Direction;
 
                 direction.x = _moveX;
                 direction.z = _moveZ;
 
-                ref var model = ref _playerFilter.Get3(i);
+                ref var model = ref _movableFilter.Get3(i);
 
                 DirectionModifier(model.ModelTransform);
             }
 
-            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
-            {
-                ShootRightHand();
-            } 
+            // if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+            // {
+            //     ShootRightHand();
+            // } 
+            //
+            // if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
+            // {
+            //     ShootLeftHand();
+            // }
             
-            if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
-            {
-                ShootLeftHand();
-            }
-            
-            if (OVRInput.GetDown(OVRInput.RawButton.Y))
+            if (OVRInput.GetDown(OVRInput.RawButton.B))
             {
                 Jump();   
             }
@@ -66,43 +64,34 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 Jump();
             }
-            if (Input.GetMouseButtonDown(0))
-            {
-                ShootLeftHand();
-            }
-            
-            if (Input.GetMouseButtonDown(1))
-            {
-                ShootLeftHand();
-            }
+            // if (Input.GetMouseButtonDown(0))
+            // {
+            //     ShootLeftHand();
+            // }
+            //
+            // if (Input.GetMouseButtonDown(1))
+            // {
+            //     ShootLeftHand();
+            // }
         }
 
-        private void ShootLeftHand()
-        {
-            foreach (var i in _playerFilter)
-            {
-                ref var entity = ref _playerFilter.GetEntity(i);
-                entity.Get<ShootLeftHandEvent>();
-            }
-        }
-
-        private void ShootRightHand()
-        {
-            foreach (var i in _playerFilter)
-            {
-                ref var entity = ref _playerFilter.GetEntity(i);
-                entity.Get<ShootRightHandEvent>();
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    foreach (var j in _healthpointsFilter)
-                    {
-                        ref var entity2 = ref _healthpointsFilter.GetEntity(j);
-                        var damage = new TakeDamageEvent {Damage = 10};
-                        entity2.Replace(damage);
-                    }
-                }
-            }
-        }
+        // private void ShootLeftHand()
+        // {
+        //     foreach (var i in _movableFilter)
+        //     {
+        //         ref var entity = ref _movableFilter.GetEntity(i);
+        //         entity.Get<ShootLeftHandEvent>();
+        //     }
+        // }
+        //
+        // private void ShootRightHand()
+        // {
+        //     foreach (var i in _movableFilter)
+        //     {
+        //         ref var entity = ref _movableFilter.GetEntity(i);
+        //         entity.Get<ShootRightHandEvent>();
+        //     }
+        // }
 
         private void Jump()
         {
@@ -116,8 +105,7 @@ namespace ZombieHunter.PlayerInputSystem
 
         private void SetDirection()
         {
-           var axis = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
-
+            var axis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);
            _moveX = axis.x;
            _moveZ = axis.y;
 
@@ -132,8 +120,7 @@ namespace ZombieHunter.PlayerInputSystem
 
         private void DirectionModifier(Transform playerTransform)
         {
-            var axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
-
+            var axis = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);
             if (_isRotateble)
             {
                 if (axis.x > _inputConfig.TopPrimaryThumbstickRotateLim)
