@@ -2,8 +2,9 @@
 using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
+using ZombieHunter.WeaponSystem.Components;
 
-namespace ZombieHunter.Weaon
+namespace ZombieHunter.WeaponSystem.Systems
 {
     public class BulletFlyingSystem : IEcsInitSystem, IEcsRunSystem
     {

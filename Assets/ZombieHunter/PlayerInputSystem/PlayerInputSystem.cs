@@ -5,6 +5,7 @@ using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.MovementSystem.Events;
 using ZombieHunter.TakeDamageSystem.Components;
+using ZombieHunter.WeaponSystem;
 
 namespace ZombieHunter.PlayerInputSystem
 {
@@ -40,15 +41,15 @@ namespace ZombieHunter.PlayerInputSystem
                 DirectionModifier(model.ModelTransform);
             }
 
-            // if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
-            // {
-            //     ShootRightHand();
-            // } 
-            //
-            // if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
-            // {
-            //     ShootLeftHand();
-            // }
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+            {
+                ShootRightHand();
+            } 
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
+            {
+                ShootLeftHand();
+            }
             
             if (OVRInput.GetDown(OVRInput.RawButton.B))
             {
@@ -64,34 +65,34 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 Jump();
             }
-            // if (Input.GetMouseButtonDown(0))
-            // {
-            //     ShootLeftHand();
-            // }
-            //
-            // if (Input.GetMouseButtonDown(1))
-            // {
-            //     ShootLeftHand();
-            // }
+            if (Input.GetMouseButtonDown(0))
+            {
+                ShootLeftHand();
+            }
+            
+            if (Input.GetMouseButtonDown(1))
+            {
+                ShootLeftHand();
+            }
         }
 
-        // private void ShootLeftHand()
-        // {
-        //     foreach (var i in _movableFilter)
-        //     {
-        //         ref var entity = ref _movableFilter.GetEntity(i);
-        //         entity.Get<ShootLeftHandEvent>();
-        //     }
-        // }
-        //
-        // private void ShootRightHand()
-        // {
-        //     foreach (var i in _movableFilter)
-        //     {
-        //         ref var entity = ref _movableFilter.GetEntity(i);
-        //         entity.Get<ShootRightHandEvent>();
-        //     }
-        // }
+        private void ShootLeftHand()
+        {
+            foreach (var i in _movableFilter)
+            {
+                ref var entity = ref _movableFilter.GetEntity(i);
+                entity.Get<ShootLeftHandEvent>();
+            }
+        }
+        
+        private void ShootRightHand()
+        {
+            foreach (var i in _movableFilter)
+            {
+                ref var entity = ref _movableFilter.GetEntity(i);
+                entity.Get<ShootRightHandEvent>();
+            }
+        }
 
         private void Jump()
         {

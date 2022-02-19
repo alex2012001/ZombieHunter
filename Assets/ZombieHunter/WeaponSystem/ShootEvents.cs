@@ -1,4 +1,4 @@
-﻿namespace ZombieHunter.Weaon
+﻿namespace ZombieHunter.WeaponSystem
 {
     internal struct ShootRightHandEvent
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Voody.UniLeo;
 
-namespace ZombieHunter.Weaon
+namespace ZombieHunter.WeaponSystem.Components
 {
     public class BulletComponent: MonoProvider<BulletData>
     {

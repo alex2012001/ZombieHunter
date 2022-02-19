@@ -2,9 +2,9 @@
 using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
-using ZombieHunter.Weaon;
+using ZombieHunter.WeaponSystem.Components;
 
-namespace ZombieHunter.Weapon
+namespace ZombieHunter.WeaponSystem.Systems
 {
     public class WeaponShootSystem : IEcsInitSystem, IEcsRunSystem
     {

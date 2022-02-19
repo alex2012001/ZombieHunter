@@ -1,6 +1,7 @@
 using UnityEngine;
 using ZombieHunter.EnemyWaveSystem;
 using ZombieHunter.MovementSystem;
+using ZombieHunter.WeaponSystem.demo;
 
 namespace ZombieHunter
 {
@@ -8,13 +9,15 @@ namespace ZombieHunter
     {
         private readonly MovementSystemsContainer _movementSystemsContainer = new MovementSystemsContainer();
         private readonly WaveSystemContainer _waveSystemContainer = new WaveSystemContainer();
+        private readonly WeaponSystemContainer _weaponSystemContainer = new WeaponSystemContainer();
             
         protected override void AddSystems()
         {
             base.AddSystems();
                 
             _movementSystemsContainer.AddSystems(_systems);
-            _waveSystemContainer.AddSystems(_systems);
+           // _waveSystemContainer.AddSystems(_systems);
+            _weaponSystemContainer.AddSystems(_systems);
         }
 
         protected override void AddOneFrames()
@@ -23,6 +26,7 @@ namespace ZombieHunter
                 
             _movementSystemsContainer.AddOneFrameObjects(_systems);
             _waveSystemContainer.AddOneFrameObjects(_systems);
+            _weaponSystemContainer.AddOneFrameObjects(_systems);
         }
 
         protected override void AddInjections()
@@ -31,6 +35,7 @@ namespace ZombieHunter
                 
             _movementSystemsContainer.AddInjectors(_systems);
             _waveSystemContainer.AddInjectors(_systems);
+            _weaponSystemContainer.AddInjectors(_systems);
         }
     }
 }

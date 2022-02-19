@@ -1,6 +1,6 @@
 ﻿using ZombieHunter.MovementSystem;
 
-namespace ZombieHunter.Weaon
+namespace ZombieHunter.WeaponSystem.demo
 {
     public class WeaponStartup : EcsStartup
     {

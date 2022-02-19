@@ -2,12 +2,10 @@
 using UnityEngine;
 using Voody.UniLeo;
 
-namespace ZombieHunter.Weaon
+namespace ZombieHunter.WeaponSystem.Components
 {
     public class WeaponSpawnComponent : MonoProvider<WeaponData>
-    {
-        
-    }
+    { }
 
     [Serializable]
     public struct WeaponData

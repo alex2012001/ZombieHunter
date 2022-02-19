@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace ZombieHunter.Weaon
+namespace ZombieHunter.WeaponSystem
 {
     [CreateAssetMenu(fileName = "BulletConfig", menuName = "BulletConfig")]
     public class BulletConfig : ScriptableObject
