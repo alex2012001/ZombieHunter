@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 1567465600084880714}
   - component: {fileID: 1567465600084880712}
   - component: {fileID: 1567465600084880718}
+  - component: {fileID: 5128759730987295780}
   m_Layer: 0
   m_Name: PlayerPrefab
   m_TagString: Untagged
@@ -569,6 +570,20 @@ MonoBehaviour:
       m_Bits: 64
     GroundCheckSphere: {fileID: 5300799859991841816}
     GroundDistance: 2
+--- !u!114 &5128759730987295780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567465600084880717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e98a5bd05c04732b6f01b83432d5fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Healthpoints: 100
 --- !u!1 &1567465600084880719
 GameObject:
   m_ObjectHideFlags: 0
