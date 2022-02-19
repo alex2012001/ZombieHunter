@@ -8,7 +8,7 @@ namespace ZombieHunter.MovementSystem.Components
     {
         
     }
-    
+
     [Serializable]
     public struct ModelData
     {

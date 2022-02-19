@@ -1,5 +1,4 @@
-﻿using ZombieHunter.MovementSystem.Events;
-
+﻿
 namespace ZombieHunter.MovementSystem.Demo
 {
     public class MovementDemoEcsStartup : EcsStartup

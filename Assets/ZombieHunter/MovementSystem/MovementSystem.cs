@@ -6,8 +6,6 @@ namespace ZombieHunter.MovementSystem
 {
     sealed class MovementSystem : IEcsRunSystem
     {
-        private readonly EcsWorld _world = null;
-
         private readonly EcsFilter<ModelData, MovableData, DirectionData> _movableFilter = null;
         
         public void Run()
