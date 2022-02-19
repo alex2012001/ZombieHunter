@@ -40,7 +40,7 @@ namespace ZombieHunter.EnemyWaveSystem
             var randPos = pos[Random.Range(0, pos.Length)];
             var randPrefab = prefabs[Random.Range(0, prefabs.Length)].gameObject;
             
-            GameObject.Instantiate(randPrefab, randPos);
+            Object.Instantiate(randPrefab, randPos);
             
             _enemyCounter--;
         }
