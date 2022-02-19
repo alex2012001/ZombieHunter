@@ -4,14 +4,13 @@ using Voody.UniLeo;
 
 namespace ZombieHunter.WeaponSystem.Components
 {
-    public class WeaponSpawnComponent : MonoProvider<WeaponData>
+    public class WeaponSpawnComponent : MonoProvider<WeaponSpawnData>
     { }
 
     [Serializable]
-    public struct WeaponData
+    public struct WeaponSpawnData
     {
         public Transform RightHandTransform;
         public Transform LeftHandTransform;
-        public Transform BulletContainer;
     }
 }

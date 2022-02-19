@@ -1,4 +1,5 @@
 ﻿using System;
+using UnityEngine;
 using Voody.UniLeo;
 
 namespace ZombieHunter.WeaponSystem.Components
@@ -10,6 +11,6 @@ namespace ZombieHunter.WeaponSystem.Components
     [Serializable]
     public struct BulletData
     {
-       
+        [HideInInspector] public float Damage;
     }
 }

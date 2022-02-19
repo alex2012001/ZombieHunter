@@ -1,25 +1,28 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
+using ZombieHunter.Tags;
 using ZombieHunter.WeaponSystem.Components;
 
 namespace ZombieHunter.WeaponSystem.Systems
 {
     public class WeaponSpawnSystem : IEcsInitSystem
     {
-        private readonly EcsFilter<Tags.Player, ModelData, WeaponData> _playerFilter = null;
-
-        private readonly WeaponComponent _weaponComponent = null;
+        private readonly EcsFilter<Tags.Player, ModelData, WeaponSpawnData> _playerFilter = null;
 
         public void Init()
         {
             foreach (var i in _playerFilter)
             {
-                ref var gunRightHandSpawnPoint = ref _playerFilter.Get3(i).RightHandTransform;
-                ref var gunLeftHandSpawnPoint = ref _playerFilter.Get3(i).LeftHandTransform;
+                var weapon = Resources.Load<WeaponComponent>("Handgun");
+                
+                ref var weaponSpawnData = ref _playerFilter.Get3(i);
 
-                GameObject.Instantiate(_weaponComponent, gunRightHandSpawnPoint);
-                GameObject.Instantiate(_weaponComponent, gunLeftHandSpawnPoint);
+                var rightGun = Object.Instantiate(weapon, weaponSpawnData.RightHandTransform);
+                rightGun.gameObject.AddComponent<RightPlayerWeaponTag>(); // TODO: refactor
+                
+                var leftGun = Object.Instantiate(weapon, weaponSpawnData.LeftHandTransform);
+                leftGun.gameObject.AddComponent<LeftPlayerWeaponTag>(); // TODO: refactor
             }
         }
     }

@@ -14,8 +14,7 @@ namespace ZombieHunter.EnemyWaveSystem
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem())
                 .Add(new EnemyFollowPlayerSystem())
-                .Add(new WaveSpawnSystem())
-                ;
+                .Add(new WaveSpawnSystem());
         }
 
         public void AddInjectors(EcsSystems ecsSystems)

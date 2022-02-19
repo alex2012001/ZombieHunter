@@ -3,11 +3,12 @@ using Voody.UniLeo;
 
 namespace ZombieHunter.WeaponSystem.Components
 {
-    public class WeaponComponent : MonoProvider<GunData>
+    public class WeaponComponent : MonoProvider<WeaponData>
     { }
     [Serializable]
-    public struct GunData
+    public struct WeaponData
     {
-        
+        public float Damage;
+        public int FireRate;
     }
 }

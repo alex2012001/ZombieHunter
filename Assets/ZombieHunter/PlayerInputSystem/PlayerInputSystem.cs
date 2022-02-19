@@ -1,11 +1,10 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.MovementSystem.Events;
-using ZombieHunter.TakeDamageSystem.Components;
 using ZombieHunter.WeaponSystem;
+using ZombieHunter.WeaponSystem.Components;
 
 namespace ZombieHunter.PlayerInputSystem
 {
@@ -19,7 +18,8 @@ namespace ZombieHunter.PlayerInputSystem
         //Inject
         private readonly EcsFilter<Tags.Player, DirectionData, ModelData> _movableFilter = null;
         private readonly EcsFilter<Tags.Player, JumpData> _jumpFilter = null;
-        private readonly EcsFilter<Tags.Player, HealthpointsData> _healthpointsFilter = null;
+        private readonly EcsFilter<Tags.RightPlayerWeapon, WeaponData> _rightWeaponFilter = null;
+        private readonly EcsFilter<Tags.LeftPlayerWeapon, WeaponData> _leftWeaponFilter = null;
         
         private readonly EcsStartup.DevelopMode _devMode = null;
         private readonly PlayerInputConfig _inputConfig = null;
@@ -56,6 +56,8 @@ namespace ZombieHunter.PlayerInputSystem
                 Jump();   
             }
 
+            #region DevMode
+
             if (!_devMode.Value)
             {
                 return;
@@ -74,23 +76,27 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 ShootLeftHand();
             }
+
+            #endregion
         }
 
         private void ShootLeftHand()
         {
-            foreach (var i in _movableFilter)
+            foreach (var i in _leftWeaponFilter)
             {
                 ref var entity = ref _movableFilter.GetEntity(i);
-                entity.Get<ShootLeftHandEvent>();
+                ref var weaponData = ref _leftWeaponFilter.Get2(i);
+                entity.Replace(new ShootLeftHandEvent { Damage = weaponData.Damage, FireRate = weaponData.FireRate});
             }
         }
-        
+
         private void ShootRightHand()
         {
-            foreach (var i in _movableFilter)
+            foreach (var i in _rightWeaponFilter)
             {
                 ref var entity = ref _movableFilter.GetEntity(i);
-                entity.Get<ShootRightHandEvent>();
+                ref var weaponData = ref _rightWeaponFilter.Get2(i);
+                entity.Replace(new ShootRightHandEvent { Damage = weaponData.Damage, FireRate = weaponData.FireRate});
             }
         }
 
@@ -103,7 +109,6 @@ namespace ZombieHunter.PlayerInputSystem
             }
         }
         
-
         private void SetDirection()
         {
             var axis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);

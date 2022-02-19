@@ -1,7 +1,6 @@
-using UnityEngine;
 using ZombieHunter.EnemyWaveSystem;
 using ZombieHunter.MovementSystem;
-using ZombieHunter.WeaponSystem.demo;
+using ZombieHunter.WeaponSystem;
 
 namespace ZombieHunter
 {

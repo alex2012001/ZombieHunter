@@ -36,15 +36,15 @@ namespace ZombieHunter.WeaponSystem.Systems
         {
             foreach (var i in _bulletFilter)
             {
-                ref var transform = ref _bulletFilter.Get1(i).ModelTransform;
-                _speed = _bulletConfig.Speed;
-                transform.Translate(new Vector3(0,0,_speed) * Time.deltaTime);
-                if (!_timerIsStart)
-                {
-                    _timerIsStart = true;
-                    _entity = transform.gameObject;
-                    DelayToDestroy();
-                }
+                // ref var transform = ref _bulletFilter.Get1(i).ModelTransform;
+                // _speed = _bulletConfig.Speed;
+                // transform.Translate(new Vector3(0,0,_speed) * Time.deltaTime);
+                // if (!_timerIsStart)
+                // {
+                //     _timerIsStart = true;
+                //     _entity = transform.gameObject;
+                //     DelayToDestroy();
+                // }
             }
         }
         
