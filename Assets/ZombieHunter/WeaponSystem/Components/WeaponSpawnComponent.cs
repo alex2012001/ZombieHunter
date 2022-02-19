@@ -12,5 +12,6 @@ namespace ZombieHunter.WeaponSystem.Components
     {
         public Transform RightHandTransform;
         public Transform LeftHandTransform;
+        public Transform BulletContainer;
     }
 }

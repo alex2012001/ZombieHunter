@@ -16,10 +16,7 @@ namespace ZombieHunter.WeaponSystem
 
         public void AddInjectors(EcsSystems ecsSystems)
         {
-            var bulletConfig = Resources.Load<BulletConfig>("BulletConfig");
-
-            ecsSystems
-                .Inject(bulletConfig);
+            
         }
 
         public void AddOneFrameObjects(EcsSystems ecsSystems)

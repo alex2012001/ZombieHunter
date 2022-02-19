@@ -13,6 +13,7 @@ namespace ZombieHunter.WeaponSystem.Systems
 
         private Transform _rightHandTransform;
         private Transform _leftHandTransform;
+        private Transform _bulletContainer;
         private BulletComponent _bullet;
         
         private bool _shootRightGun;
@@ -26,6 +27,7 @@ namespace ZombieHunter.WeaponSystem.Systems
 
                 _rightHandTransform = playerWeaponSpawnData.RightHandTransform;
                 _leftHandTransform = playerWeaponSpawnData.LeftHandTransform;
+                _bulletContainer = playerWeaponSpawnData.BulletContainer;
             }
             
             _bullet = Resources.Load<BulletComponent>("Bullet");
@@ -38,7 +40,8 @@ namespace ZombieHunter.WeaponSystem.Systems
                 if (!_shootRightGun)
                 {
                     ref var shootRightHandEvent = ref _rightHandFilter.Get2(i);
-                    Object.Instantiate(_bullet, _rightHandTransform);
+                    var bullet = Object.Instantiate(_bullet, _rightHandTransform);
+                    bullet.transform.SetParent(_bulletContainer);
                     RightShootDelay(shootRightHandEvent.FireRate);
                 }
             }
@@ -48,7 +51,8 @@ namespace ZombieHunter.WeaponSystem.Systems
                 if (!_shootLeftGun)
                 {
                     ref var shootLeftHandEvent = ref _leftHandFilter.Get2(i);
-                    Object.Instantiate(_bullet, _leftHandTransform);
+                    var bullet = Object.Instantiate(_bullet, _leftHandTransform);
+                    bullet.transform.SetParent(_bulletContainer);
                     LeftShootDelay(shootLeftHandEvent.FireRate);
                 }
             }
