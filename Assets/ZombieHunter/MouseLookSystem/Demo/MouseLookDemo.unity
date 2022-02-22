@@ -3002,6 +3002,12 @@ Transform:
   m_Father: {fileID: 850451556}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &397037719 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1567465600084849007, guid: ec5dab9062bafd243bb0f6cc5f89886b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5300799860434346636}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &398159692
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3523,6 +3529,22 @@ MonoBehaviour:
     RightHandTransform: {fileID: 5300799860434346638}
     LeftHandTransform: {fileID: 5300799860434346639}
     BulletContainer: {fileID: 1650735211}
+--- !u!114 &442510720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442510707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed245b12394f456d85803311435e71fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Direction: {x: 0, y: 0, z: 0}
+    MouseSensitivity: 1
+    CameraTransform: {fileID: 397037719}
 --- !u!1001 &455274735
 PrefabInstance:
   m_ObjectHideFlags: 0
