@@ -8,10 +8,10 @@ namespace ZombieHunter.WeaponSystem
     {
         public void AddSystems(EcsSystems ecsSystems)
         {
-            ecsSystems
+            /*ecsSystems
                 .Add(new BulletFlyingSystem())
                 .Add(new WeaponSpawnSystem())
-                .Add(new PlayerWeaponShootSystem());
+                .Add(new PlayerWeaponShootSystem());*/
         }
 
         public void AddInjectors(EcsSystems ecsSystems)
@@ -21,9 +21,9 @@ namespace ZombieHunter.WeaponSystem
 
         public void AddOneFrameObjects(EcsSystems ecsSystems)
         {
-            ecsSystems
+            /*ecsSystems
                 .OneFrame<ShootRightHandEvent>()
-                .OneFrame<ShootLeftHandEvent>();
+                .OneFrame<ShootLeftHandEvent>();*/
         }
     }
 }
