@@ -12,8 +12,7 @@ namespace ZombieHunter
         private readonly WaveSystemContainer _waveSystemContainer = new WaveSystemContainer();
         private readonly WeaponSystemContainer _weaponSystemContainer = new WeaponSystemContainer();
         private readonly TakeDamageSystemsContainer _takeDamageSystemsContainer = new TakeDamageSystemsContainer();
-        private readonly MouseLookSystemContainer _mouseLookSystemContainer = new MouseLookSystemContainer();
-            
+
         protected override void AddSystems()
         {
             base.AddSystems();
@@ -22,7 +21,6 @@ namespace ZombieHunter
             _waveSystemContainer.AddSystems(_systems);
             _weaponSystemContainer.AddSystems(_systems);
             _takeDamageSystemsContainer.AddSystems(_systems);
-            _mouseLookSystemContainer.AddSystems(_systems);
         }
 
         protected override void AddOneFrames()
@@ -33,7 +31,6 @@ namespace ZombieHunter
             _waveSystemContainer.AddOneFrameObjects(_systems);
             _weaponSystemContainer.AddOneFrameObjects(_systems);
             _takeDamageSystemsContainer.AddOneFrameObjects(_systems);
-            _mouseLookSystemContainer.AddOneFrameObjects(_systems);
         }
 
         protected override void AddInjections()
@@ -44,7 +41,6 @@ namespace ZombieHunter
             _waveSystemContainer.AddInjectors(_systems);
             _weaponSystemContainer.AddInjectors(_systems);
             _takeDamageSystemsContainer.AddInjectors(_systems);
-            _mouseLookSystemContainer.AddInjectors(_systems);
         }
     }
 }
