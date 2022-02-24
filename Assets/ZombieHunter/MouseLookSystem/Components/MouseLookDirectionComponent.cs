@@ -2,7 +2,7 @@
 using UnityEngine;
 using Voody.UniLeo;
 
-namespace ZombieHunter.MouseLookSystem
+namespace ZombieHunter.MouseLookSystem.Components
 {
     public class MouseLookDirectionComponent : MonoProvider<MouseLookDirectionData>
     {

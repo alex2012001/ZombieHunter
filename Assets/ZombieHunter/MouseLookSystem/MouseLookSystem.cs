@@ -1,5 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
+using ZombieHunter.MouseLookSystem.Components;
 using ZombieHunter.MovementSystem.Components;
 
 namespace ZombieHunter.MouseLookSystem
@@ -31,6 +32,14 @@ namespace ZombieHunter.MouseLookSystem
                 model.ModelTransform.rotation = _startTransformRotation * rotateX;
                 lookComponent.CameraTransform.rotation = model.ModelTransform.rotation * rotateY;
             }   
+        }
+    }
+
+    sealed class CursorLockSystem : IEcsInitSystem
+    {
+        public void Init()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 }

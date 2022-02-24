@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Leopotam.Ecs;
 using UnityEngine;
+using ZombieHunter.MouseLookSystem.Components;
 using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.MovementSystem.Events;
 using ZombieHunter.WeaponSystem;
@@ -10,12 +11,15 @@ namespace ZombieHunter.PlayerInputSystem
 {
     sealed class PlayerInputSystem : IEcsRunSystem
     {
+        private float _axisX;
+        private float _axisY;
         private float _moveX;
         private float _moveZ;
 
         private bool _isRotateble = true;
 
         //Inject
+        private readonly EcsFilter<ModelData, MouseLookDirectionData> _mouseInputFilter = null;
         private readonly EcsFilter<Tags.Player, DirectionData, ModelData> _movableFilter = null;
         private readonly EcsFilter<Tags.Player, JumpData> _jumpFilter = null;
         private readonly EcsFilter<Tags.RightPlayerWeapon, WeaponData> _rightWeaponFilter = null;
@@ -30,9 +34,12 @@ namespace ZombieHunter.PlayerInputSystem
 
             foreach (var i in _movableFilter)
             {
+                ref var lookComponent = ref _mouseInputFilter.Get2(i);
                 ref var directionComponent = ref _movableFilter.Get2(i);
                 ref var direction = ref directionComponent.Direction;
 
+                lookComponent.Direction.x = _axisX;
+                lookComponent.Direction.y = _axisY;
                 direction.x = _moveX;
                 direction.z = _moveZ;
 
@@ -62,6 +69,9 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 return;
             }
+            
+            GetAxis();
+            ClampAxis();
             
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -147,6 +157,17 @@ namespace ZombieHunter.PlayerInputSystem
             _isRotateble = false;
             await Task.Delay(_inputConfig.DelayPerRotate);
             _isRotateble = true;
+        }
+        
+        private void ClampAxis()
+        {
+            _axisY = Mathf.Clamp(_axisY, -90f, 90f);
+        }
+
+        private void GetAxis()
+        {
+            _axisX += Input.GetAxis("Mouse X");
+            _axisY -= Input.GetAxis("Mouse Y");
         }
     }
 }
