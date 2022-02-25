@@ -67,12 +67,12 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 Jump();
             }
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown(KeyCode.Alpha1))
             {
-                ShootLeftHand();
+                ShootRightHand();
             }
             
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 ShootLeftHand();
             }

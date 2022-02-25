@@ -11,9 +11,7 @@ GameObject:
   - component: {fileID: 2920975128431246273}
   - component: {fileID: 2920975128431246272}
   - component: {fileID: 2920975128431246275}
-  - component: {fileID: 3575382944940401884}
-  - component: {fileID: 8212393229007837649}
-  - component: {fileID: 7003582018347325086}
+  - component: {fileID: 8427067530045582337}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -84,7 +82,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3575382944940401884
+--- !u!114 &8427067530045582337
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,33 +91,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2920975128431246285}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 863c7f7460b2b49abb4fa9a7ff9cb180, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  convertMode: 0
---- !u!114 &8212393229007837649
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2920975128431246285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf732e7a6bf34d429cbb9ccc956d940d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value:
-    ModelTransform: {fileID: 2920975128431246273}
---- !u!114 &7003582018347325086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2920975128431246285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73f94b0f619340d9ad428db1409f1a09, type: 3}
+  m_Script: {fileID: 11500000, guid: 83a193d75b51442cbad0f9bf0dc05a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
