@@ -41,12 +41,14 @@ namespace ZombieHunter
         
         protected virtual void AddOneFrames()
         {
-            
+            _systems
+                .OneFrame<InitializeEntityRequest>();
         }
 
         protected virtual void AddSystems()
         {
-            
+            _systems
+                .Add(new EntityInitializeSystem());
         }
 
         protected virtual void OnDestroy()

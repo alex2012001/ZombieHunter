@@ -26,11 +26,8 @@ namespace ZombieHunter.TakeDamageSystem
 
         private void Death(ref ModelData model)
         {
-            // TODO: add deatheffects for mode entity
-           // GameObject.Destroy(model.ModelTransform.gameObject);
-            Debug.Log("Death!");
-            
-            
+            // TODO: add death effects for more entity
+            Object.Destroy(model.ModelTransform.gameObject);
         }
     }
 }

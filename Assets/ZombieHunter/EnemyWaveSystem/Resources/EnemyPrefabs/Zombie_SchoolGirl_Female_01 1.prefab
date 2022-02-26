@@ -1388,6 +1388,9 @@ GameObject:
   - component: {fileID: 4293733662696676734}
   - component: {fileID: 4293733662696676609}
   - component: {fileID: 4293733662696676608}
+  - component: {fileID: 3143662701789297412}
+  - component: {fileID: 6407378284307055755}
+  - component: {fileID: -6409033557978636548}
   m_Layer: 0
   m_Name: Zombie_SchoolGirl_Female_01 1
   m_TagString: Enemy
@@ -1536,6 +1539,46 @@ MonoBehaviour:
   value:
     Config: {fileID: 11400000, guid: faf37cdc6f42d6d4398bbb31da788aaa, type: 2}
     ParticleSpawnpoint: {fileID: 4296007808216209939}
+--- !u!114 &3143662701789297412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4293733662696676613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e98a5bd05c04732b6f01b83432d5fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Healthpoints: 100
+--- !u!114 &6407378284307055755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4293733662696676613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2837f37ebd4ed584d73d4f92608ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    EntityReference: {fileID: -6409033557978636548}
+--- !u!114 &-6409033557978636548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4293733662696676613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4293740011006711519
 GameObject:
   m_ObjectHideFlags: 0

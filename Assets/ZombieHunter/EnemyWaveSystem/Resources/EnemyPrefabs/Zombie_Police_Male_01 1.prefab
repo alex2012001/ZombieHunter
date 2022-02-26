@@ -50,6 +50,9 @@ GameObject:
   - component: {fileID: 3651197690142897694}
   - component: {fileID: 3651197690142897689}
   - component: {fileID: 3651197690142897688}
+  - component: {fileID: -2589067921760622954}
+  - component: {fileID: -1271366179061025085}
+  - component: {fileID: -8122593388297369840}
   m_Layer: 0
   m_Name: Zombie_Police_Male_01 1
   m_TagString: Enemy
@@ -198,6 +201,46 @@ MonoBehaviour:
   value:
     Config: {fileID: 11400000, guid: faf37cdc6f42d6d4398bbb31da788aaa, type: 2}
     ParticleSpawnpoint: {fileID: 3650122362445087921}
+--- !u!114 &-2589067921760622954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3651197690142897685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e98a5bd05c04732b6f01b83432d5fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Healthpoints: 100
+--- !u!114 &-1271366179061025085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3651197690142897685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2837f37ebd4ed584d73d4f92608ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    EntityReference: {fileID: -8122593388297369840}
+--- !u!114 &-8122593388297369840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3651197690142897685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3651212538123213351
 GameObject:
   m_ObjectHideFlags: 0

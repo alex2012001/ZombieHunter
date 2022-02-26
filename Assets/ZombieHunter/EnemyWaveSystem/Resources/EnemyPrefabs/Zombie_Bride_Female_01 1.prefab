@@ -48,6 +48,9 @@ GameObject:
   - component: {fileID: 2004104354767929849}
   - component: {fileID: 2004104354767929848}
   - component: {fileID: 2004104354767929847}
+  - component: {fileID: 8831749308484140342}
+  - component: {fileID: 1596934160635963036}
+  - component: {fileID: -2730066499687144696}
   m_Layer: 0
   m_Name: Zombie_Bride_Female_01 1
   m_TagString: Enemy
@@ -196,6 +199,46 @@ MonoBehaviour:
   value:
     Config: {fileID: 11400000, guid: faf37cdc6f42d6d4398bbb31da788aaa, type: 2}
     ParticleSpawnpoint: {fileID: 2007552638160361494}
+--- !u!114 &8831749308484140342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004104354767929844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e98a5bd05c04732b6f01b83432d5fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Healthpoints: 100
+--- !u!114 &1596934160635963036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004104354767929844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2837f37ebd4ed584d73d4f92608ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    EntityReference: {fileID: -2730066499687144696}
+--- !u!114 &-2730066499687144696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004104354767929844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2004120331760531238
 GameObject:
   m_ObjectHideFlags: 0

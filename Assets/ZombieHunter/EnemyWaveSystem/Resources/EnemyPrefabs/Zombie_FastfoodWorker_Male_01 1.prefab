@@ -1075,6 +1075,9 @@ GameObject:
   - component: {fileID: 6459841785351385499}
   - component: {fileID: 6459841785351385498}
   - component: {fileID: 6459841785351385493}
+  - component: {fileID: -3309124001122521603}
+  - component: {fileID: -4003186602500221057}
+  - component: {fileID: -6271404624299763207}
   m_Layer: 0
   m_Name: Zombie_FastfoodWorker_Male_01 1
   m_TagString: Enemy
@@ -1223,6 +1226,46 @@ MonoBehaviour:
   value:
     Config: {fileID: 11400000, guid: faf37cdc6f42d6d4398bbb31da788aaa, type: 2}
     ParticleSpawnpoint: {fileID: 6462284043800575942}
+--- !u!114 &-3309124001122521603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459841785351385494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e98a5bd05c04732b6f01b83432d5fde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Healthpoints: 100
+--- !u!114 &-4003186602500221057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459841785351385494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc2837f37ebd4ed584d73d4f92608ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    EntityReference: {fileID: -6271404624299763207}
+--- !u!114 &-6271404624299763207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459841785351385494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6459859268323823426
 GameObject:
   m_ObjectHideFlags: 0
