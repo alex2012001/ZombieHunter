@@ -14,7 +14,6 @@ namespace ZombieHunter.WeaponSystem
         {
             if(other.CompareTag(EnemyTag))
             {
-                Debug.Log("AAAAAAAAAAAAAAA");
                 var entityReference = other.GetComponent<EntityReference>();
                 var entity = entityReference.Entity;
                 

@@ -1,4 +1,5 @@
 ﻿using Leopotam.Ecs;
+using UnityEngine;
 
 namespace ZombieHunter
 {
@@ -14,6 +15,7 @@ namespace ZombieHunter
                 ref var request = ref _initFilter.Get1(i);
 
                 request.EntityReference.Entity = entity;
+                entity.Del<InitializeEntityRequest>();
             }
         }
     }
