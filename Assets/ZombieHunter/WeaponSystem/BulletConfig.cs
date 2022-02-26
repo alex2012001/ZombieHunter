@@ -6,5 +6,6 @@ namespace ZombieHunter.WeaponSystem
     public class BulletConfig : ScriptableObject
     {
         public float Speed;
+        public int DelayToDestroy;
     }
 }

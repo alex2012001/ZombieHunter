@@ -9,7 +9,7 @@ namespace ZombieHunter.WeaponSystem.Systems
     public class PlayerWeaponShootSystem : IEcsInitSystem, IEcsRunSystem
     {
         private readonly EcsWorld _ecsWorld = null;
-        private readonly BulletViewCreator _bulletViewCreator = null;
+        private readonly ViewCreator _viewCreator = null;
         
         private readonly EcsFilter<Tags.Player, WeaponSpawnData> _playerFilter = null;
         private readonly EcsFilter<Tags.Player, ShootRightHandEvent> _rightHandFilter = null;
@@ -22,7 +22,8 @@ namespace ZombieHunter.WeaponSystem.Systems
         
         private bool _shootRightGun;
         private bool _shootLeftGun;
-
+        private int _delayToDestroyBullet;
+        
         public void Init()
         {
             foreach (var i in _playerFilter)
@@ -35,6 +36,8 @@ namespace ZombieHunter.WeaponSystem.Systems
             }
             
             _bullet = Resources.Load<BulletView>("Bullet");
+            var bulletConfig = Resources.Load<BulletConfig>("BulletConfig");
+            _delayToDestroyBullet = bulletConfig.DelayToDestroy;
         }
         
         public void Run()
@@ -45,35 +48,39 @@ namespace ZombieHunter.WeaponSystem.Systems
                 {
                     ref var shootRightHandEvent = ref _rightHandFilter.Get2(i);
 
-                     var bullet = _bulletViewCreator.Create(_bullet, _rightHandTransform);
-                     bullet.transform.SetParent(_bulletContainer);
-                     bullet.Damage = shootRightHandEvent.Damage;
-
-                     var entity = _ecsWorld.NewEntity();
+                    CreateBullet(shootRightHandEvent.Damage, _rightHandTransform);
                     
-                     ref var model = ref entity.Get<ModelData>();
-                     model.ModelTransform = bullet.transform;
-
-                    entity.Get<BulletData>();
-                    
-                    DelayToDestroyBullet(bullet.gameObject,entity);
-
-                    // var bullet = Object.Instantiate(_bullet, _rightHandTransform);
-                    // bullet.transform.SetParent(_bulletContainer);
                     RightShootDelay(shootRightHandEvent.FireRate);
                 }
             }
 
-            // foreach (var i in _leftHandFilter)
-            // {
-            //     if (!_shootLeftGun)
-            //     {
-            //         ref var shootLeftHandEvent = ref _leftHandFilter.Get2(i);
-            //         var bullet = Object.Instantiate(_bullet, _leftHandTransform);
-            //         bullet.transform.SetParent(_bulletContainer);
-            //         LeftShootDelay(shootLeftHandEvent.FireRate);
-            //     }
-            // }
+            foreach (var i in _leftHandFilter)
+            {
+                if (!_shootLeftGun)
+                {
+                    ref var shootLeftHandEvent = ref _leftHandFilter.Get2(i);
+                    
+                    CreateBullet(shootLeftHandEvent.Damage, _leftHandTransform);
+                    
+                    LeftShootDelay(shootLeftHandEvent.FireRate);
+                }
+            }
+        }
+
+        private void CreateBullet(float damage, Transform root)
+        {
+            var bullet = _viewCreator.Create(_bullet, root);
+            bullet.transform.SetParent(_bulletContainer);
+            bullet.Damage = damage;
+
+            var entity = _ecsWorld.NewEntity();
+                    
+            ref var model = ref entity.Get<ModelData>();
+            model.ModelTransform = bullet.transform;
+
+            entity.Get<BulletData>();
+                    
+            DelayToDestroyBullet(bullet,entity);
         }
 
         private async void RightShootDelay(int fireRate)
@@ -90,11 +97,11 @@ namespace ZombieHunter.WeaponSystem.Systems
             _shootLeftGun = false;
         }
 
-        private async void DelayToDestroyBullet(GameObject obj, EcsEntity entity)
+        private async void DelayToDestroyBullet(BulletView bullet, EcsEntity entity)
         {
-            await Task.Delay(1000);
+            await Task.Delay(_delayToDestroyBullet * 1000);
             entity.Destroy();
-            Object.Destroy(obj);
+            Object.Destroy(bullet.gameObject);
         }
     }
 }

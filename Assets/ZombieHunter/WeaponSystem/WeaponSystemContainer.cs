@@ -16,10 +16,7 @@ namespace ZombieHunter.WeaponSystem
 
         public void AddInjectors(EcsSystems ecsSystems)
         {
-            var bulletViewCreator = new BulletViewCreator();
-
-            ecsSystems
-                .Inject(bulletViewCreator);
+            
         }
 
         public void AddOneFrameObjects(EcsSystems ecsSystems)
