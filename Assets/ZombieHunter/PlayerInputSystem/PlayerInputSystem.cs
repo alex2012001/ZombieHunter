@@ -86,7 +86,12 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 ref var entity = ref _movableFilter.GetEntity(i);
                 ref var weaponData = ref _leftWeaponFilter.Get2(i);
-                entity.Replace(new ShootLeftHandEvent { Damage = weaponData.Damage, FireRate = weaponData.FireRate});
+                entity.Replace(new ShootLeftHandEvent 
+                    { 
+                        Damage = weaponData.Damage, 
+                        FireRate = weaponData.FireRate,
+                        FirePoint = weaponData.FirePoint
+                    });
             }
         }
 
@@ -96,7 +101,12 @@ namespace ZombieHunter.PlayerInputSystem
             {
                 ref var entity = ref _movableFilter.GetEntity(i);
                 ref var weaponData = ref _rightWeaponFilter.Get2(i);
-                entity.Replace(new ShootRightHandEvent { Damage = weaponData.Damage, FireRate = weaponData.FireRate});
+                entity.Replace(new ShootRightHandEvent 
+                { 
+                    Damage = weaponData.Damage, 
+                    FireRate = weaponData.FireRate,
+                    FirePoint = weaponData.FirePoint
+                });
             }
         }
 

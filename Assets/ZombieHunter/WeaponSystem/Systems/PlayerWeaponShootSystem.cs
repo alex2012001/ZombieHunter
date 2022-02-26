@@ -36,6 +36,7 @@ namespace ZombieHunter.WeaponSystem.Systems
             }
             
             _bullet = Resources.Load<BulletView>("Bullet");
+            
             var bulletConfig = Resources.Load<BulletConfig>("BulletConfig");
             _delayToDestroyBullet = bulletConfig.DelayToDestroy;
         }
@@ -48,8 +49,8 @@ namespace ZombieHunter.WeaponSystem.Systems
                 {
                     ref var shootRightHandEvent = ref _rightHandFilter.Get2(i);
 
-                    CreateBullet(shootRightHandEvent.Damage, _rightHandTransform);
-                    
+                    CreateBullet(shootRightHandEvent.Damage, shootRightHandEvent.FirePoint);
+
                     RightShootDelay(shootRightHandEvent.FireRate);
                 }
             }
@@ -60,7 +61,7 @@ namespace ZombieHunter.WeaponSystem.Systems
                 {
                     ref var shootLeftHandEvent = ref _leftHandFilter.Get2(i);
                     
-                    CreateBullet(shootLeftHandEvent.Damage, _leftHandTransform);
+                    CreateBullet(shootLeftHandEvent.Damage, shootLeftHandEvent.FirePoint);
                     
                     LeftShootDelay(shootLeftHandEvent.FireRate);
                 }
