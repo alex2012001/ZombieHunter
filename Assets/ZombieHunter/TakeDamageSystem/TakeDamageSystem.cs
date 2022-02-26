@@ -1,5 +1,4 @@
 ﻿using Leopotam.Ecs;
-using UnityEngine;
 using ZombieHunter.TakeDamageSystem.Components;
 using ZombieHunter.TakeDamageSystem.Events;
 

@@ -14,19 +14,25 @@ namespace ZombieHunter.TakeDamageSystem
         {
             foreach (var i in _deathFilter)
             {
+                Debug.Log("Check");
+                ref var entity = ref _deathFilter.GetEntity(i);
                 ref var healthpoints = ref _deathFilter.Get2(i);
                 ref var model = ref _deathFilter.Get3(i);
 
+                entity.Del<CheckDeathEvent>();
+                
                 if (healthpoints.Healthpoints <= 0f)
                 {
-                    Death(ref model);
+                    Death(ref entity, ref model);
                 }
             }
         }
 
-        private void Death(ref ModelData model)
+        private void Death(ref EcsEntity entity, ref ModelData model)
         {
+            Debug.Log("AAAAAAAAAAAAAAAAA");
             // TODO: add death effects for more entity
+            entity.Destroy();
             Object.Destroy(model.ModelTransform.gameObject);
         }
     }
