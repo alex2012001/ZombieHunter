@@ -17,7 +17,7 @@ namespace ZombieHunter
             base.AddSystems();
                 
             _movementSystemsContainer.AddSystems(_systems);
-           // _waveSystemContainer.AddSystems(_systems);
+            _waveSystemContainer.AddSystems(_systems);
             _weaponSystemContainer.AddSystems(_systems);
             _takeDamageSystemsContainer.AddSystems(_systems);
         }
@@ -27,7 +27,7 @@ namespace ZombieHunter
             base.AddOneFrames();
                 
             _movementSystemsContainer.AddOneFrameObjects(_systems);
-           // _waveSystemContainer.AddOneFrameObjects(_systems);
+            _waveSystemContainer.AddOneFrameObjects(_systems);
             _weaponSystemContainer.AddOneFrameObjects(_systems);
             _takeDamageSystemsContainer.AddOneFrameObjects(_systems);
         }
@@ -36,8 +36,8 @@ namespace ZombieHunter
         {
             base.AddInjections();
                 
-            _movementSystemsContainer.AddInjectors(_systems);
-          //  _waveSystemContainer.AddInjectors(_systems);
+            _movementSystemsContainer.AddInjectors(_systems); 
+            _waveSystemContainer.AddInjectors(_systems);
             _weaponSystemContainer.AddInjectors(_systems);
             _takeDamageSystemsContainer.AddInjectors(_systems);
         }
