@@ -8,16 +8,17 @@ namespace ZombieHunter.TakeDamageSystem
 {
     public class DeathSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<CheckDeathEvent,HealthpointsData, ModelData> _deathFilter = null;
+        private readonly EcsFilter<Tags.Player,CheckDeathEvent,HealthpointsData, ModelData> _playerDeathFilter = null;
+        private readonly EcsFilter<Tags.Enemy,CheckDeathEvent,HealthpointsData, ModelData> _enemyDeathFilter = null;
         
         public void Run()
         {
-            foreach (var i in _deathFilter)
+            foreach (var i in _enemyDeathFilter)
             {
                 Debug.Log("Check");
-                ref var entity = ref _deathFilter.GetEntity(i);
-                ref var healthpoints = ref _deathFilter.Get2(i);
-                ref var model = ref _deathFilter.Get3(i);
+                ref var entity = ref _enemyDeathFilter.GetEntity(i);
+                ref var healthpoints = ref _enemyDeathFilter.Get3(i);
+                ref var model = ref _enemyDeathFilter.Get4(i);
 
                 entity.Del<CheckDeathEvent>();
                 

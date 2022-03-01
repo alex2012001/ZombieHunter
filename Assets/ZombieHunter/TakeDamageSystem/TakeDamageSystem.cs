@@ -1,4 +1,5 @@
 ﻿using Leopotam.Ecs;
+using UnityEngine;
 using ZombieHunter.TakeDamageSystem.Components;
 using ZombieHunter.TakeDamageSystem.Events;
 
@@ -23,6 +24,7 @@ namespace ZombieHunter.TakeDamageSystem
 
         private void TakeDamage(ref EcsEntity entity ,ref HealthpointsData hpData, TakeDamageEvent damage)
         {
+            Debug.Log(hpData.Healthpoints);
             hpData.Healthpoints -= damage.Damage;
             entity.Get<CheckDeathEvent>();
         }
