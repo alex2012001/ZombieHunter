@@ -1,6 +1,6 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
-using ZombieHunter.MouseLookSystem.Components;
+using ZombieHunter.InputSystem.MouseInputSystemComponent;
 using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.MovementSystem.Events;
 using ZombieHunter.WeaponSystem;
