@@ -31,8 +31,8 @@ namespace ZombieHunter.InputSystem
                 return;
             }
                         
-            _startTransformRotation = _mouseInputFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
             Cursor.lockState = CursorLockMode.Locked;
+            _startTransformRotation = _mouseInputFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
         }
         
         public void Run()
