@@ -10,12 +10,6 @@ namespace ZombieHunter.InputSystem
 {
     sealed class PlayerInputSystem : IEcsRunSystem
     {
-        private float _moveX;
-        private float _moveZ;
-
-        private bool _isRotateble = true;
-
-        //Inject
         private readonly EcsFilter<Tags.Player, DirectionData, ModelData> _movableFilter = null;
         private readonly EcsFilter<Tags.Player, JumpData> _jumpFilter = null;
         private readonly EcsFilter<Tags.RightPlayerWeapon, WeaponData> _rightWeaponFilter = null;
@@ -24,14 +18,19 @@ namespace ZombieHunter.InputSystem
         private readonly EcsStartup.DevelopMode _devMode = null;
         private readonly PlayerInputConfig _inputConfig = null;
         
+        private float _moveX;
+        private float _moveZ;
+
+        private bool _isRotatable = true;
+
         public void Run()
         {
             if (_devMode.Value)
             {
                 return;
             }
-            
-            SetDirection();
+
+            GetControllersInput();
 
             foreach (var i in _movableFilter)
             {
@@ -44,21 +43,6 @@ namespace ZombieHunter.InputSystem
                 ref var model = ref _movableFilter.Get3(i);
 
                 DirectionModifier(model.ModelTransform);
-            }
-
-            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
-            {
-                ShootRightHand();
-            } 
-            
-            if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
-            {
-                ShootLeftHand();
-            }
-            
-            if (OVRInput.GetDown(OVRInput.RawButton.B))
-            {
-                Jump();   
             }
         }
 
@@ -101,7 +85,7 @@ namespace ZombieHunter.InputSystem
         private void DirectionModifier(Transform playerTransform)
         {
             var axis = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);
-            if (_isRotateble)
+            if (_isRotatable)
             {
                 if (axis.x > _inputConfig.TopPrimaryThumbstickRotateLim)
                 {
@@ -118,9 +102,29 @@ namespace ZombieHunter.InputSystem
 
         private async void ModiferTimer()
         {
-            _isRotateble = false;
+            _isRotatable = false;
             await Task.Delay(_inputConfig.DelayPerRotate);
-            _isRotateble = true;
+            _isRotatable = true;
+        }
+
+        private void GetControllersInput()
+        {
+            SetDirection();
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+            {
+                ShootRightHand();
+            } 
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
+            {
+                ShootLeftHand();
+            }
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.B))
+            {
+                Jump();   
+            }
         }
     }
 }
