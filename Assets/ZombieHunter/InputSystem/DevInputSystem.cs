@@ -42,6 +42,9 @@ namespace ZombieHunter.InputSystem
                 return;
             }
             
+            GetMouseInput();
+            GetKeyboardInput();
+            
             foreach (var i in _movableFilter)
             {
                 ref var directionComponent = ref _movableFilter.Get2(i);
@@ -68,9 +71,6 @@ namespace ZombieHunter.InputSystem
                 lookComponent.Direction.x = _axisX;
                 lookComponent.Direction.y = _axisY;
             }
-            
-            GetMouseInput();
-            GetKeyboardInput();
         }
         private void ShootLeftHand()
         {
