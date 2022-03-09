@@ -1,9 +1,9 @@
 using UnityEngine;
 
-namespace ZombieHunter.PlayerInputSystem
+namespace ZombieHunter.ZInputSystem
 {
-    [CreateAssetMenu(fileName = "PlayerInputConfig", menuName = "Configs/PlayerInputConfig")]
-    public class PlayerInputConfig : ScriptableObject
+    [CreateAssetMenu(fileName = "InputConfig", menuName = "Configs/InputConfig")]
+    public class InputConfig : ScriptableObject
     {
         public int RotateModifier;
         public int DelayPerRotate;

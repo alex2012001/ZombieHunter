@@ -13,9 +13,10 @@ namespace ZombieHunter.MouseLookSystem
 
         public void Init()
         {
+            Cursor.lockState = CursorLockMode.Locked;
             _startTransformRotation = _mouseLookFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
         }
-        
+
         public void Run()
         {
             foreach (var i in _mouseLookFilter)
@@ -27,19 +28,12 @@ namespace ZombieHunter.MouseLookSystem
                 var axisY = lookComponent.Direction.y;
 
                 var rotateX = Quaternion.AngleAxis(axisX, Vector3.up * Time.deltaTime * lookComponent.MouseSensitivity);
-                var rotateY = Quaternion.AngleAxis(axisY, Vector3.right * Time.deltaTime * lookComponent.MouseSensitivity);
+                var rotateY = Quaternion.AngleAxis(axisY,
+                    Vector3.right * Time.deltaTime * lookComponent.MouseSensitivity);
 
                 model.ModelTransform.rotation = _startTransformRotation * rotateX;
                 lookComponent.CameraTransform.rotation = model.ModelTransform.rotation * rotateY;
-            }   
-        }
-    }
-
-    sealed class CursorLockSystem : IEcsInitSystem
-    {
-        public void Init()
-        {
-            Cursor.lockState = CursorLockMode.Locked;
+            }
         }
     }
 }

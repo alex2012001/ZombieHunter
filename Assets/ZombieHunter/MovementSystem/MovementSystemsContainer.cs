@@ -1,8 +1,7 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
-using ZombieHunter.MouseLookSystem;
+using ZombieHunter.ZInputSystem;
 using ZombieHunter.MovementSystem.Events;
-using ZombieHunter.PlayerInputSystem;
 
 namespace ZombieHunter.MovementSystem
 {
@@ -12,9 +11,9 @@ namespace ZombieHunter.MovementSystem
         {
             ecsSystems
                 .Add(new BlockJumpSystem())
+                .Add(new DeveloperInputSystem.DeveloperInputSystem())
                 .Add(new PlayerInputSystem.PlayerInputSystem())
                 .Add(new MouseLookSystem.MouseLookSystem())
-                .Add(new CursorLockSystem())
                 .Add(new MovementSystem())
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem());
@@ -22,7 +21,7 @@ namespace ZombieHunter.MovementSystem
 
         public void AddInjectors(EcsSystems ecsSystems)
         {
-            var inputConfig = Resources.Load<PlayerInputConfig>("PlayerInputConfig");
+            var inputConfig = Resources.Load<InputConfig>("InputConfig");
 
             ecsSystems
                 .Inject(inputConfig);
