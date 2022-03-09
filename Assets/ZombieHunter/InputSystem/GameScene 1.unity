@@ -3538,7 +3538,7 @@ MonoBehaviour:
   value:
     Direction: {x: 0, y: 0, z: 0}
     MouseSensitivity: 1
-    CameraTransform: {fileID: 1501868155}
+    CameraTransform: {fileID: 1999268913}
 --- !u!1001 &455274735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11050,12 +11050,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1499003746}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1501868155 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1567465600084849001, guid: ec5dab9062bafd243bb0f6cc5f89886b,
-    type: 3}
-  m_PrefabInstance: {fileID: 5300799860434346636}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1513247555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14592,6 +14586,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4802134562677756, guid: 68cbfa1438162b243ac02fb9e3e30581,
     type: 3}
   m_PrefabInstance: {fileID: 1983983515}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1999268913 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1567465600084849007, guid: ec5dab9062bafd243bb0f6cc5f89886b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5300799860434346636}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2002488412
 GameObject:

@@ -7,7 +7,7 @@ namespace ZombieHunter.MouseLookSystem
 {
     sealed class MouseLookSystem : IEcsInitSystem, IEcsRunSystem
     {
-        private readonly EcsFilter<ModelData, MouseLookDirectionData> _mouseLookFilter = null;
+        private readonly EcsFilter<ModelData, MouseLookDirectionData> _mouseInputFilter = null;
         
         private readonly EcsStartup.DevelopMode _devMode = null;
         
@@ -21,15 +21,20 @@ namespace ZombieHunter.MouseLookSystem
             }
             
             Cursor.lockState = CursorLockMode.Locked;
-            _startTransformRotation = _mouseLookFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
+            _startTransformRotation = _mouseInputFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
         }
         
         public void Run()
         {
-            foreach (var i in _mouseLookFilter)
+            if (!_devMode.Value)
             {
-                ref var model = ref _mouseLookFilter.Get1(i);
-                ref var lookComponent = ref _mouseLookFilter.Get2(i);
+                return;
+            }
+            
+            foreach (var i in _mouseInputFilter)
+            {
+                ref var model = ref _mouseInputFilter.Get1(i);
+                ref var lookComponent = ref _mouseInputFilter.Get2(i);
 
                 var axisX = lookComponent.Direction.x;
                 var axisY = lookComponent.Direction.y;

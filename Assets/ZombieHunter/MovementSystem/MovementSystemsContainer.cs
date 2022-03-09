@@ -11,11 +11,11 @@ namespace ZombieHunter.MovementSystem
         public void AddSystems(EcsSystems ecsSystems)
         {
             ecsSystems
-                .Add(new DevInputSystem())
                 .Add(new BlockJumpSystem())
                 .Add(new PlayerInputSystem())
-                .Add(new MouseLookSystem.MouseLookSystem())
-                .Add(new MouseInputSystem())
+                .Add(new DevInputSystem())
+                //.Add(new MouseLookSystem.MouseLookSystem())
+                //.Add(new MouseInputSystem())
                 .Add(new MovementSystem())
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem());
