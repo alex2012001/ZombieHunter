@@ -18,12 +18,13 @@ namespace ZombieHunter.InputSystem
 
         private readonly EcsStartup.DevelopMode _devMode = null;
         
+        private Quaternion _startTransformRotation;
+        
         private float _axisX;
         private float _axisY;
         private float _moveX;
         private float _moveZ;
-        private Quaternion _startTransformRotation;
-        
+
         public void Init()
         {
             if (!_devMode.Value)
@@ -135,8 +136,8 @@ namespace ZombieHunter.InputSystem
         
         private void GetMouseInput()
         {
-            ClampAxis();
             GetMouseAxis();
+            ClampAxis();
             GetMouseActions();
         }
         private void GetKeyboardInput()
