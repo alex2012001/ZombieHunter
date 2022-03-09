@@ -1,5 +1,4 @@
 ﻿using Leopotam.Ecs;
-using ZombieHunter.MovementSystem;
 
 namespace ZombieHunter.EnemyWaveSystem
 {
@@ -8,11 +7,6 @@ namespace ZombieHunter.EnemyWaveSystem
         public void AddSystems(EcsSystems ecsSystems)
         {
             ecsSystems
-                .Add(new BlockJumpSystem())
-                .Add(new PlayerInputSystem.PlayerInputSystem())
-                .Add(new MovementSystem.MovementSystem())
-                .Add(new GroundCheckSystem())
-                .Add(new PlayerJumpSystem())
                 .Add(new EnemyFollowPlayerSystem())
                 .Add(new WaveSpawnSystem());
         }

@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Leopotam.Ecs;
 using UnityEngine;
+using ZombieHunter.MouseLookSystem.Components;
 using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.MovementSystem.Events;
 using ZombieHunter.WeaponSystem;
@@ -8,8 +9,8 @@ using ZombieHunter.WeaponSystem.Components;
 
 namespace ZombieHunter.PlayerInputSystem
 {
-    class PlayerInputSystem : IEcsRunSystem
-    {
+    public class DevInputSystem : IEcsRunSystem, IEcsInitSystem
+    { 
         private float _moveX;
         private float _moveZ;
 
@@ -20,8 +21,19 @@ namespace ZombieHunter.PlayerInputSystem
         private readonly EcsFilter<Tags.Player, JumpData> _jumpFilter = null;
         private readonly EcsFilter<Tags.RightPlayerWeapon, WeaponData> _rightWeaponFilter = null;
         private readonly EcsFilter<Tags.LeftPlayerWeapon, WeaponData> _leftWeaponFilter = null;
+        private readonly EcsFilter<ModelData, MouseLookDirectionData> _mouseLookFilter = null;
         
+        private readonly EcsStartup.DevelopMode _devMode = null;
         private readonly PlayerInputConfig _inputConfig = null;
+      
+
+        private Quaternion _startTransformRotation;
+
+        public void Init()
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            _startTransformRotation = _mouseLookFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
+        }
         
         public void Run()
         {
@@ -40,19 +52,23 @@ namespace ZombieHunter.PlayerInputSystem
                 DirectionModifier(model.ModelTransform);
             }
 
-            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+            if (!_devMode.Value)
             {
-                ShootRightHand();
-            } 
+                return;
+            }
             
-            if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Jump();
+            }
+            if (Input.GetMouseButtonDown(0))
             {
                 ShootLeftHand();
             }
             
-            if (OVRInput.GetDown(OVRInput.RawButton.B))
+            if (Input.GetMouseButtonDown(1))
             {
-                Jump();   
+                ShootRightHand();
             }
         }
 
@@ -91,6 +107,11 @@ namespace ZombieHunter.PlayerInputSystem
            _moveX = axis.x;
            _moveZ = axis.y;
 
+           if (!_devMode.Value)
+           {
+               return;
+           }
+           
            _moveX = Input.GetAxis("Horizontal");
            _moveZ = Input.GetAxis("Vertical");
         }
