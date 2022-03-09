@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.24647538, g: 0.28234535, b: 0.3457032, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3523,6 +3523,22 @@ MonoBehaviour:
     RightHandTransform: {fileID: 5300799860434346638}
     LeftHandTransform: {fileID: 5300799860434346639}
     BulletContainer: {fileID: 1650735211}
+--- !u!114 &442510720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442510707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e9e873c94ef4767b32ea75a0ff4b241, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    Direction: {x: 0, y: 0, z: 0}
+    MouseSensitivity: 1
+    CameraTransform: {fileID: 1501868155}
 --- !u!1001 &455274735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10810,7 +10826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75cdcd615ae7dd9408c135cf9ee5fe35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  developmentMode: 0
+  developmentMode: 1
 --- !u!4 &1460235168
 Transform:
   m_ObjectHideFlags: 0
@@ -11033,6 +11049,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4835789832631930, guid: bdf8e7438a7816543998181bd3067573,
     type: 3}
   m_PrefabInstance: {fileID: 1499003746}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1501868155 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1567465600084849001, guid: ec5dab9062bafd243bb0f6cc5f89886b,
+    type: 3}
+  m_PrefabInstance: {fileID: 5300799860434346636}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1513247555
 PrefabInstance:
