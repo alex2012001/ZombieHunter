@@ -22,9 +22,15 @@ namespace ZombieHunter.PlayerInputSystem
         private readonly EcsFilter<Tags.LeftPlayerWeapon, WeaponData> _leftWeaponFilter = null;
         
         private readonly PlayerInputConfig _inputConfig = null;
+        private readonly EcsStartup.DevelopMode _devMode = null;
         
         public void Run()
         {
+            if (_devMode.Value)
+            {
+                return;
+            }
+            
             SetDirection();
 
             foreach (var i in _movableFilter)
@@ -90,9 +96,6 @@ namespace ZombieHunter.PlayerInputSystem
             var axis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);
            _moveX = axis.x;
            _moveZ = axis.y;
-
-           _moveX = Input.GetAxis("Horizontal");
-           _moveZ = Input.GetAxis("Vertical");
         }
 
         private void DirectionModifier(Transform playerTransform)
