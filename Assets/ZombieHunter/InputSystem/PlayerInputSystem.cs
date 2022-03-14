@@ -15,7 +15,6 @@ namespace ZombieHunter.InputSystem
         private readonly EcsFilter<Tags.RightPlayerWeapon, WeaponData> _rightWeaponFilter = null;
         private readonly EcsFilter<Tags.LeftPlayerWeapon, WeaponData> _leftWeaponFilter = null;
         
-        private readonly EcsStartup.DevelopMode _devMode = null;
         private readonly PlayerInputConfig _inputConfig = null;
         
         private float _moveX;
@@ -25,11 +24,6 @@ namespace ZombieHunter.InputSystem
 
         public void Run()
         {
-            if (_devMode.Value)
-            {
-                return;
-            }
-
             GetControllersInput();
 
             foreach (var i in _movableFilter)
