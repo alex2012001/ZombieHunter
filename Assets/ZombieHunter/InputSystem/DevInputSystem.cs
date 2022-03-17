@@ -42,9 +42,8 @@ namespace ZombieHunter.InputSystem
             {
                 return;
             }
-            
-            GetMouseInput();
-            GetKeyboardInput();
+
+            GetControllersInput();
             
             foreach (var i in _movableFilter)
             {
@@ -99,51 +98,35 @@ namespace ZombieHunter.InputSystem
                 entity.Get<JumpEvent>();
             }
         }
-
-        private void ClampAxis()
-        {
-            _axisY = Mathf.Clamp(_axisY, -90f, 90f);
-        }
         private void GetMouseAxis()
         {
             _axisX += Input.GetAxis("Mouse X");
             _axisY -= Input.GetAxis("Mouse Y");
-        }
-        private void GetMouseActions()
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                ShootLeftHand();
-            }
             
-            if (Input.GetMouseButtonDown(1))
-            {
-                ShootRightHand();
-            }
+            _axisY = Mathf.Clamp(_axisY, -90f, 90f);
         }
         private void SetDirection()
         {
             _moveX = Input.GetAxis("Horizontal");
             _moveZ = Input.GetAxis("Vertical");
         }
-        private void GetKeyboardActions()
+        private void GetControllersInput()
         {
+            GetMouseAxis();
+            SetDirection();
+            
+            if (Input.GetMouseButtonDown(0))
+            {
+                ShootLeftHand();
+            }
+            if (Input.GetMouseButtonDown(1))
+            {
+                ShootRightHand();
+            }
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 Jump();
             }
-        }
-        
-        private void GetMouseInput()
-        {
-            GetMouseAxis();
-            ClampAxis();
-            GetMouseActions();
-        }
-        private void GetKeyboardInput()
-        {
-            SetDirection();
-            GetKeyboardActions();
         }
     }
 }
