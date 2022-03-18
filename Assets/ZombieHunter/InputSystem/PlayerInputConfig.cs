@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace ZombieHunter.PlayerInputSystem
+namespace ZombieHunter.InputSystem
 {
     [CreateAssetMenu(fileName = "PlayerInputConfig", menuName = "Configs/PlayerInputConfig")]
     public class PlayerInputConfig : ScriptableObject

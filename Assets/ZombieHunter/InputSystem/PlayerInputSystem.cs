@@ -6,27 +6,25 @@ using ZombieHunter.MovementSystem.Events;
 using ZombieHunter.WeaponSystem;
 using ZombieHunter.WeaponSystem.Components;
 
-namespace ZombieHunter.PlayerInputSystem
+namespace ZombieHunter.InputSystem
 {
     sealed class PlayerInputSystem : IEcsRunSystem
     {
-        private float _moveX;
-        private float _moveZ;
-
-        private bool _isRotateble = true;
-
-        //Inject
         private readonly EcsFilter<Tags.Player, DirectionData, ModelData> _movableFilter = null;
         private readonly EcsFilter<Tags.Player, JumpData> _jumpFilter = null;
         private readonly EcsFilter<Tags.RightPlayerWeapon, WeaponData> _rightWeaponFilter = null;
         private readonly EcsFilter<Tags.LeftPlayerWeapon, WeaponData> _leftWeaponFilter = null;
         
-        private readonly EcsStartup.DevelopMode _devMode = null;
         private readonly PlayerInputConfig _inputConfig = null;
         
+        private float _moveX;
+        private float _moveZ;
+
+        private bool _isRotatable = true;
+
         public void Run()
         {
-            SetDirection();
+            GetControllersInput();
 
             foreach (var i in _movableFilter)
             {
@@ -40,44 +38,6 @@ namespace ZombieHunter.PlayerInputSystem
 
                 DirectionModifier(model.ModelTransform);
             }
-
-            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
-            {
-                ShootRightHand();
-            } 
-            
-            if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
-            {
-                ShootLeftHand();
-            }
-            
-            if (OVRInput.GetDown(OVRInput.RawButton.B))
-            {
-                Jump();   
-            }
-
-            #region DevMode
-
-            if (!_devMode.Value)
-            {
-                return;
-            }
-            
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                Jump();
-            }
-            if (Input.GetMouseButtonDown(0))
-            {
-                ShootLeftHand();
-            }
-            
-            if (Input.GetMouseButtonDown(1))
-            {
-                ShootLeftHand();
-            }
-
-            #endregion
         }
 
         private void ShootLeftHand()
@@ -114,20 +74,12 @@ namespace ZombieHunter.PlayerInputSystem
             var axis = OVRInput.Get(OVRInput.RawAxis2D.LThumbstick);
            _moveX = axis.x;
            _moveZ = axis.y;
-
-           if (!_devMode.Value)
-           {
-               return;
-           }
-           
-           _moveX = Input.GetAxis("Horizontal");
-           _moveZ = Input.GetAxis("Vertical");
         }
 
         private void DirectionModifier(Transform playerTransform)
         {
             var axis = OVRInput.Get(OVRInput.RawAxis2D.RThumbstick);
-            if (_isRotateble)
+            if (_isRotatable)
             {
                 if (axis.x > _inputConfig.TopPrimaryThumbstickRotateLim)
                 {
@@ -144,9 +96,29 @@ namespace ZombieHunter.PlayerInputSystem
 
         private async void ModiferTimer()
         {
-            _isRotateble = false;
+            _isRotatable = false;
             await Task.Delay(_inputConfig.DelayPerRotate);
-            _isRotateble = true;
+            _isRotatable = true;
+        }
+
+        private void GetControllersInput()
+        {
+            SetDirection();
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+            {
+                ShootRightHand();
+            } 
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger))
+            {
+                ShootLeftHand();
+            }
+            
+            if (OVRInput.GetDown(OVRInput.RawButton.B))
+            {
+                Jump();   
+            }
         }
     }
 }

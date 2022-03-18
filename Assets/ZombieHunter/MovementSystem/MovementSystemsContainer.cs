@@ -1,7 +1,7 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
 using ZombieHunter.MovementSystem.Events;
-using ZombieHunter.PlayerInputSystem;
+using ZombieHunter.InputSystem;
 
 namespace ZombieHunter.MovementSystem
 {
@@ -11,7 +11,8 @@ namespace ZombieHunter.MovementSystem
         {
             ecsSystems
                 .Add(new BlockJumpSystem())
-                .Add(new PlayerInputSystem.PlayerInputSystem())
+                .Add(new PlayerInputSystem())
+                .Add(new DevInputSystem())
                 .Add(new MovementSystem())
                 .Add(new GroundCheckSystem())
                 .Add(new PlayerJumpSystem());
