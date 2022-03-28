@@ -1,12 +1,16 @@
 ﻿using System.Threading.Tasks;
 using Leopotam.Ecs;
 using UnityEngine;
+using ZombieHunter.MovementSystem.Components;
 using ZombieHunter.WeaponSystem.Components;
 
 namespace ZombieHunter.WeaponSystem.Systems
 {
     public class PlayerWeaponShootSystem : IEcsInitSystem, IEcsRunSystem
     {
+        private readonly EcsWorld _ecsWorld = null;
+        private readonly ViewCreator _viewCreator = null;
+        
         private readonly EcsFilter<Tags.Player, WeaponSpawnData> _playerFilter = null;
         private readonly EcsFilter<Tags.Player, ShootRightHandEvent> _rightHandFilter = null;
         private readonly EcsFilter<Tags.Player, ShootLeftHandEvent> _leftHandFilter = null;
@@ -14,11 +18,12 @@ namespace ZombieHunter.WeaponSystem.Systems
         private Transform _rightHandTransform;
         private Transform _leftHandTransform;
         private Transform _bulletContainer;
-        private BulletComponent _bullet;
+        private BulletView _bullet;
         
         private bool _shootRightGun;
         private bool _shootLeftGun;
-
+        private int _delayToDestroyBullet;
+        
         public void Init()
         {
             foreach (var i in _playerFilter)
@@ -30,7 +35,10 @@ namespace ZombieHunter.WeaponSystem.Systems
                 _bulletContainer = playerWeaponSpawnData.BulletContainer;
             }
             
-            _bullet = Resources.Load<BulletComponent>("Bullet");
+            _bullet = Resources.Load<BulletView>("Bullet");
+            
+            var bulletConfig = Resources.Load<BulletConfig>("BulletConfig");
+            _delayToDestroyBullet = bulletConfig.DelayToDestroy;
         }
         
         public void Run()
@@ -40,8 +48,9 @@ namespace ZombieHunter.WeaponSystem.Systems
                 if (!_shootRightGun)
                 {
                     ref var shootRightHandEvent = ref _rightHandFilter.Get2(i);
-                    var bullet = Object.Instantiate(_bullet, _rightHandTransform);
-                    bullet.transform.SetParent(_bulletContainer);
+
+                    CreateBullet(shootRightHandEvent.Damage, shootRightHandEvent.FirePoint);
+
                     RightShootDelay(shootRightHandEvent.FireRate);
                 }
             }
@@ -51,11 +60,28 @@ namespace ZombieHunter.WeaponSystem.Systems
                 if (!_shootLeftGun)
                 {
                     ref var shootLeftHandEvent = ref _leftHandFilter.Get2(i);
-                    var bullet = Object.Instantiate(_bullet, _leftHandTransform);
-                    bullet.transform.SetParent(_bulletContainer);
+                    
+                    CreateBullet(shootLeftHandEvent.Damage, shootLeftHandEvent.FirePoint);
+                    
                     LeftShootDelay(shootLeftHandEvent.FireRate);
                 }
             }
+        }
+
+        private void CreateBullet(float damage, Transform root)
+        {
+            var bullet = _viewCreator.Create(_bullet, root);
+            bullet.transform.SetParent(_bulletContainer);
+            bullet.Damage = damage;
+
+            var entity = _ecsWorld.NewEntity();
+                    
+            ref var model = ref entity.Get<ModelData>();
+            model.ModelTransform = bullet.transform;
+
+            entity.Get<BulletData>();
+                    
+            DelayToDestroyBullet(bullet,entity);
         }
 
         private async void RightShootDelay(int fireRate)
@@ -70,6 +96,13 @@ namespace ZombieHunter.WeaponSystem.Systems
             _shootLeftGun = true;
             await Task.Delay(fireRate);
             _shootLeftGun = false;
+        }
+
+        private async void DelayToDestroyBullet(BulletView bullet, EcsEntity entity)
+        {
+            await Task.Delay(_delayToDestroyBullet * 1000);
+            entity.Destroy();
+            Object.Destroy(bullet.gameObject);
         }
     }
 }

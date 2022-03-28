@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699060560a2c440096e7cc847a825978, type: 3}
   m_Name: BulletConfig
   m_EditorClassIdentifier: 
-  Damage: 15
   Speed: 30
-  DestroyDelay: 0
+  DelayToDestroy: 2

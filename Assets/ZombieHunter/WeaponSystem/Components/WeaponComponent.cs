@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 using Voody.UniLeo;
 
 namespace ZombieHunter.WeaponSystem.Components
@@ -10,5 +11,6 @@ namespace ZombieHunter.WeaponSystem.Components
     {
         public float Damage;
         public int FireRate;
+        public Transform FirePoint;
     }
 }

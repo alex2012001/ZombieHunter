@@ -36,7 +36,7 @@ namespace ZombieHunter
         {
             base.AddInjections();
                 
-            _movementSystemsContainer.AddInjectors(_systems);
+            _movementSystemsContainer.AddInjectors(_systems); 
             _waveSystemContainer.AddInjectors(_systems);
             _weaponSystemContainer.AddInjectors(_systems);
             _takeDamageSystemsContainer.AddInjectors(_systems);

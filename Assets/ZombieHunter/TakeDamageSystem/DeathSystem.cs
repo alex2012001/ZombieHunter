@@ -8,29 +8,33 @@ namespace ZombieHunter.TakeDamageSystem
 {
     public class DeathSystem : IEcsRunSystem
     {
-        private readonly EcsFilter<CheckDeathEvent,HealthpointsData, ModelData> _deathFilter = null;
+        private readonly EcsFilter<Tags.Player,CheckDeathEvent,HealthpointsData, ModelData> _playerDeathFilter = null;
+        private readonly EcsFilter<Tags.Enemy,CheckDeathEvent,HealthpointsData, ModelData> _enemyDeathFilter = null;
         
         public void Run()
         {
-            foreach (var i in _deathFilter)
+            foreach (var i in _enemyDeathFilter)
             {
-                ref var healthpoints = ref _deathFilter.Get2(i);
-                ref var model = ref _deathFilter.Get3(i);
+                Debug.Log("Check");
+                ref var entity = ref _enemyDeathFilter.GetEntity(i);
+                ref var healthpoints = ref _enemyDeathFilter.Get3(i);
+                ref var model = ref _enemyDeathFilter.Get4(i);
 
+                entity.Del<CheckDeathEvent>();
+                
                 if (healthpoints.Healthpoints <= 0f)
                 {
-                    Death(ref model);
+                    Death(ref entity, ref model);
                 }
             }
         }
 
-        private void Death(ref ModelData model)
+        private void Death(ref EcsEntity entity, ref ModelData model)
         {
-            // TODO: add deatheffects for mode entity
-           // GameObject.Destroy(model.ModelTransform.gameObject);
-            Debug.Log("Death!");
-            
-            
+            Debug.Log("AAAAAAAAAAAAAAAAA");
+            // TODO: add death effects for more entity
+            entity.Destroy();
+            Object.Destroy(model.ModelTransform.gameObject);
         }
     }
 }

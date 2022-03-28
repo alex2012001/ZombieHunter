@@ -399,7 +399,7 @@ GameObject:
   - component: {fileID: 5128759730987295780}
   m_Layer: 0
   m_Name: PlayerPrefab
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,7 +433,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 3.7
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3

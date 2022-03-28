@@ -2,6 +2,7 @@ using Leopotam.Ecs;
 using Voody.UniLeo;
 using UnityEngine;
 using ZombieHunter.MovementSystem;
+using ZombieHunter.WeaponSystem;
 
 namespace ZombieHunter
 {
@@ -34,17 +35,19 @@ namespace ZombieHunter
         protected virtual void AddInjections()
         {
             _systems
-                .Inject(new DevelopMode(developmentMode));
+                .Inject(new DevelopMode(developmentMode))
+                .Inject(new ViewCreator());
         }
         
         protected virtual void AddOneFrames()
         {
-            
+           
         }
 
         protected virtual void AddSystems()
         {
-            
+            _systems
+                .Add(new EntityInitializeSystem());
         }
 
         protected virtual void OnDestroy()

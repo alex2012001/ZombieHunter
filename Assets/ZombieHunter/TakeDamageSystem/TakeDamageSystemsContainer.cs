@@ -19,9 +19,7 @@ namespace ZombieHunter.TakeDamageSystem
 
         public void AddOneFrameObjects(EcsSystems ecsSystems)
         {
-            ecsSystems
-                .OneFrame<TakeDamageEvent>()
-                .OneFrame<CheckDeathEvent>();
+            
         }
     }
 }
