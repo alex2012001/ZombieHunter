@@ -27080,7 +27080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75cdcd615ae7dd9408c135cf9ee5fe35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  developmentMode: 1
+  developmentMode: 0
 --- !u!4 &1460235168
 Transform:
   m_ObjectHideFlags: 0
@@ -27957,9 +27957,9 @@ Transform:
   - {fileID: 1011542565}
   - {fileID: 1159919293}
   - {fileID: 1371563236}
+  - {fileID: 1749672038}
   - {fileID: 950596005}
   - {fileID: 1559667510}
-  - {fileID: 1749672038}
   - {fileID: 584545212}
   - {fileID: 1541524293}
   m_Father: {fileID: 1656193299}
@@ -32102,7 +32102,7 @@ Transform:
   - {fileID: 1245051946}
   - {fileID: 473118534}
   m_Father: {fileID: 1523918144}
-  m_RootOrder: 32
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1750297138
 PrefabInstance:
