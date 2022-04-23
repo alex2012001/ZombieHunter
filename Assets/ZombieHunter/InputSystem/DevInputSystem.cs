@@ -33,7 +33,8 @@ namespace ZombieHunter.InputSystem
             }
                         
             Cursor.lockState = CursorLockMode.Locked;
-            _startTransformRotation = _mouseInputFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
+            //_startTransformRotation = _mouseInputFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
+            _startTransformRotation = Quaternion.identity;
         }
         
         public void Run()
@@ -42,7 +43,7 @@ namespace ZombieHunter.InputSystem
             {
                 return;
             }
-
+            
             GetControllersInput();
             
             foreach (var i in _movableFilter)

@@ -13,7 +13,7 @@ namespace ZombieHunter
         protected EcsWorld _world;
         protected EcsSystems _systems;
 
-        private void Start()
+        private void Awake()
         {
             _world = new EcsWorld();
             _systems = new EcsSystems(_world);
