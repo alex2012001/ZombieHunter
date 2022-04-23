@@ -13,5 +13,7 @@ namespace Wave.Enemy
         public float Speed;
         public float AngularSpeed;
         public float StoppingDistance;
+
+        public float DistanceChangeChoiseObjectAttack;
     }
 }

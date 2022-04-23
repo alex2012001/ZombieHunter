@@ -19,3 +19,4 @@ MonoBehaviour:
   Speed: 1
   AngularSpeed: 120
   StoppingDistance: 0.7
+  DistanceChangeChoiseObjectAttack: 10
