@@ -5,12 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/ZombieHunter/NewLevel/GameScene 1.unity
-    guid: 613bef9fc500c52459955f3060fbf39a
   - enabled: 1
-    path: Assets/ZombieHunter/DemoLevel/DenoScene.unity
-    guid: 4baf6c5ff7e7f2b4abcdf9f63ace3b5c
+    path: Assets/ZombieHunter/Scenes/SavePointMode/DenoScene 1.unity
+    guid: 384a64c5fc2b1464b801b21c6d00448f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: dc4c1b0e7d65dc24f8ef88e11193c416,
       type: 2}
