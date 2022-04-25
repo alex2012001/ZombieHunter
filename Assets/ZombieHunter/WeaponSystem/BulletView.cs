@@ -6,6 +6,7 @@ namespace ZombieHunter.WeaponSystem
 {
     public class BulletView : ViewObject
     {
+        [SerializeField] private EntityReference bulletEntityReference;
         public float Damage { get; set; }
 
         private readonly string EnemyTag = "Enemy";
@@ -16,7 +17,7 @@ namespace ZombieHunter.WeaponSystem
             {
                 var entityReference = other.GetComponent<EntityReference>();
                 var entity = entityReference.Entity;
-                
+
                 entity.Replace(new TakeDamageEvent 
                 { 
                     Damage = Damage

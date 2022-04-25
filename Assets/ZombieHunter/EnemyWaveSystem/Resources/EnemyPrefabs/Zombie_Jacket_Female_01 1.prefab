@@ -736,7 +736,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7417353657287741517}
   - component: {fileID: 7472554478327057789}
-  - component: {fileID: 7414408316930423761}
   - component: {fileID: 7414408316930423758}
   - component: {fileID: 7414408316930423764}
   - component: {fileID: 7414408316930423765}
@@ -746,6 +745,8 @@ GameObject:
   - component: {fileID: -7339272633093068756}
   - component: {fileID: 6984249155503843052}
   - component: {fileID: 8379200173318753902}
+  - component: {fileID: -6802419648225175771}
+  - component: {fileID: -4425383076462409640}
   m_Layer: 0
   m_Name: Zombie_Jacket_Female_01 1
   m_TagString: Enemy
@@ -788,20 +789,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &7414408316930423761
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7414408316930423759}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.36483765
-  m_Height: 1.8066349
-  m_Direction: 1
-  m_Center: {x: -0.0010375977, y: 0.9134455, z: 0}
 --- !u!54 &7414408316930423758
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -832,7 +819,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0.7
+  m_StoppingDistance: 1.3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -934,6 +921,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6802419648225175771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414408316930423759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf732e7a6bf34d429cbb9ccc956d940d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    ModelTransform: {fileID: 7417353657287741517}
+--- !u!136 &-4425383076462409640
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414408316930423759}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19350635
+  m_Height: 1.3682661
+  m_Direction: 1
+  m_Center: {x: -0.012340719, y: 1.1320021, z: -0.042126328}
 --- !u!1 &7414410642495394539
 GameObject:
   m_ObjectHideFlags: 0

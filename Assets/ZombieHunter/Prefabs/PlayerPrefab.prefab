@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1567465600074668209}
   - component: {fileID: 1567465600074668199}
   - component: {fileID: 1465683500899781889}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OVRCameraRig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567465600084848999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ForwardDirection
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -169,7 +169,7 @@ GameObject:
   - component: {fileID: 1567465600084306933}
   - component: {fileID: 1567465600074876887}
   - component: {fileID: 1567465600379503290}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CenterEyeAnchor
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1567465600084849003}
   - component: {fileID: 1551517878884753653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightEyeAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 1567465600084880712}
   - component: {fileID: 1567465600084880718}
   - component: {fileID: 5128759730987295780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlayerPrefab
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -595,7 +595,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1567465600084849007}
   - component: {fileID: 1551284269883214875}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftEyeAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -668,7 +668,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567465600084798471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHandAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -699,7 +699,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567465600084802665}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHandAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567465600084780817}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrackerAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -760,7 +760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567465600084780823}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TrackingSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -796,7 +796,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567465600324245374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -827,7 +827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1567465600433291544}
   - component: {fileID: 1567465600439081654}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OVRControllerPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1567465601518417353}
   - component: {fileID: 1567465601518417352}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OVRControllerPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -928,7 +928,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1567465601633591573}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: cap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1571513552967925423}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightControllerAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,7 +989,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1571229597282160865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftControllerAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1020,7 +1020,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5300799859991841816}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1051,7 +1051,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1645870433739004261}
   - component: {fileID: 5104993619814844612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Audio
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,9 +14,7 @@ namespace ZombieHunter.WeaponSystem.Systems
         private readonly EcsFilter<Tags.Player, WeaponSpawnData> _playerFilter = null;
         private readonly EcsFilter<Tags.Player, ShootRightHandEvent> _rightHandFilter = null;
         private readonly EcsFilter<Tags.Player, ShootLeftHandEvent> _leftHandFilter = null;
-
-        private Transform _rightHandTransform;
-        private Transform _leftHandTransform;
+        
         private Transform _bulletContainer;
         private BulletView _bullet;
         
@@ -29,9 +27,6 @@ namespace ZombieHunter.WeaponSystem.Systems
             foreach (var i in _playerFilter)
             {
                 ref var playerWeaponSpawnData = ref _playerFilter.Get2(i);
-
-                _rightHandTransform = playerWeaponSpawnData.RightHandTransform;
-                _leftHandTransform = playerWeaponSpawnData.LeftHandTransform;
                 _bulletContainer = playerWeaponSpawnData.BulletContainer;
             }
             
@@ -48,10 +43,10 @@ namespace ZombieHunter.WeaponSystem.Systems
                 if (!_shootRightGun)
                 {
                     ref var shootRightHandEvent = ref _rightHandFilter.Get2(i);
+                   
+                    CreateBullet(shootRightHandEvent.WeaponData.Damage, shootRightHandEvent.WeaponData.FirePoint);
 
-                    CreateBullet(shootRightHandEvent.Damage, shootRightHandEvent.FirePoint);
-
-                    RightShootDelay(shootRightHandEvent.FireRate);
+                    RightShootDelay(shootRightHandEvent.WeaponData.FireRate);
                 }
             }
 
@@ -61,9 +56,9 @@ namespace ZombieHunter.WeaponSystem.Systems
                 {
                     ref var shootLeftHandEvent = ref _leftHandFilter.Get2(i);
                     
-                    CreateBullet(shootLeftHandEvent.Damage, shootLeftHandEvent.FirePoint);
+                    CreateBullet(shootLeftHandEvent.WeaponData.Damage, shootLeftHandEvent.WeaponData.FirePoint);
                     
-                    LeftShootDelay(shootLeftHandEvent.FireRate);
+                    LeftShootDelay(shootLeftHandEvent.WeaponData.FireRate);
                 }
             }
         }
@@ -80,7 +75,7 @@ namespace ZombieHunter.WeaponSystem.Systems
             model.ModelTransform = bullet.transform;
 
             entity.Get<BulletData>();
-                    
+
             DelayToDestroyBullet(bullet,entity);
         }
 

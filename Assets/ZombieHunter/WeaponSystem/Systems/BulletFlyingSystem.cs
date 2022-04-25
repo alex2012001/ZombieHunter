@@ -22,8 +22,11 @@ namespace ZombieHunter.WeaponSystem.Systems
         {
             foreach (var i in _bulletFilter)
             {
-                ref var transform = ref _bulletFilter.Get1(i).ModelTransform;
-                transform.Translate(new Vector3(0,0,_speed) * Time.deltaTime);
+                ref Transform tr = ref _bulletFilter.Get1(i).ModelTransform;
+                if (tr != null)
+                {
+                    tr.Translate(new Vector3(0,0,_speed) * Time.deltaTime);
+                }
             }
         }
     }
