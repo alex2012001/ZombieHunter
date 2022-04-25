@@ -1,11 +1,13 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
+using ZombieHunter.DestroySystem;
 using ZombieHunter.TakeDamageSystem.Events;
 
 namespace ZombieHunter.WeaponSystem
 {
     public class BulletView : ViewObject
     {
+        [SerializeField] private EntityReference bulletEntityReference;
         public float Damage { get; set; }
 
         private readonly string EnemyTag = "Enemy";
@@ -21,6 +23,8 @@ namespace ZombieHunter.WeaponSystem
                 { 
                     Damage = Damage
                 });
+
+                bulletEntityReference.Entity.Get<DestroyEvent>();
             }
         }
     }
