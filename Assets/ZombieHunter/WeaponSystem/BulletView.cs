@@ -1,6 +1,5 @@
 ﻿using Leopotam.Ecs;
 using UnityEngine;
-using ZombieHunter.DestroySystem;
 using ZombieHunter.TakeDamageSystem.Events;
 
 namespace ZombieHunter.WeaponSystem
@@ -23,8 +22,6 @@ namespace ZombieHunter.WeaponSystem
                 { 
                     Damage = Damage
                 });
-
-                bulletEntityReference.Entity.Get<DestroyEvent>();
             }
         }
     }
