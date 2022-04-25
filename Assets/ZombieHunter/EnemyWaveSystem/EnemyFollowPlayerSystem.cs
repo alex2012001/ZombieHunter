@@ -20,6 +20,8 @@ namespace ZombieHunter.EnemyWaveSystem
                 ref var enemyDataConfig = ref _enemyDataFilter.Get2(i).Config;
                 ref var posPlayer = ref _playerFilter.Get2(i).ModelTransform;
                 ref var posSavePoint = ref _savePointFilter.Get2(i).SavePointTransform;
+                
+//                Debug.Log(posPlayer.transform.name);
 
                 if (posPlayer.transform.gameObject.activeSelf && Vector3.Distance(posPlayer.transform.position,navMesh.transform.position) < enemyDataConfig.DistanceChangeChoiseObjectAttack)
                 {
