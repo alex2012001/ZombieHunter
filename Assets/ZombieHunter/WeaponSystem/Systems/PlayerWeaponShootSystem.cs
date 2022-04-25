@@ -48,10 +48,10 @@ namespace ZombieHunter.WeaponSystem.Systems
                 if (!_shootRightGun)
                 {
                     ref var shootRightHandEvent = ref _rightHandFilter.Get2(i);
+                   
+                    CreateBullet(shootRightHandEvent.WeaponData.Damage, shootRightHandEvent.WeaponData.FirePoint);
 
-                    CreateBullet(shootRightHandEvent.Damage, shootRightHandEvent.FirePoint);
-
-                    RightShootDelay(shootRightHandEvent.FireRate);
+                    RightShootDelay(shootRightHandEvent.WeaponData.FireRate);
                 }
             }
 
@@ -61,9 +61,9 @@ namespace ZombieHunter.WeaponSystem.Systems
                 {
                     ref var shootLeftHandEvent = ref _leftHandFilter.Get2(i);
                     
-                    CreateBullet(shootLeftHandEvent.Damage, shootLeftHandEvent.FirePoint);
+                    CreateBullet(shootLeftHandEvent.WeaponData.Damage, shootLeftHandEvent.WeaponData.FirePoint);
                     
-                    LeftShootDelay(shootLeftHandEvent.FireRate);
+                    LeftShootDelay(shootLeftHandEvent.WeaponData.FireRate);
                 }
             }
         }

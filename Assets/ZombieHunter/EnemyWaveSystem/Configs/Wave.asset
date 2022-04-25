@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wave
   m_EditorClassIdentifier: 
   CountWaves: 1
-  CountEnemyPerWave: 10
+  CountEnemyPerWave: 1
   DelayBetweenSpawn: 2
