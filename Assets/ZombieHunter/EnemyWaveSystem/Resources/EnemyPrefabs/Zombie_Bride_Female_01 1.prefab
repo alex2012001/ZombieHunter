@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 8831749308484140342}
   - component: {fileID: 1596934160635963036}
   - component: {fileID: -2730066499687144696}
+  - component: {fileID: 8077067673215212235}
   m_Layer: 0
   m_Name: Zombie_Bride_Female_01 1
   m_TagString: Enemy
@@ -239,6 +240,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8077067673215212235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004104354767929844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf732e7a6bf34d429cbb9ccc956d940d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    ModelTransform: {fileID: 2007552638160361494}
 --- !u!1 &2004120331760531238
 GameObject:
   m_ObjectHideFlags: 0

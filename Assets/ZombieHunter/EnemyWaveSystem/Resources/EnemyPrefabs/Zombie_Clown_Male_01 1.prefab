@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: -511523140422058578}
   - component: {fileID: 5271324461557642672}
   - component: {fileID: -7061529780531175923}
+  - component: {fileID: -7976786302712610308}
   m_Layer: 0
   m_Name: Zombie_Clown_Male_01 1
   m_TagString: Enemy
@@ -272,6 +273,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7976786302712610308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8566158762056598824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf732e7a6bf34d429cbb9ccc956d940d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    ModelTransform: {fileID: 8569645343582041800}
 --- !u!1 &8566197840182377780
 GameObject:
   m_ObjectHideFlags: 0

@@ -1412,6 +1412,7 @@ GameObject:
   - component: {fileID: -6936972140200847494}
   - component: {fileID: 7393186966954727700}
   - component: {fileID: 1946976758802779699}
+  - component: {fileID: -4861202130727438682}
   m_Layer: 0
   m_Name: Zombie_Gangster_Male_01 1
   m_TagString: Enemy
@@ -1600,6 +1601,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4861202130727438682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7513794085569597696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf732e7a6bf34d429cbb9ccc956d940d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    ModelTransform: {fileID: 7516393199067217628}
 --- !u!1 &7513817069838290828
 GameObject:
   m_ObjectHideFlags: 0

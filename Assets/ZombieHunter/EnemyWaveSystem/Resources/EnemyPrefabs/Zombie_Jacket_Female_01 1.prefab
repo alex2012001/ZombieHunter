@@ -746,6 +746,7 @@ GameObject:
   - component: {fileID: -7339272633093068756}
   - component: {fileID: 6984249155503843052}
   - component: {fileID: 8379200173318753902}
+  - component: {fileID: -6802419648225175771}
   m_Layer: 0
   m_Name: Zombie_Jacket_Female_01 1
   m_TagString: Enemy
@@ -934,6 +935,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17ff6d96dc424a8f6345a3b4fd66c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-6802419648225175771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7414408316930423759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf732e7a6bf34d429cbb9ccc956d940d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  value:
+    ModelTransform: {fileID: 7417353657287741517}
 --- !u!1 &7414410642495394539
 GameObject:
   m_ObjectHideFlags: 0
