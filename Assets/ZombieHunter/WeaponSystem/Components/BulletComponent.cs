@@ -12,5 +12,6 @@ namespace ZombieHunter.WeaponSystem.Components
     public struct BulletData
     {
         [HideInInspector] public float Damage;
+        [HideInInspector] public Collider Collision;
     }
 }

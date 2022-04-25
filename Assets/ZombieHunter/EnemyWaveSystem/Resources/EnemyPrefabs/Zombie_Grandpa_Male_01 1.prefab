@@ -573,7 +573,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1205269632569162659}
   - component: {fileID: 1289100619359253729}
-  - component: {fileID: 1202986392865352428}
   - component: {fileID: 1202986392865352429}
   - component: {fileID: 1202986392865352418}
   - component: {fileID: 1202986392865352417}
@@ -584,6 +583,7 @@ GameObject:
   - component: {fileID: 3135173134260322483}
   - component: {fileID: 867444595022840514}
   - component: {fileID: -1171666509801090534}
+  - component: {fileID: 7053951899747105455}
   m_Layer: 0
   m_Name: Zombie_Grandpa_Male_01 1
   m_TagString: Enemy
@@ -615,7 +615,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202986392865352427}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b20a3c10714a6ac439af479e3273de65, type: 3}
   m_Controller: {fileID: 9100000, guid: 80544552aace0a143b16ed108229a654, type: 2}
   m_CullingMode: 1
@@ -626,20 +626,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &1202986392865352428
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1202986392865352427}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.36483765
-  m_Height: 1.8066349
-  m_Direction: 1
-  m_Center: {x: -0.0010375977, y: 0.9134455, z: 0}
 --- !u!54 &1202986392865352429
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -786,6 +772,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     ModelTransform: {fileID: 1205269632569162659}
+--- !u!136 &7053951899747105455
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202986392865352427}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19350635
+  m_Height: 1.3682661
+  m_Direction: 1
+  m_Center: {x: -0.012340719, y: 1.1320021, z: -0.042126328}
 --- !u!1 &1203038784735636185
 GameObject:
   m_ObjectHideFlags: 0

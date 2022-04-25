@@ -41,7 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2007552638160361494}
   - component: {fileID: 1910168035705082502}
-  - component: {fileID: 2004104354767929845}
   - component: {fileID: 2004104354767929846}
   - component: {fileID: 2004104354767929851}
   - component: {fileID: 2004104354767929850}
@@ -52,6 +51,7 @@ GameObject:
   - component: {fileID: 1596934160635963036}
   - component: {fileID: -2730066499687144696}
   - component: {fileID: 8077067673215212235}
+  - component: {fileID: 111294943273138874}
   m_Layer: 0
   m_Name: Zombie_Bride_Female_01 1
   m_TagString: Enemy
@@ -83,31 +83,17 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2004104354767929844}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b20a3c10714a6ac439af479e3273de65, type: 3}
   m_Controller: {fileID: 9100000, guid: 80544552aace0a143b16ed108229a654, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &2004104354767929845
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2004104354767929844}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.36483765
-  m_Height: 1.8066349
-  m_Direction: 1
-  m_Center: {x: -0.0010375977, y: 0.9134455, z: 0}
 --- !u!54 &2004104354767929846
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -254,6 +240,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     ModelTransform: {fileID: 2007552638160361494}
+--- !u!136 &111294943273138874
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004104354767929844}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19350635
+  m_Height: 1.3682661
+  m_Direction: 1
+  m_Center: {x: -0.012340719, y: 1.1320021, z: -0.042126328}
 --- !u!1 &2004120331760531238
 GameObject:
   m_ObjectHideFlags: 0

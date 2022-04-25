@@ -14,9 +14,7 @@ namespace ZombieHunter.WeaponSystem.Systems
         private readonly EcsFilter<Tags.Player, WeaponSpawnData> _playerFilter = null;
         private readonly EcsFilter<Tags.Player, ShootRightHandEvent> _rightHandFilter = null;
         private readonly EcsFilter<Tags.Player, ShootLeftHandEvent> _leftHandFilter = null;
-
-        private Transform _rightHandTransform;
-        private Transform _leftHandTransform;
+        
         private Transform _bulletContainer;
         private BulletView _bullet;
         
@@ -29,9 +27,6 @@ namespace ZombieHunter.WeaponSystem.Systems
             foreach (var i in _playerFilter)
             {
                 ref var playerWeaponSpawnData = ref _playerFilter.Get2(i);
-
-                _rightHandTransform = playerWeaponSpawnData.RightHandTransform;
-                _leftHandTransform = playerWeaponSpawnData.LeftHandTransform;
                 _bulletContainer = playerWeaponSpawnData.BulletContainer;
             }
             
@@ -80,7 +75,7 @@ namespace ZombieHunter.WeaponSystem.Systems
             model.ModelTransform = bullet.transform;
 
             entity.Get<BulletData>();
-                    
+
             DelayToDestroyBullet(bullet,entity);
         }
 

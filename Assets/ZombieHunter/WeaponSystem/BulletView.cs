@@ -16,7 +16,7 @@ namespace ZombieHunter.WeaponSystem
             {
                 var entityReference = other.GetComponent<EntityReference>();
                 var entity = entityReference.Entity;
-                
+
                 entity.Replace(new TakeDamageEvent 
                 { 
                     Damage = Damage

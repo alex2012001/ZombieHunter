@@ -1068,7 +1068,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6462284043800575942}
   - component: {fileID: 6409093275829222740}
-  - component: {fileID: 6459841785351385495}
   - component: {fileID: 6459841785351385492}
   - component: {fileID: 6459841785351385497}
   - component: {fileID: 6459841785351385496}
@@ -1079,6 +1078,7 @@ GameObject:
   - component: {fileID: -4003186602500221057}
   - component: {fileID: -6271404624299763207}
   - component: {fileID: 1577731586263703052}
+  - component: {fileID: -6066393150523911775}
   m_Layer: 0
   m_Name: Zombie_FastfoodWorker_Male_01 1
   m_TagString: Enemy
@@ -1110,7 +1110,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6459841785351385494}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b20a3c10714a6ac439af479e3273de65, type: 3}
   m_Controller: {fileID: 9100000, guid: 80544552aace0a143b16ed108229a654, type: 2}
   m_CullingMode: 1
@@ -1121,20 +1121,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &6459841785351385495
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6459841785351385494}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.36483765
-  m_Height: 1.8066349
-  m_Direction: 1
-  m_Center: {x: -0.0010375977, y: 0.9134455, z: 0}
 --- !u!54 &6459841785351385492
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1281,6 +1267,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
     ModelTransform: {fileID: 6462284043800575942}
+--- !u!136 &-6066393150523911775
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6459841785351385494}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.19350635
+  m_Height: 1.3682661
+  m_Direction: 1
+  m_Center: {x: -0.012340719, y: 1.1320021, z: -0.042126328}
 --- !u!1 &6459859268323823426
 GameObject:
   m_ObjectHideFlags: 0
