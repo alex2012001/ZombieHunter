@@ -10,7 +10,7 @@ namespace ZombieHunter.WeaponSystem
         {
             ecsSystems
                 .Add(new BulletFlyingSystem())
-                // .Add(new WeaponSpawnSystem())
+                .Add(new WeaponSpawnSystem())
                 .Add(new PlayerWeaponShootSystem());
         }
 

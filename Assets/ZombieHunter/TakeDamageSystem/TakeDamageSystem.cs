@@ -17,14 +17,13 @@ namespace ZombieHunter.TakeDamageSystem
                 ref var damageEvent = ref _damageFilter.Get1(i);
                 ref var healthpoints = ref _damageFilter.Get2(i);
                 
-                entity.Del<TakeDamageEvent>();
                 TakeDamage(ref entity,ref healthpoints, damageEvent);
+                entity.Del<TakeDamageEvent>();
             }
         }
 
         private void TakeDamage(ref EcsEntity entity ,ref HealthpointsData hpData, TakeDamageEvent damage)
         {
-            Debug.Log(hpData.Healthpoints);
             hpData.Healthpoints -= damage.Damage;
             entity.Get<CheckDeathEvent>();
         }
