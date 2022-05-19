@@ -14,13 +14,13 @@ namespace ZombieHunter.InputSystem
         private readonly EcsFilter<Tags.Player, DirectionData, ModelData> _movableFilter = null;
         private readonly EcsFilter<Tags.RightPlayerWeapon, WeaponData> _rightWeaponFilter = null;
         private readonly EcsFilter<Tags.LeftPlayerWeapon, WeaponData> _leftWeaponFilter = null;
-       // private readonly EcsFilter<ModelData, MouseLookDirectionData> _mouseInputFilter = null;
+        private readonly EcsFilter<ModelData, MouseLookDirectionData> _mouseInputFilter = null;
 
         private readonly EcsStartup.DevelopMode _devMode = null;
         
-       // private Quaternion _startTransformRotation;
+        private Quaternion _startTransformRotation;
         
-       // private float _axisX;
+        private float _axisX;
         private float _axisY;
         private float _moveX;
         private float _moveZ;
@@ -32,9 +32,9 @@ namespace ZombieHunter.InputSystem
                 return;
             }
                         
-            //Cursor.lockState = CursorLockMode.Locked;
-            //_startTransformRotation = _mouseInputFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
-          //  _startTransformRotation = Quaternion.identity;
+            Cursor.lockState = CursorLockMode.Locked;
+            _startTransformRotation = _mouseInputFilter.GetEntity(0).Get<ModelData>().ModelTransform.rotation;
+            _startTransformRotation = Quaternion.identity;
         }
         
         public void Run()
@@ -55,23 +55,21 @@ namespace ZombieHunter.InputSystem
                 direction.z = _moveZ;
             }
             
-            // foreach (var i in _mouseInputFilter)
-            // {
-            //     ref var model = ref _mouseInputFilter.Get1(i);
-            //     ref var lookComponent = ref _mouseInputFilter.Get2(i);
-            //
-            //     // var axisX = lookComponent.Direction.x;
-            //     // var axisY = lookComponent.Direction.y;
-            //     //
-            //     // var rotateX = Quaternion.AngleAxis(axisX, Vector3.up * Time.deltaTime * lookComponent.MouseSensitivity);
-            //     // var rotateY = Quaternion.AngleAxis(axisY, Vector3.right * Time.deltaTime * lookComponent.MouseSensitivity);
-            //
-            //     // model.ModelTransform.rotation = _startTransformRotation * rotateX;
-            //     // lookComponent.CameraTransform.rotation = model.ModelTransform.rotation * rotateY;
-            //     //
-            //     // lookComponent.Direction.x = _axisX;
-            //     // lookComponent.Direction.y = _axisY;
-            //}
+            foreach (var i in _mouseInputFilter)
+            {
+                ref var model = ref _mouseInputFilter.Get1(i);
+                ref var lookComponent = ref _mouseInputFilter.Get2(i);
+            
+                var axisX = lookComponent.Direction.x;
+                var axisY = lookComponent.Direction.y;
+                var rotateX = Quaternion.AngleAxis(axisX, Vector3.up * Time.deltaTime * lookComponent.MouseSensitivity);
+                var rotateY = Quaternion.AngleAxis(axisY, Vector3.right * Time.deltaTime * lookComponent.MouseSensitivity);
+            
+                model.ModelTransform.rotation = _startTransformRotation * rotateX;
+                lookComponent.CameraTransform.rotation = model.ModelTransform.rotation * rotateY;
+                lookComponent.Direction.x = _axisX;
+                lookComponent.Direction.y = _axisY;
+            }
         }
         private void ShootLeftHand()
         {
@@ -99,13 +97,13 @@ namespace ZombieHunter.InputSystem
                 entity.Get<JumpEvent>();
             }
         }
-        // private void GetMouseAxis()
-        // {
-        //    // _axisX += Input.GetAxis("Mouse X");
-        //     _axisY -= Input.GetAxis("Mouse Y");
-        //     
-        //     _axisY = Mathf.Clamp(_axisY, -90f, 90f);
-        // }
+        private void GetMouseAxis()
+        {
+            _axisX += Input.GetAxis("Mouse X");
+            _axisY -= Input.GetAxis("Mouse Y");
+            
+            _axisY = Mathf.Clamp(_axisY, -90f, 90f);
+        }
         private void SetDirection()
         {
             _moveX = Input.GetAxis("Horizontal");
@@ -113,8 +111,8 @@ namespace ZombieHunter.InputSystem
         }
         private void GetControllersInput()
         {
-            // GetMouseAxis();
-             SetDirection();
+            GetMouseAxis();
+            SetDirection();
             
             if (Input.GetMouseButtonDown(0))
             {
