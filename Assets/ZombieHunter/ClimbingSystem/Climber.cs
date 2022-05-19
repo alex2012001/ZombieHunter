@@ -11,6 +11,11 @@ namespace ZombieHunter.ClimbingSystem
         private Hand _currentHand = null;
         private CharacterController _controller = null;
 
+        private void Awake()
+        {
+            _controller = GetComponent<CharacterController>();
+        }
+
         private void Update()
         {
             CalculateMovement();
@@ -18,14 +23,14 @@ namespace ZombieHunter.ClimbingSystem
 
         private void CalculateMovement()
         {
-            Vector3 movement = Vector3.zero;
+            var movement = Vector3.zero;
 
             if (_currentHand)
             {
                 movement += _currentHand.Delta * Sensivity;
             }
 
-            if (movement==Vector3.zero)
+            if (movement == Vector3.zero)
             {
                 movement.y -= Gravity * Time.deltaTime;
             }

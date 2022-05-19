@@ -7,14 +7,14 @@ public class Utility
     public static GameObject GetNearest(Vector3 origin, List<GameObject> collection)
     {
         GameObject nearest = null;
-        float minDistance = float.MaxValue;
-        float distance = 0f;
+        var minDistance = float.MaxValue;
+        var distance = 0f;
 
-        foreach (GameObject entity in collection)
+        foreach (var entity in collection)
         {
             distance = (entity.gameObject.transform.position - origin).sqrMagnitude;
 
-            if (distance<minDistance)
+            if (distance < minDistance)
             {
                 minDistance = distance;
                 nearest = entity;

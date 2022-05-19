@@ -48,7 +48,7 @@ namespace ZombieHunter.ClimbingSystem
 
         private void LateUpdate()
         {
-            Delta = _lastPosition - transform.position;
+            Delta = (_lastPosition - transform.position)*Time.deltaTime;
         }
 
         private void GridPoint()
