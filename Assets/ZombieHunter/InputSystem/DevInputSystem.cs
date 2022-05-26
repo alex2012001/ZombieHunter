@@ -124,6 +124,7 @@ namespace ZombieHunter.InputSystem
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log("Jump");
                 Jump();
             }
         }
